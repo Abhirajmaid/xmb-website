@@ -31,12 +31,12 @@ export default function Button({
   fullWidth = false,
   loading = false,
 }: ButtonProps) {
-  // Size configurations
+  // Size configurations with responsive design
   const sizeClasses = {
-    sm: "px-4 py-2 text-sm",
-    md: "px-6 py-3 text-base",
-    lg: "px-8 py-4 text-lg",
-    xl: "px-12 py-5 text-xl",
+    sm: "px-3 py-2 text-sm sm:px-4",
+    md: "px-4 py-2.5 text-sm sm:px-6 sm:py-3 sm:text-base",
+    lg: "px-5 py-3 text-base sm:px-8 sm:py-4 sm:text-lg",
+    xl: "px-6 py-3.5 text-base sm:px-10 sm:py-4.5 sm:text-lg md:px-12 md:py-5 md:text-xl",
   };
 
   // Variant configurations with advanced animations
@@ -87,6 +87,10 @@ export default function Button({
       before:bg-gradient-to-r before:from-white/30 before:to-white/10
       before:translate-y-[100%] before:transition-transform before:duration-500
       hover:before:translate-y-0
+      after:absolute after:top-0 after:left-[-100%] after:w-full after:h-full
+      after:bg-gradient-to-r after:from-transparent after:via-white/30 after:to-transparent
+      after:transition-all after:duration-700 after:ease-out
+      hover:after:left-[100%]
       hover:bg-white/30 hover:border-white/50
       shadow-xl hover:shadow-2xl hover:shadow-black/20
       transform hover:scale-105 hover:-translate-y-1
@@ -100,10 +104,12 @@ export default function Button({
       before:bg-gradient-to-r before:from-pink-500 before:via-purple-500 before:to-blue-500
       before:opacity-0 before:transition-opacity before:duration-500
       hover:before:opacity-100
-      border border-purple-400 hover:border-pink-400
+      after:absolute after:inset-0 after:bg-gradient-to-r after:from-transparent after:via-white/20 after:to-transparent
+      after:translate-x-[-200%] after:transition-transform after:duration-1000
+      hover:after:translate-x-[200%]
+      border border-purple-400/50 hover:border-pink-400/70
       shadow-lg hover:shadow-xl hover:shadow-purple-500/25
       transform hover:scale-105 hover:-translate-y-1
-      animate-gradient-x
     `,
   };
 
@@ -166,11 +172,11 @@ export default function Button({
   // Content with proper z-index for animations
   const content = (
     <>
-      <span className="relative z-10 flex items-center gap-3">
+      <span className="relative z-20 flex items-center gap-3">
         {loading && <LoadingSpinner />}
         {!loading && icon && iconPosition === "left" && icon}
         {!loading && showArrow && iconPosition === "left" && <ArrowIcon />}
-        <span>{children}</span>
+        <span className="font-bold tracking-wide">{children}</span>
         {!loading && icon && iconPosition === "right" && icon}
         {!loading && showArrow && iconPosition === "right" && <ArrowIcon />}
       </span>

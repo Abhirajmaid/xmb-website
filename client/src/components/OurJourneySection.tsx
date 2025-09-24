@@ -93,7 +93,7 @@ export default function OurJourneySection() {
   ];
 
   return (
-    <section className="relative bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 py-24 px-6 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 py-16 md:py-24 px-4 md:px-6 overflow-hidden">
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-br from-blue-400/40 to-purple-400/40 rounded-full blur-3xl animate-pulse"></div>
@@ -123,7 +123,7 @@ export default function OurJourneySection() {
         ))}
       </div>
 
-      <div className="max-w-[80%] mx-auto relative z-10">
+      <div className="max-w-[95%] sm:max-w-[90%] md:max-w-[85%] lg:max-w-[80%] mx-auto relative z-10">
         {/* Enhanced Section Header */}
         <div className="text-center mb-20">
           <div className="relative inline-block mb-8">
@@ -131,10 +131,10 @@ export default function OurJourneySection() {
               ✨ OUR JOURNEY
             </p>
           </div>
-          <h2 className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-gray-900 bg-clip-text text-transparent leading-tight mb-8">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-gray-900 bg-clip-text text-transparent leading-tight mb-8">
             Excellence Through Innovation
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             From visionary beginnings to industry leadership, discover the
             milestones that define our commitment to transforming manufacturing
             through cutting-edge solutions.
@@ -166,11 +166,11 @@ export default function OurJourneySection() {
         </div>
 
         {/* Main Content */}
-        <div className="backdrop-blur-xl bg-white/40 border border-white/50 rounded-3xl p-10 md:p-16 shadow-2xl relative">
+        <div className="backdrop-blur-xl bg-white/40 border border-white/50 rounded-3xl p-3 sm:p-6 md:p-10 lg:p-16 shadow-2xl relative">
           {/* Glass effect overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-white/60 to-white/30 rounded-3xl"></div>
 
-          <div className="grid lg:grid-cols-5 gap-16 items-start relative z-10">
+          <div className="grid lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8 lg:gap-16 items-start relative z-10">
             {/* Left Content */}
             <div className="lg:col-span-2 space-y-8">
               {/* Hero Visual */}
@@ -205,10 +205,10 @@ export default function OurJourneySection() {
               </div>
 
               <div className="space-y-6">
-                <h3 className="text-3xl font-bold text-gray-900">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
                   Transforming Manufacturing, One Innovation at a Time
                 </h3>
-                <p className="text-lg text-gray-600 leading-relaxed">
+                <p className="text-base md:text-lg text-gray-600 leading-relaxed">
                   Our journey represents more than growth—it's a testament to
                   our unwavering commitment to pushing the boundaries of what's
                   possible in manufacturing excellence.
@@ -365,7 +365,7 @@ export default function OurJourneySection() {
                     </div>
 
                     {/* Content Card */}
-                    <div className="ml-20 backdrop-blur-md bg-white/80 border border-white/60 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 group hover:scale-102 relative overflow-hidden">
+                    <div className="ml-12 sm:ml-16 md:ml-20 backdrop-blur-md bg-white/80 border border-white/60 rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 group hover:scale-102 relative overflow-hidden">
                       {/* Card Background Pattern */}
                       <div className="absolute inset-0 opacity-5">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-400 to-purple-400 rounded-full -translate-y-16 translate-x-16"></div>
@@ -432,7 +432,7 @@ export default function OurJourneySection() {
 
         {/* Bottom CTA Section */}
         <div className="text-center mt-20">
-          <div className="backdrop-blur-xl bg-white/60 border border-white/40 rounded-3xl p-12 shadow-2xl">
+          <div className="backdrop-blur-xl bg-white/60 border border-white/40 rounded-3xl p-6 sm:p-8 md:p-12 shadow-2xl">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
               Ready to Write Your Success Story?
             </h3>
@@ -440,12 +440,13 @@ export default function OurJourneySection() {
               Join hundreds of companies who have transformed their operations
               with our innovative solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
               <Button
                 variant="primary"
                 size="xl"
                 showArrow={true}
                 href="/contact"
+                className="w-full sm:w-auto min-w-0"
               >
                 Start Your Journey
               </Button>
@@ -454,6 +455,7 @@ export default function OurJourneySection() {
                 size="xl"
                 showArrow={true}
                 href="/case-studies"
+                className="w-full sm:w-auto min-w-0"
               >
                 View Success Stories
               </Button>

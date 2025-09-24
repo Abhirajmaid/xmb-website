@@ -306,15 +306,15 @@ export default function Header() {
                     {sectionIndex === 0 && (
                       <div className="pt-6">
                         <Button
-                          variant="primary"
-                          size="sm"
+                          variant="gradient"
+                          size="md"
                           href={
                             navigationLinks.find(
                               (link) => link.id === activeDropdown
                             )?.href || "#"
                           }
                           showArrow={true}
-                          className="bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white shadow-lg hover:shadow-pink-500/25"
+                          className="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 hover:from-pink-600 hover:via-purple-600 hover:to-blue-600 text-white shadow-xl hover:shadow-2xl hover:shadow-pink-500/30 transform hover:scale-110 transition-all duration-500 border-0 font-bold tracking-wide"
                         >
                           Explore
                         </Button>
@@ -325,11 +325,11 @@ export default function Header() {
                     {sectionIndex === 1 && (
                       <div className="pt-6">
                         <Button
-                          variant="secondary"
-                          size="sm"
+                          variant="glass"
+                          size="md"
                           href="#"
                           showArrow={true}
-                          className="bg-gray-900 hover:bg-gray-800 text-white shadow-lg"
+                          className="backdrop-blur-xl bg-gradient-to-r from-slate-900/80 via-gray-900/80 to-slate-900/80 hover:from-slate-800/90 hover:via-gray-800/90 hover:to-slate-800/90 border border-white/20 hover:border-white/40 text-white shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-500 font-bold tracking-wide"
                         >
                           Explore models
                         </Button>

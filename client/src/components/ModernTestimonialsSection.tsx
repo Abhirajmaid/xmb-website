@@ -109,7 +109,7 @@ export default function ModernTestimonialsSection() {
   };
 
   return (
-    <section className="bg-gradient-to-br from-slate-100 via-purple-50 to-blue-50 py-20 px-6 relative overflow-hidden">
+    <section className="bg-gradient-to-br from-slate-100 via-purple-50 to-blue-50 py-12 sm:py-16 md:py-20 px-2 sm:px-4 md:px-6 relative overflow-hidden">
       {/* Glass background elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-32 left-32 w-96 h-96 bg-purple-400/30 rounded-full blur-3xl"></div>
@@ -134,10 +134,10 @@ export default function ModernTestimonialsSection() {
         </div>
 
         {/* Main Testimonial Display */}
-        <div className="backdrop-blur-xl bg-white/80 border border-white/60 rounded-3xl shadow-2xl shadow-black/10 p-8 lg:p-12 mb-12 relative">
+        <div className="backdrop-blur-xl bg-white/80 border border-white/60 rounded-3xl shadow-2xl shadow-black/10 p-4 sm:p-6 md:p-8 lg:p-12 mb-8 sm:mb-12 relative">
           {/* Glass effect overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-white/60 to-white/40 rounded-3xl"></div>
-          <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center relative z-10">
             {/* Testimonial Content */}
             <div>
               {/* Rating Stars */}
@@ -256,10 +256,10 @@ export default function ModernTestimonialsSection() {
         </div>
 
         {/* Stats Section */}
-        <div className="backdrop-blur-xl bg-white/80 border border-white/60 rounded-3xl p-8 lg:p-12 shadow-2xl shadow-black/10 relative">
+        <div className="backdrop-blur-xl bg-white/80 border border-white/60 rounded-3xl p-4 sm:p-6 md:p-8 lg:p-12 shadow-2xl shadow-black/10 relative">
           {/* Glass effect overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-white/60 to-white/40 rounded-3xl"></div>
-          <div className="grid md:grid-cols-4 gap-8 text-center relative z-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 text-center relative z-10">
             <div>
               <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
               <div className="text-gray-600">Successful Projects</div>
@@ -290,12 +290,13 @@ export default function ModernTestimonialsSection() {
             Let's discuss how we can help you achieve similar results and
             transform your operations.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
             <Button
               variant="primary"
               size="lg"
               showArrow={true}
               href="/contact"
+              className="w-full sm:w-auto min-w-0"
             >
               Start Your Success Story
             </Button>
@@ -304,6 +305,7 @@ export default function ModernTestimonialsSection() {
               size="lg"
               showArrow={true}
               href="/case-studies"
+              className="w-full sm:w-auto min-w-0"
             >
               View Case Studies
             </Button>

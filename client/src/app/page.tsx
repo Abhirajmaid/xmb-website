@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import CTARegistrationSection from "@/components/CTARegistrationSection";
 import AboutUsSection from "@/components/AboutUsSection";
 import ModernServicesSection from "@/components/ModernServicesSection";
 import GlobalManufacturingCapacity from "@/components/GlobalManufacturingCapacity";
@@ -13,6 +14,7 @@ export default function Home() {
     <main className="min-h-screen">
       <Header />
       <HeroSection />
+      <CTARegistrationSection />
       <AboutUsSection />
       <ModernServicesSection />
       <GlobalManufacturingCapacity />

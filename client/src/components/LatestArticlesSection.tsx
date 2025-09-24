@@ -54,7 +54,7 @@ export default function LatestArticlesSection() {
   }
 
   return (
-    <section className="bg-gradient-to-br from-slate-100 via-blue-50 to-purple-50 py-20 px-6 relative overflow-hidden">
+    <section className="bg-gradient-to-br from-slate-100 via-blue-50 to-purple-50 py-12 sm:py-16 md:py-20 px-2 sm:px-4 md:px-6 relative overflow-hidden">
       {/* Glass background elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-40 left-40 w-96 h-96 bg-green-400/30 rounded-full blur-3xl"></div>
@@ -68,10 +68,10 @@ export default function LatestArticlesSection() {
           <p className="text-blue-600 uppercase tracking-wide text-sm font-medium mb-6 backdrop-blur-sm bg-blue-50/50 px-6 py-2 rounded-full w-fit mx-auto border border-blue-200/50">
             LATEST INSIGHTS
           </p>
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
             Latest from XMB
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
+          <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
             Stay updated with our latest insights, case studies, and innovations
             in manufacturing excellence. Discover how we're shaping the future
             of industry.
@@ -82,7 +82,7 @@ export default function LatestArticlesSection() {
         </div>
 
         {/* Category Filters */}
-        <div className="backdrop-blur-xl bg-white/30 border border-white/30 rounded-2xl p-6 shadow-2xl shadow-black/10 mb-12 relative">
+        <div className="backdrop-blur-xl bg-white/30 border border-white/30 rounded-2xl p-3 sm:p-4 md:p-6 shadow-2xl shadow-black/10 mb-8 sm:mb-12 relative">
           {/* Glass effect overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-white/10 rounded-2xl"></div>
           <div className="flex flex-wrap justify-center gap-4 relative z-10">
@@ -103,7 +103,7 @@ export default function LatestArticlesSection() {
         </div>
 
         {/* Main Content Grid - Zetwerk Style */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-12">
+        <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12">
           {/* Featured Article - Large Left Side */}
           {featuredArticle && (
             <div className="lg:col-span-1">
@@ -206,7 +206,7 @@ export default function LatestArticlesSection() {
 
         {/* Bottom Articles Row - Zetwerk Style */}
         {bottomGridArticles && bottomGridArticles.length > 0 && (
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {bottomGridArticles.map((article) => (
               <article key={article.id} className="group cursor-pointer">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-2xl mb-4">

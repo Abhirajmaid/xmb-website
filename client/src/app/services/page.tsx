@@ -32,7 +32,7 @@ export default function ServicesPage() {
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&h=1080&fit=crop&crop=center"
-            alt="Manufacturing Services Background"
+            alt="Business Services Background"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/60 via-blue-800/50 to-blue-700/40"></div>
@@ -183,12 +183,13 @@ export default function ServicesPage() {
               </p>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">
-              Manufacturing Services
+              Complete Business Solutions
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Explore our comprehensive range of manufacturing services designed
-              to meet diverse industry requirements with precision, quality, and
-              reliability.
+              Explore our comprehensive range of services from strategic
+              sourcing and innovative design to advanced manufacturing and
+              operational excellence, designed to drive growth and efficiency
+              across your entire value chain.
             </p>
           </div>
 

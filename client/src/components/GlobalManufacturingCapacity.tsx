@@ -52,7 +52,7 @@ export default function GlobalManufacturingCapacity() {
       {/* India Map Section */}
       <section
         ref={sectionRef}
-        className="relative py-20 px-6 overflow-hidden min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100"
+        className="hidden lg:block relative py-20 px-6 overflow-hidden min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100"
       >
         {/* Section Header with Glass Design */}
         <div className="text-center mb-16 relative z-30">

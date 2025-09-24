@@ -36,7 +36,7 @@ export default function AboutUsSection() {
   }, [images.length]);
 
   return (
-    <section className="bg-gradient-to-br from-slate-100 via-blue-50 to-slate-100 py-24 pb-12 px-6 relative overflow-hidden">
+    <section className="bg-gradient-to-br from-slate-100 via-blue-50 to-slate-100 py-12 sm:py-16 md:py-24 pb-8 sm:pb-12 px-2 sm:px-4 md:px-6 relative overflow-hidden">
       {/* Glass background elements */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-20 left-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
@@ -45,17 +45,17 @@ export default function AboutUsSection() {
 
       <div className="max-w-8xl mx-auto relative z-10">
         {/* Glass Morphism Card Section */}
-        <div className="backdrop-blur-xl bg-white/30 border border-white/30 rounded-3xl p-10 md:p-14 shadow-2xl shadow-black/10 relative overflow-hidden">
+        <div className="backdrop-blur-xl bg-white/30 border border-white/30 rounded-3xl p-3 sm:p-4 md:p-10 lg:p-14 shadow-2xl shadow-black/10 relative overflow-hidden">
           {/* Additional glass effect overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-white/10 rounded-3xl"></div>
-          <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10">
+          <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-16 items-center relative z-10">
             {/* Left Content */}
             <div className="space-y-8">
               <div>
                 <p className="text-blue-600 uppercase tracking-wide text-sm font-medium mb-6 backdrop-blur-sm bg-blue-50/50 px-4 py-2 rounded-full w-fit border border-blue-200/50">
                   ABOUT US
                 </p>
-                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
                   We are a team of passionate experts dedicated to transforming
                   businesses through innovative solutions.
                 </h2>
@@ -161,8 +161,8 @@ export default function AboutUsSection() {
         </div>
 
         {/* Testimonials Section - What they say about us */}
-        <div className="bg-white rounded-3xl p-10 md:p-14 shadow-sm mt-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="bg-white rounded-3xl p-4 sm:p-6 md:p-10 lg:p-14 shadow-sm mt-6 sm:mt-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
             <div>
               <p className="text-gray-500 uppercase tracking-wide text-sm font-medium mb-6">
                 TESTIMONIALS

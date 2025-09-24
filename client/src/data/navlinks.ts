@@ -34,67 +34,70 @@ export const navigationLinks: NavLink[] = [
         label: "Services",
         dropdown: [
             {
-                title: "Manufacturing Services",
-                description: "Comprehensive manufacturing solutions from precision machining to complete assemblies. Accelerate your production with our expert services across multiple domains.",
+                title: "Core Services",
+                description: "Our comprehensive suite of business solutions designed to drive efficiency, innovation, and growth across your entire value chain.",
                 items: [
                     {
-                        href: "/services/precision-machining",
-                        label: "Precision Machining",
-                        description: "CNC • High-precision components",
+                        href: "/services/sourcing-procurement",
+                        label: "Sourcing & Procurement",
+                        description: "Supply chain • Strategic sourcing",
                         iconType: "svg",
-                        icon: "cog"
+                        icon: "heroicons:truck-20-solid"
                     },
                     {
-                        href: "/services/assembly-manufacturing",
-                        label: "Assembly Manufacturing",
-                        description: "Production • Complete solutions",
+                        href: "/services/design-prototyping",
+                        label: "Design and Prototyping",
+                        description: "Innovation • Rapid prototyping",
                         iconType: "svg",
-                        icon: "wrench"
+                        icon: "heroicons:light-bulb-20-solid"
                     },
                     {
-                        href: "/services/quality-control",
-                        label: "Quality Assurance",
-                        description: "Testing • ISO certified processes",
+                        href: "/services/manufacturing-solutions",
+                        label: "Manufacturing Solutions",
+                        description: "Production • Advanced manufacturing",
                         iconType: "svg",
-                        icon: "shield-check"
+                        icon: "heroicons:cog-6-tooth-20-solid"
                     },
                     {
-                        href: "/services/supply-chain",
-                        label: "Supply Chain Management",
-                        description: "Logistics • End-to-end solutions",
+                        href: "/services/operation-consulting-service-excellence",
+                        label: "Operation Consulting",
+                        description: "Excellence • Process optimization",
                         iconType: "svg",
-                        icon: "truck"
+                        icon: "heroicons:chart-bar-20-solid"
                     }
                 ]
             },
             {
-                title: "Service Packages",
-                description: "Choose the right service level for your manufacturing needs",
+                title: "Service Capabilities",
+                description: "Specialized capabilities within our core service offerings",
                 items: [
                     {
-                        href: "/services/basic",
-                        label: "Basic Manufacturing",
-                        description: "Best for starting up",
-                        price: "₹0",
-                        badge: "Free",
+                        href: "/services/sourcing-procurement#strategic-sourcing",
+                        label: "Strategic Sourcing",
+                        description: "Market analysis • Supplier evaluation",
                         iconType: "svg",
-                        icon: "building-factory"
+                        icon: "heroicons:magnifying-glass-20-solid"
                     },
                     {
-                        href: "/services/professional",
-                        label: "Professional Services",
-                        description: "Best for growing production",
-                        price: "₹25k/month",
+                        href: "/services/design-prototyping#rapid-prototyping",
+                        label: "Rapid Prototyping",
+                        description: "24-48hrs • Design validation",
                         iconType: "svg",
-                        icon: "rocket"
+                        icon: "heroicons:bolt-20-solid"
                     },
                     {
-                        href: "/services/enterprise",
-                        label: "Enterprise Solutions",
-                        description: "Best for large-scale operations",
-                        price: "₹1L/month",
+                        href: "/services/manufacturing-solutions#precision-machining",
+                        label: "Precision Manufacturing",
+                        description: "±0.001mm • ISO certified",
                         iconType: "svg",
-                        icon: "building-office"
+                        icon: "heroicons:wrench-screwdriver-20-solid"
+                    },
+                    {
+                        href: "/services/operation-consulting-service-excellence#process-optimization",
+                        label: "Process Optimization",
+                        description: "25-40% efficiency gains",
+                        iconType: "svg",
+                        icon: "heroicons:adjustments-horizontal-20-solid"
                     }
                 ]
             }
@@ -102,99 +105,104 @@ export const navigationLinks: NavLink[] = [
     },
     {
         id: "solutions",
-        href: "#",
+        href: "/solutions",
         label: "Solutions",
         dropdown: [
             {
                 title: "Industry Solutions",
-                description: "Specialized manufacturing solutions tailored for different industries with proven expertise and quality standards.",
+                description: "Specialized solutions tailored for different industries with proven expertise across our core service areas.",
                 items: [
                     {
                         href: "/solutions/automotive",
-                        label: "Automotive Manufacturing",
-                        description: "Production • Tier 1 & 2 suppliers",
+                        label: "Automotive Industry",
+                        description: "Supply chain • Manufacturing • Quality",
                         iconType: "svg",
-                        icon: "car"
+                        icon: "mdi:car"
                     },
                     {
                         href: "/solutions/aerospace",
-                        label: "Aerospace Components",
+                        label: "Aerospace & Defense",
                         description: "Precision • AS9100 certified",
                         iconType: "svg",
-                        icon: "plane"
+                        icon: "heroicons:paper-airplane-20-solid"
                     },
                     {
                         href: "/solutions/electronics",
-                        label: "Electronics Assembly",
-                        description: "SMT • Through-hole assembly",
+                        label: "Electronics & Technology",
+                        description: "Design • Prototyping • Assembly",
                         iconType: "svg",
-                        icon: "cpu-chip"
+                        icon: "heroicons:cpu-chip-20-solid"
                     },
                     {
                         href: "/solutions/medical",
-                        label: "Medical Devices",
+                        label: "Medical & Healthcare",
                         description: "FDA compliant • ISO 13485",
                         iconType: "svg",
-                        icon: "heart"
+                        icon: "heroicons:heart-20-solid"
                     }
                 ]
             },
             {
-                title: "Custom Solutions",
-                description: "Tailored manufacturing approaches for unique requirements",
+                title: "Business Solutions",
+                description: "Comprehensive business solutions combining our core services",
                 items: [
                     {
-                        href: "/solutions/prototyping",
-                        label: "Rapid Prototyping",
-                        description: "Fast iteration cycles",
-                        price: "₹5k+",
+                        href: "/solutions/end-to-end",
+                        label: "End-to-End Solutions",
+                        description: "Complete value chain management",
+                        badge: "Popular",
                         iconType: "svg",
-                        icon: "bolt"
+                        icon: "heroicons:arrow-path-20-solid"
                     },
                     {
-                        href: "/solutions/low-volume",
-                        label: "Low Volume Production",
-                        description: "Flexible manufacturing",
-                        price: "₹15k+",
+                        href: "/solutions/supply-chain-optimization",
+                        label: "Supply Chain Optimization",
+                        description: "Sourcing • Procurement • Logistics",
                         iconType: "svg",
-                        icon: "adjustments"
+                        icon: "heroicons:truck-20-solid"
                     },
                     {
-                        href: "/solutions/high-volume",
-                        label: "High Volume Production",
-                        description: "Scalable operations",
-                        price: "Custom",
+                        href: "/solutions/innovation-lab",
+                        label: "Innovation Lab Services",
+                        description: "Design • Prototyping • Testing",
                         iconType: "svg",
-                        icon: "chart-bar"
+                        icon: "heroicons:beaker-20-solid"
+                    },
+                    {
+                        href: "/solutions/operational-excellence",
+                        label: "Operational Excellence",
+                        description: "Process improvement • Consulting",
+                        iconType: "svg",
+                        icon: "heroicons:chart-bar-20-solid"
                     }
                 ]
             },
             {
-                title: "Join Our Platform",
-                description: "Register as a customer or supplier to access our manufacturing network",
+                title: "Partnership Programs",
+                description: "Join our ecosystem of customers, suppliers, and partners",
                 items: [
                     {
                         href: "/register/customer",
-                        label: "Register as Customer",
-                        description: "Access our manufacturing services",
-                        badge: "Free",
+                        label: "Customer Portal",
+                        description: "Access our services platform",
+                        badge: "Free Access",
                         iconType: "svg",
-                        icon: "user-group"
+                        icon: "heroicons:user-group-20-solid"
                     },
                     {
                         href: "/register/supplier",
-                        label: "Register as Supplier",
-                        description: "Join our supplier network",
+                        label: "Supplier Network",
+                        description: "Join our verified suppliers",
                         badge: "Apply Now",
                         iconType: "svg",
-                        icon: "building-factory"
+                        icon: "heroicons:building-office-2-20-solid"
                     },
                     {
-                        href: "/login",
-                        label: "Login",
-                        description: "Access your account",
+                        href: "/partners/strategic",
+                        label: "Strategic Partnerships",
+                        description: "Long-term collaboration",
                         iconType: "svg",
-                        icon: "key"
+                        icon: "heroicons:hand-raised-20-solid"
                     }
                 ]
             }
@@ -207,35 +215,35 @@ export const navigationLinks: NavLink[] = [
         dropdown: [
             {
                 title: "Learning & Insights",
-                description: "Stay updated with the latest manufacturing trends, case studies, and industry best practices.",
+                description: "Stay updated with the latest trends in sourcing, design, manufacturing, and operational excellence.",
                 items: [
                     {
                         href: "/case-studies",
                         label: "Case Studies",
                         description: "Success stories • Project highlights",
                         iconType: "svg",
-                        icon: "chart-pie"
+                        icon: "heroicons:chart-pie-20-solid"
                     },
                     {
                         href: "/blog",
-                        label: "Manufacturing Blog",
-                        description: "Industry insights • Technical articles",
+                        label: "Industry Blog",
+                        description: "Business insights • Best practices",
                         iconType: "svg",
-                        icon: "document-text"
+                        icon: "heroicons:document-text-20-solid"
                     },
                     {
                         href: "/webinars",
                         label: "Webinars & Events",
                         description: "Live sessions • Expert talks",
                         iconType: "svg",
-                        icon: "video-camera"
+                        icon: "heroicons:video-camera-20-solid"
                     },
                     {
                         href: "/whitepapers",
                         label: "White Papers",
-                        description: "Research • Technical guides",
+                        description: "Research • Strategic guides",
                         iconType: "svg",
-                        icon: "academic-cap"
+                        icon: "heroicons:academic-cap-20-solid"
                     }
                 ]
             },
@@ -249,7 +257,7 @@ export const navigationLinks: NavLink[] = [
                         description: "Complete specifications",
                         badge: "PDF",
                         iconType: "svg",
-                        icon: "folder"
+                        icon: "heroicons:folder-20-solid"
                     },
                     {
                         href: "/downloads/certifications",
@@ -257,7 +265,7 @@ export const navigationLinks: NavLink[] = [
                         description: "ISO • Quality standards",
                         badge: "Verified",
                         iconType: "svg",
-                        icon: "badge-check"
+                        icon: "heroicons:shield-check-20-solid"
                     },
                     {
                         href: "/calculator",
@@ -265,7 +273,7 @@ export const navigationLinks: NavLink[] = [
                         description: "Estimate project costs",
                         badge: "Free Tool",
                         iconType: "svg",
-                        icon: "calculator"
+                        icon: "heroicons:calculator-20-solid"
                     }
                 ]
             }
@@ -278,35 +286,35 @@ export const navigationLinks: NavLink[] = [
         dropdown: [
             {
                 title: "About XMB",
-                description: "Learn more about our company, values, and the team behind our manufacturing excellence.",
+                description: "Learn more about our company, values, and the team behind our business excellence across sourcing, design, manufacturing, and operations.",
                 items: [
                     {
                         href: "/about",
                         label: "Our Story",
                         description: "Mission • Vision • Values",
                         iconType: "svg",
-                        icon: "building-office-2"
+                        icon: "heroicons:building-office-2-20-solid"
                     },
                     {
                         href: "/team",
                         label: "Leadership Team",
                         description: "Meet our experts",
                         iconType: "svg",
-                        icon: "user-group"
+                        icon: "heroicons:user-group-20-solid"
                     },
                     {
-                        href: "/facilities",
-                        label: "Manufacturing Facilities",
-                        description: "Global presence • Local expertise",
+                        href: "/capabilities",
+                        label: "Our Capabilities",
+                        description: "Global network • Service excellence",
                         iconType: "svg",
-                        icon: "building-factory-2"
+                        icon: "heroicons:building-storefront-20-solid"
                     },
                     {
                         href: "/sustainability",
                         label: "Sustainability",
                         description: "Environmental commitment",
                         iconType: "svg",
-                        icon: "leaf"
+                        icon: "heroicons:leaf-20-solid"
                     }
                 ]
             },
@@ -319,7 +327,7 @@ export const navigationLinks: NavLink[] = [
                         label: "Contact Us",
                         description: "Get in touch with our team",
                         iconType: "svg",
-                        icon: "phone"
+                        icon: "heroicons:phone-20-solid"
                     },
                     {
                         href: "/careers",
@@ -327,21 +335,21 @@ export const navigationLinks: NavLink[] = [
                         description: "Join our growing team",
                         badge: "We're hiring",
                         iconType: "svg",
-                        icon: "briefcase"
+                        icon: "heroicons:briefcase-20-solid"
                     },
                     {
                         href: "/partners",
                         label: "Partner Program",
                         description: "Become a partner",
                         iconType: "svg",
-                        icon: "handshake"
+                        icon: "heroicons:hand-raised-20-solid"
                     },
                     {
                         href: "/news",
                         label: "News & Press",
                         description: "Latest updates",
                         iconType: "svg",
-                        icon: "newspaper"
+                        icon: "heroicons:newspaper-20-solid"
                     }
                 ]
             }
