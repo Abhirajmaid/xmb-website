@@ -8,7 +8,7 @@ import Button from "@/components/Button";
 export default function ContactPage() {
   const [showNotification, setShowNotification] = useState(false);
   const [notificationMessage, setNotificationMessage] = useState("");
-  const [activeTab, setActiveTab] = useState("INDIA");
+  // const [activeTab, setActiveTab] = useState("INDIA"); // Removed since only India is shown
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -20,33 +20,13 @@ export default function ContactPage() {
     agreeToStore: false,
   });
 
-  // Location data for different tabs
+  // Location data for India only
   const locationData = {
-    INDIA: {
-      company: "Zetwerk Manufacturing Businesses Pvt Ltd.",
-      address:
-        "841, Vaishnavi Sovereign, Green Glen Layout, Bellandur, Bengaluru 560103",
-      phone: "+91 77950 81665",
-      email: "contact@zetwerk.com",
-    },
-    USA: {
-      company: "Zetwerk Manufacturing USA Inc.",
-      address: "1234 Manufacturing Drive, Detroit, MI 48201",
-      phone: "+1 (555) 123-4567",
-      email: "usa@zetwerk.com",
-    },
-    SINGAPORE: {
-      company: "Zetwerk Manufacturing Singapore Pte Ltd.",
-      address: "123 Business Park, Singapore 123456",
-      phone: "+65 1234 5678",
-      email: "singapore@zetwerk.com",
-    },
-    UAE: {
-      company: "Zetwerk Manufacturing UAE LLC",
-      address: "Dubai International Financial Centre, Dubai, UAE",
-      phone: "+971 4 123 4567",
-      email: "uae@zetwerk.com",
-    },
+    company: "Xtrawrkx Manufacturing Businesses Pvt Ltd.",
+    address:
+      "841, Vaishnavi Sovereign, Green Glen Layout, Bellandur, Bengaluru 560103",
+    phone: "+91 77950 81665",
+    email: "contact@xtrawrkx.com",
   };
 
   const handleInputChange = (
@@ -117,12 +97,12 @@ export default function ContactPage() {
             <div className="bg-white rounded-3xl p-8 shadow-lg">
               <div className="mb-8">
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                  Zetwerk is a global manufacturer that can help you maximize
+                  Xtrawrkx Manufacturing is a global manufacturer that can help you maximize
                   efficiency, quality and value in your supply chain.
                 </h2>
                 <p className="text-blue-600 text-lg">
                   With worldwide operations and manufacturing capabilities for
-                  precision parts, capital goods, and consumer goods, Zetwerk
+                  precision parts, capital goods, and consumer goods, Xtrawrkx Manufacturing
                   offers best-in-class lead times — whatever the category,
                   product, scale, or geography.
                 </p>
@@ -251,7 +231,7 @@ export default function ContactPage() {
                   </div>
                   <p className="text-xs text-gray-500 mt-1">
                     Accepts .pdf, .dwg, .step, .stp, .iges. Other file types can
-                    be emailed to contact: nab@zetwerk.com.
+                    be emailed to contact: nab@xtrawrkx.com.
                   </p>
                 </div>
 
@@ -277,7 +257,7 @@ export default function ContactPage() {
                       htmlFor="agreeToReceive"
                       className="text-sm text-gray-700"
                     >
-                      I agree to receive communications from Zetwerk.*
+                      I agree to receive communications from Xtrawrkx Manufacturing.*
                     </label>
                   </div>
 
@@ -294,7 +274,7 @@ export default function ContactPage() {
                       htmlFor="agreeToStore"
                       className="text-sm text-gray-700"
                     >
-                      I agree to allow Zetwerk to store and process my personal
+                      I agree to allow Xtrawrkx Manufacturing to store and process my personal
                       data.*
                     </label>
                   </div>
@@ -333,31 +313,11 @@ export default function ContactPage() {
                 Our Global Print
               </h3>
 
-              {/* Location Tabs */}
-              <div className="flex space-x-1 mb-8 bg-gray-100 rounded-lg p-1">
-                {Object.keys(locationData).map((location) => (
-                  <button
-                    key={location}
-                    onClick={() => setActiveTab(location)}
-                    className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-all duration-200 ${
-                      activeTab === location
-                        ? "bg-white text-blue-600 shadow-sm"
-                        : "text-gray-600 hover:text-gray-900"
-                    }`}
-                  >
-                    {location}
-                  </button>
-                ))}
-              </div>
-
-              {/* Location Content */}
+              {/* Location Content - India Only */}
               <div className="space-y-6">
                 <div>
                   <h4 className="font-bold text-gray-900 text-lg mb-4">
-                    {
-                      locationData[activeTab as keyof typeof locationData]
-                        .company
-                    }
+                    {locationData.company}
                   </h4>
                 </div>
 
@@ -380,10 +340,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <p className="text-gray-700 text-sm leading-relaxed">
-                    {
-                      locationData[activeTab as keyof typeof locationData]
-                        .address
-                    }
+                    {locationData.address}
                   </p>
                 </div>
 
@@ -400,7 +357,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <p className="text-blue-600 text-sm font-medium">
-                    {locationData[activeTab as keyof typeof locationData].phone}
+                    {locationData.phone}
                   </p>
                 </div>
 
@@ -417,7 +374,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <p className="text-blue-600 text-sm font-medium">
-                    {locationData[activeTab as keyof typeof locationData].email}
+                    {locationData.email}
                   </p>
                 </div>
 

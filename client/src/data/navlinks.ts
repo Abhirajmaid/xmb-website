@@ -28,8 +28,49 @@ export const navigationLinks: NavLink[] = [
         href: "/about",
         label: "About Us"
     },
+    // {
+    //     id: "services",
+    //     href: "/services",
+    //     label: "Services",
+    //     dropdown: [
+    //         {
+    //             title: "Service Capabilities",
+    //             description: "Specialized capabilities within our core service offerings",
+    //             items: [
+    //                 {
+    //                     href: "/services/sourcing-procurement#strategic-sourcing",
+    //                     label: "Strategic Sourcing",
+    //                     description: "Market analysis • Supplier evaluation",
+    //                     iconType: "svg",
+    //                     icon: "heroicons:magnifying-glass-20-solid"
+    //                 },
+    //                 {
+    //                     href: "/services/design-prototyping#rapid-prototyping",
+    //                     label: "Rapid Prototyping",
+    //                     description: "24-48hrs • Design validation",
+    //                     iconType: "svg",
+    //                     icon: "heroicons:bolt-20-solid"
+    //                 },
+    //                 {
+    //                     href: "/services/manufacturing-solutions#precision-machining",
+    //                     label: "Precision Manufacturing",
+    //                     description: "±0.001mm • ISO certified",
+    //                     iconType: "svg",
+    //                     icon: "heroicons:wrench-screwdriver-20-solid"
+    //                 },
+    //                 {
+    //                     href: "/services/operation-consulting-service-excellence#process-optimization",
+    //                     label: "Process Optimization",
+    //                     description: "25-40% efficiency gains",
+    //                     iconType: "svg",
+    //                     icon: "heroicons:adjustments-horizontal-20-solid"
+    //                 }
+    //             ]
+    //         }
+    //     ]
+    // },
     {
-        id: "services",
+        id: "solutions",
         href: "/services",
         label: "Services",
         dropdown: [
@@ -68,112 +109,43 @@ export const navigationLinks: NavLink[] = [
                 ]
             },
             {
-                title: "Service Capabilities",
-                description: "Specialized capabilities within our core service offerings",
+                title: "Industry Services",
+                description: "Specialized manufacturing solutions for cutting-edge industries driving the future of technology.",
                 items: [
                     {
-                        href: "/services/sourcing-procurement#strategic-sourcing",
-                        label: "Strategic Sourcing",
-                        description: "Market analysis • Supplier evaluation",
-                        iconType: "svg",
-                        icon: "heroicons:magnifying-glass-20-solid"
-                    },
-                    {
-                        href: "/services/design-prototyping#rapid-prototyping",
-                        label: "Rapid Prototyping",
-                        description: "24-48hrs • Design validation",
-                        iconType: "svg",
-                        icon: "heroicons:bolt-20-solid"
-                    },
-                    {
-                        href: "/services/manufacturing-solutions#precision-machining",
-                        label: "Precision Manufacturing",
-                        description: "±0.001mm • ISO certified",
-                        iconType: "svg",
-                        icon: "heroicons:wrench-screwdriver-20-solid"
-                    },
-                    {
-                        href: "/services/operation-consulting-service-excellence#process-optimization",
-                        label: "Process Optimization",
-                        description: "25-40% efficiency gains",
-                        iconType: "svg",
-                        icon: "heroicons:adjustments-horizontal-20-solid"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        id: "solutions",
-        href: "/solutions",
-        label: "Solutions",
-        dropdown: [
-            {
-                title: "Industry Solutions",
-                description: "Specialized solutions tailored for different industries with proven expertise across our core service areas.",
-                items: [
-                    {
-                        href: "/solutions/automotive",
-                        label: "Automotive Industry",
-                        description: "Supply chain • Manufacturing • Quality",
-                        iconType: "svg",
-                        icon: "mdi:car"
-                    },
-                    {
-                        href: "/solutions/aerospace",
-                        label: "Aerospace & Defense",
-                        description: "Precision • AS9100 certified",
-                        iconType: "svg",
-                        icon: "heroicons:paper-airplane-20-solid"
-                    },
-                    {
-                        href: "/solutions/electronics",
-                        label: "Electronics & Technology",
-                        description: "Design • Prototyping • Assembly",
-                        iconType: "svg",
-                        icon: "heroicons:cpu-chip-20-solid"
-                    },
-                    {
-                        href: "/solutions/medical",
-                        label: "Medical & Healthcare",
-                        description: "FDA compliant • ISO 13485",
-                        iconType: "svg",
-                        icon: "heroicons:heart-20-solid"
-                    }
-                ]
-            },
-            {
-                title: "Business Solutions",
-                description: "Comprehensive business solutions combining our core services",
-                items: [
-                    {
-                        href: "/solutions/end-to-end",
-                        label: "End-to-End Solutions",
-                        description: "Complete value chain management",
-                        badge: "Popular",
-                        iconType: "svg",
-                        icon: "heroicons:arrow-path-20-solid"
-                    },
-                    {
-                        href: "/solutions/supply-chain-optimization",
-                        label: "Supply Chain Optimization",
-                        description: "Sourcing • Procurement • Logistics",
+                        href: "/industries/ev-mobility",
+                        label: "EV/E-Mobility",
+                        description: "Electric vehicles • Charging infrastructure",
                         iconType: "svg",
                         icon: "heroicons:truck-20-solid"
                     },
                     {
-                        href: "/solutions/innovation-lab",
-                        label: "Innovation Lab Services",
-                        description: "Design • Prototyping • Testing",
+                        href: "/industries/bess-energy-storage",
+                        label: "BESS/Energy Storage",
+                        description: "Battery systems • Grid storage",
                         iconType: "svg",
-                        icon: "heroicons:beaker-20-solid"
+                        icon: "heroicons:battery-100-20-solid"
                     },
                     {
-                        href: "/solutions/operational-excellence",
-                        label: "Operational Excellence",
-                        description: "Process improvement • Consulting",
+                        href: "/industries/drones",
+                        label: "Drones",
+                        description: "UAV manufacturing • Aerial systems",
                         iconType: "svg",
-                        icon: "heroicons:chart-bar-20-solid"
+                        icon: "heroicons:paper-airplane-20-solid"
+                    },
+                    {
+                        href: "/industries/e-agritech",
+                        label: "E-Agritech",
+                        description: "Smart farming • Agricultural tech",
+                        iconType: "svg",
+                        icon: "heroicons:leaf-20-solid"
+                    },
+                    {
+                        href: "/industries/aerospace",
+                        label: "Aerospace",
+                        description: "Aviation • Space technology",
+                        iconType: "svg",
+                        icon: "heroicons:rocket-launch-20-solid"
                     }
                 ]
             },
@@ -209,76 +181,81 @@ export const navigationLinks: NavLink[] = [
         ]
     },
     {
-        id: "resources",
-        href: "#",
-        label: "Resources",
-        dropdown: [
-            {
-                title: "Learning & Insights",
-                description: "Stay updated with the latest trends in sourcing, design, manufacturing, and operational excellence.",
-                items: [
-                    {
-                        href: "/case-studies",
-                        label: "Case Studies",
-                        description: "Success stories • Project highlights",
-                        iconType: "svg",
-                        icon: "heroicons:chart-pie-20-solid"
-                    },
-                    {
-                        href: "/blog",
-                        label: "Industry Blog",
-                        description: "Business insights • Best practices",
-                        iconType: "svg",
-                        icon: "heroicons:document-text-20-solid"
-                    },
-                    {
-                        href: "/webinars",
-                        label: "Webinars & Events",
-                        description: "Live sessions • Expert talks",
-                        iconType: "svg",
-                        icon: "heroicons:video-camera-20-solid"
-                    },
-                    {
-                        href: "/whitepapers",
-                        label: "White Papers",
-                        description: "Research • Strategic guides",
-                        iconType: "svg",
-                        icon: "heroicons:academic-cap-20-solid"
-                    }
-                ]
-            },
-            {
-                title: "Tools & Downloads",
-                description: "Access our comprehensive resource library",
-                items: [
-                    {
-                        href: "/downloads/catalogs",
-                        label: "Product Catalogs",
-                        description: "Complete specifications",
-                        badge: "PDF",
-                        iconType: "svg",
-                        icon: "heroicons:folder-20-solid"
-                    },
-                    {
-                        href: "/downloads/certifications",
-                        label: "Certifications",
-                        description: "ISO • Quality standards",
-                        badge: "Verified",
-                        iconType: "svg",
-                        icon: "heroicons:shield-check-20-solid"
-                    },
-                    {
-                        href: "/calculator",
-                        label: "Cost Calculator",
-                        description: "Estimate project costs",
-                        badge: "Free Tool",
-                        iconType: "svg",
-                        icon: "heroicons:calculator-20-solid"
-                    }
-                ]
-            }
-        ]
+        id: "industries",
+        href: "/industries",
+        label: "Industries"
     },
+    // {
+    //     id: "resources",
+    //     href: "#",
+    //     label: "Resources",
+    //     dropdown: [
+    //         {
+    //             title: "Learning & Insights",
+    //             description: "Stay updated with the latest trends in sourcing, design, manufacturing, and operational excellence.",
+    //             items: [
+    //                 {
+    //                     href: "/case-studies",
+    //                     label: "Case Studies",
+    //                     description: "Success stories • Project highlights",
+    //                     iconType: "svg",
+    //                     icon: "heroicons:chart-pie-20-solid"
+    //                 },
+    //                 {
+    //                     href: "/blog",
+    //                     label: "Industry Blog",
+    //                     description: "Business insights • Best practices",
+    //                     iconType: "svg",
+    //                     icon: "heroicons:document-text-20-solid"
+    //                 },
+    //                 {
+    //                     href: "/webinars",
+    //                     label: "Webinars & Events",
+    //                     description: "Live sessions • Expert talks",
+    //                     iconType: "svg",
+    //                     icon: "heroicons:video-camera-20-solid"
+    //                 },
+    //                 {
+    //                     href: "/whitepapers",
+    //                     label: "White Papers",
+    //                     description: "Research • Strategic guides",
+    //                     iconType: "svg",
+    //                     icon: "heroicons:academic-cap-20-solid"
+    //                 }
+    //             ]
+    //         },
+    //         {
+    //             title: "Tools & Downloads",
+    //             description: "Access our comprehensive resource library",
+    //             items: [
+    //                 {
+    //                     href: "/downloads/catalogs",
+    //                     label: "Product Catalogs",
+    //                     description: "Complete specifications",
+    //                     badge: "PDF",
+    //                     iconType: "svg",
+    //                     icon: "heroicons:folder-20-solid"
+    //                 },
+    //                 {
+    //                     href: "/downloads/certifications",
+    //                     label: "Certifications",
+    //                     description: "ISO • Quality standards",
+    //                     badge: "Verified",
+    //                     iconType: "svg",
+    //                     icon: "heroicons:shield-check-20-solid"
+    //                 },
+    //                 {
+    //                     href: "/calculator",
+    //                     label: "Cost Calculator",
+    //                     description: "Estimate project costs",
+    //                     badge: "Free Tool",
+    //                     iconType: "svg",
+    //                     icon: "heroicons:calculator-20-solid"
+    //                 }
+    //             ]
+    //         }
+    //     ]
+    // },
     {
         id: "company",
         href: "#",
@@ -372,11 +349,6 @@ export const mobileNavigationLinks: NavLink[] = [
         id: "services",
         href: "/services",
         label: "Services"
-    },
-    {
-        id: "about",
-        href: "/about",
-        label: "About Us"
     },
     {
         id: "blog",

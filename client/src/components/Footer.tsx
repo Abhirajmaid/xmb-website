@@ -86,27 +86,29 @@ export default function Footer() {
               </p>
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-6">
-              <div className="text-center p-4 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10">
-                <div className="text-2xl font-bold text-white">500+</div>
-                <div className="text-xs text-gray-400 uppercase tracking-wide">
-                  Projects
+            {/* Stats - commented out */}
+            {false && (
+              <div className="grid grid-cols-3 gap-6">
+                <div className="text-center p-4 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10">
+                  <div className="text-2xl font-bold text-white">500+</div>
+                  <div className="text-xs text-gray-400 uppercase tracking-wide">
+                    Projects
+                  </div>
+                </div>
+                <div className="text-center p-4 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10">
+                  <div className="text-2xl font-bold text-white">25+</div>
+                  <div className="text-xs text-gray-400 uppercase tracking-wide">
+                    Countries
+                  </div>
+                </div>
+                <div className="text-center p-4 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10">
+                  <div className="text-2xl font-bold text-white">15+</div>
+                  <div className="text-xs text-gray-400 uppercase tracking-wide">
+                    Years
+                  </div>
                 </div>
               </div>
-              <div className="text-center p-4 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10">
-                <div className="text-2xl font-bold text-white">25+</div>
-                <div className="text-xs text-gray-400 uppercase tracking-wide">
-                  Countries
-                </div>
-              </div>
-              <div className="text-center p-4 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10">
-                <div className="text-2xl font-bold text-white">15+</div>
-                <div className="text-xs text-gray-400 uppercase tracking-wide">
-                  Years
-                </div>
-              </div>
-            </div>
+            )}
 
             {/* Social Media */}
             <div>

@@ -26,16 +26,22 @@ export default function Header() {
 
   // Handle dropdown interactions
   const handleMouseEnter = (linkId: string) => {
-    if (dropdownTimeoutRef.current) {
-      clearTimeout(dropdownTimeoutRef.current);
+    // Only apply hover for non-industries dropdowns
+    if (linkId !== 'industries') {
+      if (dropdownTimeoutRef.current) {
+        clearTimeout(dropdownTimeoutRef.current);
+      }
+      setActiveDropdown(linkId);
     }
-    setActiveDropdown(linkId);
   };
 
   const handleMouseLeave = () => {
-    dropdownTimeoutRef.current = setTimeout(() => {
-      setActiveDropdown(null);
-    }, 150);
+    // Only apply hover leave for non-industries dropdowns
+    if (activeDropdown !== 'industries') {
+      dropdownTimeoutRef.current = setTimeout(() => {
+        setActiveDropdown(null);
+      }, 150);
+    }
   };
 
   const handleDropdownMouseEnter = () => {
@@ -45,10 +51,15 @@ export default function Header() {
   };
 
   const handleDropdownMouseLeave = () => {
-    dropdownTimeoutRef.current = setTimeout(() => {
-      setActiveDropdown(null);
-    }, 150);
+    // Only apply hover leave for non-industries dropdowns
+    if (activeDropdown !== 'industries') {
+      dropdownTimeoutRef.current = setTimeout(() => {
+        setActiveDropdown(null);
+      }, 150);
+    }
   };
+
+  // Industries is now a direct link, no dropdown functionality needed
 
   // Handle mobile dropdown toggle
   const toggleMobileDropdown = (linkId: string) => {
@@ -57,9 +68,13 @@ export default function Header() {
 
   // Close dropdowns when clicking outside
   useEffect(() => {
-    const handleClickOutside = () => {
-      setActiveDropdown(null);
-      setIsMobileDropdownOpen(null);
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      // Don't close if clicking on the dropdown or navigation items
+      if (!target.closest('.dropdown-container') && !target.closest('nav')) {
+        setActiveDropdown(null);
+        setIsMobileDropdownOpen(null);
+      }
     };
 
     document.addEventListener("click", handleClickOutside);
@@ -127,7 +142,7 @@ export default function Header() {
               <div
                 key={link.id}
                 className="relative"
-                onMouseEnter={() => link.dropdown && handleMouseEnter(link.id)}
+                onMouseEnter={() => link.dropdown && link.id !== 'industries' && handleMouseEnter(link.id)}
                 onMouseLeave={handleMouseLeave}
               >
                 <a
@@ -141,10 +156,16 @@ export default function Header() {
                     if (link.dropdown && link.href === "#") {
                       e.preventDefault();
                     }
+                    // Industries should navigate directly to the page, not show dropdown
+                    if (link.id === 'industries') {
+                      // Allow normal navigation to /industries page
+                      return;
+                    }
                   }}
                 >
                   <span>{link.label}</span>
-                  {link.dropdown && (
+                  {/* Show dropdown arrow for all items except industries */}
+                  {link.dropdown && link.id !== 'industries' && (
                     <svg
                       className={`w-4 h-4 transition-transform duration-200 ${
                         activeDropdown === link.id ? "rotate-180" : ""
@@ -212,144 +233,162 @@ export default function Header() {
         {/* Global Dropdown Menu */}
         {activeDropdown && (
           <div
-            className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-3xl shadow-2xl shadow-black/20 p-8 animate-in slide-in-from-top-5 duration-300 z-50"
+            className="dropdown-container absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-3xl shadow-2xl shadow-black/20 p-8 animate-in slide-in-from-top-5 duration-300 z-50"
             onMouseEnter={handleDropdownMouseEnter}
             onMouseLeave={handleDropdownMouseLeave}
           >
-            <div
-              className={`grid gap-8 ${
-                navigationLinks.find((link) => link.id === activeDropdown)
-                  ?.dropdown?.length === 3
-                  ? "grid-cols-3"
-                  : "grid-cols-2"
-              }`}
-            >
+            <div className={`grid gap-8 ${
+              navigationLinks.find((link) => link.id === activeDropdown)?.dropdown?.length === 3 
+                ? "grid-cols-3" 
+                : "grid-cols-2"
+            }`}>
               {navigationLinks
                 .find((link) => link.id === activeDropdown)
                 ?.dropdown?.map((section, sectionIndex) => (
-                  <div key={sectionIndex} className="space-y-4">
-                    {/* Section Header */}
-                    <div className="pb-4 border-b border-gray-200/50">
-                      <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  <div key={sectionIndex} className="flex flex-col h-full">
+                    {/* Section Header - Fixed Height */}
+                    <div className="h-24 mb-6">
+                      <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight">
                         {section.title}
                       </h3>
                       {section.description && (
-                        <p className="text-sm text-gray-600 leading-relaxed">
+                        <p className="text-sm text-gray-600 leading-relaxed line-clamp-2">
                           {section.description}
                         </p>
                       )}
                     </div>
 
-                    {/* Section Items */}
-                    <div className="space-y-2">
+                    {/* Section Items - Fixed Height Cards */}
+                    <div className="flex-1 space-y-3">
                       {section.items.map((item, itemIndex) => (
                         <a
                           key={itemIndex}
                           href={item.href}
-                          className="group flex items-start space-x-4 p-4 rounded-2xl bg-gray-50 border border-gray-200 hover:bg-blue-50 hover:border-blue-300 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/20"
+                          className="group block h-20 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-blue-50 hover:border-blue-300 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/20"
                         >
-                          <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-200 transition-all duration-300">
-                            {item.iconType === "svg" ? (
-                              <Icon
-                                name={item.icon || ""}
-                                className="text-blue-600"
-                                size="md"
-                              />
-                            ) : (
-                              <span className="text-lg text-blue-600">
-                                {item.icon}
-                              </span>
-                            )}
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <div className="flex items-center justify-between mb-2">
-                              <h4 className="text-sm font-semibold text-gray-900 group-hover:text-blue-700 transition-colors duration-300">
-                                {item.label}
-                              </h4>
-                              {item.price && (
-                                <span className="text-sm font-bold text-blue-600 bg-blue-100 px-2 py-1 rounded-full">
-                                  {item.price}
+                          <div className="flex items-center space-x-3 h-full">
+                            {/* Icon Container - Fixed Size */}
+                            <div className="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-200 transition-all duration-300">
+                              {item.iconType === "svg" ? (
+                                <Icon
+                                  name={item.icon || ""}
+                                  className="text-blue-600"
+                                  size="sm"
+                                />
+                              ) : (
+                                <span className="text-sm text-blue-600">
+                                  {item.icon}
                                 </span>
                               )}
                             </div>
-                            {item.description && (
-                              <p className="text-xs text-gray-600 leading-relaxed">
-                                {item.description}
-                              </p>
-                            )}
-                            {item.badge && (
-                              <span className="inline-block mt-2 px-3 py-1 bg-green-100 text-green-700 text-xs font-medium rounded-full border border-green-200">
-                                {item.badge}
-                              </span>
-                            )}
-                          </div>
-                          <div className="flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <svg
-                              className="w-4 h-4 text-blue-600"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M9 5l7 7-7 7"
-                              />
-                            </svg>
+                            
+                            {/* Content Container - Fixed Height */}
+                            <div className="flex-1 min-w-0 h-full flex flex-col justify-center">
+                              <div className="flex items-center justify-between mb-1">
+                                <h4 className="text-sm font-semibold text-gray-900 group-hover:text-blue-700 transition-colors duration-300 truncate">
+                                  {item.label}
+                                </h4>
+                                {item.badge && (
+                                  <span className="ml-2 px-2 py-1 bg-green-100 text-green-700 text-xs font-medium rounded-full border border-green-200 flex-shrink-0">
+                                    {item.badge}
+                                  </span>
+                                )}
+                              </div>
+                              {item.description && (
+                                <p className="text-xs text-gray-600 leading-tight line-clamp-1">
+                                  {item.description}
+                                </p>
+                              )}
+                            </div>
+                            
+                            {/* Arrow Icon */}
+                            <div className="flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                              <svg
+                                className="w-4 h-4 text-blue-600"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M9 5l7 7-7 7"
+                                />
+                              </svg>
+                            </div>
                           </div>
                         </a>
                       ))}
                     </div>
 
-                    {/* Explore Button for each section */}
-                    {sectionIndex === 0 && (
-                      <div className="pt-6">
-                        <Button
-                          variant="gradient"
-                          size="md"
-                          href={
-                            navigationLinks.find(
-                              (link) => link.id === activeDropdown
-                            )?.href || "#"
-                          }
-                          showArrow={true}
-                          className="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 hover:from-pink-600 hover:via-purple-600 hover:to-blue-600 text-white shadow-xl hover:shadow-2xl hover:shadow-pink-500/30 transform hover:scale-110 transition-all duration-500 border-0 font-bold tracking-wide"
-                        >
-                          Explore
-                        </Button>
-                      </div>
-                    )}
-
-                    {/* Explore models button for second section */}
-                    {sectionIndex === 1 && (
-                      <div className="pt-6">
-                        <Button
-                          variant="glass"
-                          size="md"
-                          href="#"
-                          showArrow={true}
-                          className="backdrop-blur-xl bg-gradient-to-r from-slate-900/80 via-gray-900/80 to-slate-900/80 hover:from-slate-800/90 hover:via-gray-800/90 hover:to-slate-800/90 border border-white/20 hover:border-white/40 text-white shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-500 font-bold tracking-wide"
-                        >
-                          Explore models
-                        </Button>
-                      </div>
-                    )}
-
-                    {/* Join Platform button for third section */}
-                    {sectionIndex === 2 && (
-                      <div className="pt-6">
-                        <Button
-                          variant="primary"
-                          size="sm"
-                          href="/register"
-                          showArrow={true}
-                          className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg hover:shadow-blue-500/25"
-                        >
-                          Join Platform
-                        </Button>
-                      </div>
-                    )}
+                    {/* CTA Button - Fixed Position */}
+                    <div className="mt-6 pt-4 border-t border-gray-200">
+                      {activeDropdown === 'solutions' && (
+                        <>
+                          {sectionIndex === 0 && (
+                            <Button
+                              variant="primary"
+                              size="sm"
+                              showArrow={true}
+                              href="/solutions"
+                              className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800"
+                            >
+                              Explore
+                            </Button>
+                          )}
+                          {sectionIndex === 1 && (
+                            <Button
+                              variant="primary"
+                              size="sm"
+                              showArrow={true}
+                              href="/industries"
+                              className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800"
+                            >
+                              Explore Industries
+                            </Button>
+                          )}
+                          {sectionIndex === 2 && (
+                            <Button
+                              variant="primary"
+                              size="sm"
+                              showArrow={true}
+                              href="/register"
+                              className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800"
+                            >
+                              Join Platform
+                            </Button>
+                          )}
+                        </>
+                      )}
+                      
+                      {activeDropdown === 'company' && (
+                        <>
+                          {sectionIndex === 0 && (
+                            <Button
+                              variant="primary"
+                              size="sm"
+                              showArrow={true}
+                              href="/about"
+                              className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800"
+                            >
+                              Learn More
+                            </Button>
+                          )}
+                          {sectionIndex === 1 && (
+                            <Button
+                              variant="primary"
+                              size="sm"
+                              showArrow={true}
+                              href="/contact"
+                              className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800"
+                            >
+                              Get In Touch
+                            </Button>
+                          )}
+                        </>
+                      )}
+                    </div>
                   </div>
                 ))}
             </div>

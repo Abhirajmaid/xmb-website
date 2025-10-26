@@ -58,31 +58,20 @@ export default function HeroSection() {
                 </h1>
 
                 <p className="text-xl lg:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto">
-                  Transform your manufacturing operations with XMB's innovative
-                  solutions. We deliver precision engineering and business
-                  excellence that powers your growth.
+                  Xtrawrkx Manufacturing Services provides end-to-end product development and manufacturing services — from ideation and prototyping to large-scale production, quality assurance, logistics, and supply chain solutions.
                 </p>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
+            <div className="flex justify-center items-center">
               <Button
-                variant="glass"
+                variant="primary"
                 size="xl"
                 showArrow={true}
                 href="/services"
                 className="w-full sm:w-auto min-w-0"
               >
-                Explore Solutions
-              </Button>
-              <Button
-                variant="primary"
-                size="xl"
-                showArrow={true}
-                href="/demo"
-                className="w-full sm:w-auto min-w-0"
-              >
-                Watch Demo
+                Explore Services
               </Button>
             </div>
           </div>

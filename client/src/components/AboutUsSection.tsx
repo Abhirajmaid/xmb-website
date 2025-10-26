@@ -69,7 +69,8 @@ export default function AboutUsSection() {
                 success.
               </p>
 
-              <div className="grid grid-cols-2 gap-6">
+              {/* Statistics Section - Commented out */}
+              {/* <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-gray-900 mb-2">
                     500+
@@ -82,7 +83,7 @@ export default function AboutUsSection() {
                   </div>
                   <div className="text-gray-600 text-sm">Success Rate</div>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Right Content - Image Gallery */}
@@ -161,7 +162,8 @@ export default function AboutUsSection() {
         </div>
 
         {/* Testimonials Section - What they say about us */}
-        <div className="bg-white rounded-3xl p-4 sm:p-6 md:p-10 lg:p-14 shadow-sm mt-6 sm:mt-8">
+        {false && (
+          <div className="bg-white rounded-3xl p-4 sm:p-6 md:p-10 lg:p-14 shadow-sm mt-6 sm:mt-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
             <div>
               <p className="text-gray-500 uppercase tracking-wide text-sm font-medium mb-6">
@@ -509,7 +511,9 @@ export default function AboutUsSection() {
               </div>
             </div>
           </div>
-        </div>
+          </div>
+        )}
+        {/* </div> */}
       </div>
     </section>
   );

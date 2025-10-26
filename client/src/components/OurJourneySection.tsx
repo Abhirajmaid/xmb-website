@@ -431,7 +431,7 @@ export default function OurJourneySection() {
         </div>
 
         {/* Bottom CTA Section */}
-        <div className="text-center mt-20">
+        {/* <div className="text-center mt-20">
           <div className="backdrop-blur-xl bg-white/60 border border-white/40 rounded-3xl p-6 sm:p-8 md:p-12 shadow-2xl">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
               Ready to Write Your Success Story?
@@ -461,7 +461,7 @@ export default function OurJourneySection() {
               </Button>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

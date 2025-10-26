@@ -15,10 +15,10 @@ export default function Home() {
       <Header />
       <HeroSection />
       <CTARegistrationSection />
-      <AboutUsSection />
       <ModernServicesSection />
+      <AboutUsSection />
       <GlobalManufacturingCapacity />
-      <ModernTestimonialsSection />
+      {/* <ModernTestimonialsSection /> */}
       <OurJourneySection />
       <LatestArticlesSection />
       <Footer />

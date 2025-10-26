@@ -162,7 +162,7 @@ export default function CTARegistrationSection() {
         </div>
 
         {/* Enhanced Stats Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 max-w-5xl mx-auto">
+        {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 max-w-5xl mx-auto">
           <div className="group text-center backdrop-blur-xl bg-white/60 border border-white/40 rounded-2xl p-3 sm:p-4 md:p-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-blue-100/30 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <div className="relative z-10">
@@ -207,7 +207,7 @@ export default function CTARegistrationSection() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
