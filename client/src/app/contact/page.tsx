@@ -4,6 +4,7 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Button from "@/components/Button";
+import PageHero from "@/components/PageHero";
 
 export default function ContactPage() {
   const [showNotification, setShowNotification] = useState(false);
@@ -60,7 +61,7 @@ export default function ContactPage() {
     <main className="min-h-screen">
       {/* Notification Toast */}
       {showNotification && (
-        <div className="fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 animate-fade-in">
+        <div className="fixed top-4 right-4 bg-brand-success text-white px-6 py-3 rounded-lg shadow-lg z-50 animate-fade-in">
           {notificationMessage}
         </div>
       )}
@@ -68,26 +69,12 @@ export default function ContactPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 px-6 overflow-hidden h-[50vh]">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&h=1080&fit=crop&crop=center"
-            alt="Contact Background"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/60 via-blue-800/50 to-blue-700/40"></div>
-        </div>
-
-        {/* Glass Overlay with Content */}
-        <div className="absolute inset-6 backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl flex items-center justify-center z-10">
-          <div className="text-center text-white">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-              Contact Us
-            </h1>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        title="Contact Us"
+        backgroundImage="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&h=1080&fit=crop&crop=center"
+        backgroundAlt="Contact Background"
+        variant="full"
+      />
 
       {/* Main Contact Section */}
       <section className="py-20 px-6 bg-gray-50">
@@ -97,14 +84,15 @@ export default function ContactPage() {
             <div className="bg-white rounded-3xl p-8 shadow-lg">
               <div className="mb-8">
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                  Xtrawrkx Manufacturing is a global manufacturer that can help you maximize
-                  efficiency, quality and value in your supply chain.
+                  Xtrawrkx Manufacturing is a global manufacturer that can help
+                  you maximize efficiency, quality and value in your supply
+                  chain.
                 </h2>
-                <p className="text-blue-600 text-lg">
+                <p className="text-brand-primary text-lg">
                   With worldwide operations and manufacturing capabilities for
-                  precision parts, capital goods, and consumer goods, Xtrawrkx Manufacturing
-                  offers best-in-class lead times — whatever the category,
-                  product, scale, or geography.
+                  precision parts, capital goods, and consumer goods, Xtrawrkx
+                  Manufacturing offers best-in-class lead times — whatever the
+                  category, product, scale, or geography.
                 </p>
               </div>
 
@@ -131,7 +119,7 @@ export default function ContactPage() {
                       name="firstName"
                       value={formData.firstName}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200"
                       required
                     />
                   </div>
@@ -148,7 +136,7 @@ export default function ContactPage() {
                       name="lastName"
                       value={formData.lastName}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200"
                       required
                     />
                   </div>
@@ -169,7 +157,7 @@ export default function ContactPage() {
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200"
                       required
                     />
                   </div>
@@ -186,7 +174,7 @@ export default function ContactPage() {
                       name="companyName"
                       value={formData.companyName}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200"
                       required
                     />
                   </div>
@@ -206,7 +194,7 @@ export default function ContactPage() {
                     rows={4}
                     value={formData.project}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 resize-none"
                     required
                   ></textarea>
                 </div>
@@ -225,7 +213,7 @@ export default function ContactPage() {
                       id="file"
                       name="file"
                       onChange={handleFileChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-brand-light file:text-brand-dark hover:file:bg-brand-light/80"
                       accept=".pdf,.dwg,.step,.stp,.iges,.jpg,.png"
                     />
                   </div>
@@ -251,13 +239,14 @@ export default function ContactPage() {
                       name="agreeToReceive"
                       checked={formData.agreeToReceive}
                       onChange={handleInputChange}
-                      className="mt-1 w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                      className="mt-1 w-4 h-4 text-brand-primary border-gray-300 rounded focus:ring-brand-primary"
                     />
                     <label
                       htmlFor="agreeToReceive"
                       className="text-sm text-gray-700"
                     >
-                      I agree to receive communications from Xtrawrkx Manufacturing.*
+                      I agree to receive communications from Xtrawrkx
+                      Manufacturing.*
                     </label>
                   </div>
 
@@ -268,14 +257,14 @@ export default function ContactPage() {
                       name="agreeToStore"
                       checked={formData.agreeToStore}
                       onChange={handleInputChange}
-                      className="mt-1 w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                      className="mt-1 w-4 h-4 text-brand-primary border-gray-300 rounded focus:ring-brand-primary"
                     />
                     <label
                       htmlFor="agreeToStore"
                       className="text-sm text-gray-700"
                     >
-                      I agree to allow Xtrawrkx Manufacturing to store and process my personal
-                      data.*
+                      I agree to allow Xtrawrkx Manufacturing to store and
+                      process my personal data.*
                     </label>
                   </div>
                 </div>
@@ -323,7 +312,7 @@ export default function ContactPage() {
 
                 {/* Address */}
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 text-blue-600 mt-1">
+                  <div className="w-6 h-6 text-brand-primary mt-1">
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
                         strokeLinecap="round"
@@ -346,7 +335,7 @@ export default function ContactPage() {
 
                 {/* Phone */}
                 <div className="flex items-center space-x-3">
-                  <div className="w-6 h-6 text-blue-600">
+                  <div className="w-6 h-6 text-brand-primary">
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
                         strokeLinecap="round"
@@ -356,14 +345,14 @@ export default function ContactPage() {
                       />
                     </svg>
                   </div>
-                  <p className="text-blue-600 text-sm font-medium">
+                  <p className="text-brand-primary text-sm font-medium">
                     {locationData.phone}
                   </p>
                 </div>
 
                 {/* Email */}
                 <div className="flex items-center space-x-3">
-                  <div className="w-6 h-6 text-blue-600">
+                  <div className="w-6 h-6 text-brand-primary">
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
                         strokeLinecap="round"
@@ -373,14 +362,14 @@ export default function ContactPage() {
                       />
                     </svg>
                   </div>
-                  <p className="text-blue-600 text-sm font-medium">
+                  <p className="text-brand-primary text-sm font-medium">
                     {locationData.email}
                   </p>
                 </div>
 
                 {/* View on Google Map */}
                 <div className="pt-4">
-                  <button className="inline-flex items-center text-blue-600 text-sm font-medium hover:text-blue-700 transition-colors">
+                  <button className="inline-flex items-center text-brand-primary text-sm font-medium hover:text-brand-dark transition-colors">
                     View on Google Map
                     <svg
                       className="w-4 h-4 ml-1"

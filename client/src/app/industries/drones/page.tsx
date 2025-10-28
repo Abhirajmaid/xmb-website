@@ -18,24 +18,48 @@ export default function DronesPage() {
   const services = [
     {
       title: "Commercial Drones",
-      description: "Professional-grade UAVs for commercial applications including delivery, inspection, and surveying",
-      features: ["Delivery Drones", "Inspection UAVs", "Surveying Systems", "Payload Integration"]
+      description:
+        "Professional-grade UAVs for commercial applications including delivery, inspection, and surveying",
+      features: [
+        "Delivery Drones",
+        "Inspection UAVs",
+        "Surveying Systems",
+        "Payload Integration",
+      ],
     },
     {
       title: "Industrial UAVs",
-      description: "Heavy-duty drones for industrial applications requiring robust performance and reliability",
-      features: ["Heavy Lift Drones", "Industrial Inspection", "Cargo Transport", "Emergency Response"]
+      description:
+        "Heavy-duty drones for industrial applications requiring robust performance and reliability",
+      features: [
+        "Heavy Lift Drones",
+        "Industrial Inspection",
+        "Cargo Transport",
+        "Emergency Response",
+      ],
     },
     {
       title: "Defense Systems",
-      description: "Military-grade drone systems for defense and security applications",
-      features: ["Surveillance Drones", "Reconnaissance Systems", "Defense Platforms", "Security Solutions"]
+      description:
+        "Military-grade drone systems for defense and security applications",
+      features: [
+        "Surveillance Drones",
+        "Reconnaissance Systems",
+        "Defense Platforms",
+        "Security Solutions",
+      ],
     },
     {
       title: "Aerial Surveillance",
-      description: "Advanced surveillance and monitoring systems for security and safety applications",
-      features: ["Security Monitoring", "Border Patrol", "Search & Rescue", "Environmental Monitoring"]
-    }
+      description:
+        "Advanced surveillance and monitoring systems for security and safety applications",
+      features: [
+        "Security Monitoring",
+        "Border Patrol",
+        "Search & Rescue",
+        "Environmental Monitoring",
+      ],
+    },
   ];
 
   const capabilities = [
@@ -44,7 +68,7 @@ export default function DronesPage() {
     "Payload Integration",
     "Navigation Systems",
     "Communication Systems",
-    "Safety Compliance"
+    "Safety Compliance",
   ];
 
   return (
@@ -77,7 +101,8 @@ export default function DronesPage() {
               Drones
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              Cutting-edge drone technology for commercial, industrial, and defense applications
+              Cutting-edge drone technology for commercial, industrial, and
+              defense applications
             </p>
           </div>
         </div>
@@ -97,26 +122,36 @@ export default function DronesPage() {
                 Soaring to New Heights
               </h2>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                The drone industry is revolutionizing how we approach aerial operations across multiple sectors. 
-                From commercial delivery services to industrial inspection and defense applications, drones 
-                are transforming industries with their versatility, efficiency, and precision. Our manufacturing 
-                expertise delivers reliable, high-performance UAV systems for every mission.
+                The drone industry is revolutionizing how we approach aerial
+                operations across multiple sectors. From commercial delivery
+                services to industrial inspection and defense applications,
+                drones are transforming industries with their versatility,
+                efficiency, and precision. Our manufacturing expertise delivers
+                reliable, high-performance UAV systems for every mission.
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-600 mb-2">200+</div>
+                  <div className="text-3xl font-bold text-purple-600 mb-2">
+                    200+
+                  </div>
                   <div className="text-sm text-gray-600">Drone Models</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-600 mb-2">50+</div>
+                  <div className="text-3xl font-bold text-purple-600 mb-2">
+                    50+
+                  </div>
                   <div className="text-sm text-gray-600">Applications</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-600 mb-2">99.8%</div>
+                  <div className="text-3xl font-bold text-purple-600 mb-2">
+                    99.8%
+                  </div>
                   <div className="text-sm text-gray-600">Flight Success</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-600 mb-2">24/7</div>
+                  <div className="text-3xl font-bold text-purple-600 mb-2">
+                    24/7
+                  </div>
                   <div className="text-sm text-gray-600">Support</div>
                 </div>
               </div>
@@ -132,8 +167,10 @@ export default function DronesPage() {
                   Advanced Drone Manufacturing
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Our facilities specialize in manufacturing precision-engineered drones with advanced 
-                  flight control systems, robust construction, and cutting-edge payload integration capabilities.
+                  Our facilities specialize in manufacturing
+                  precision-engineered drones with advanced flight control
+                  systems, robust construction, and cutting-edge payload
+                  integration capabilities.
                 </p>
               </div>
             </div>
@@ -149,7 +186,8 @@ export default function DronesPage() {
               Our Drone Services
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Comprehensive drone solutions for commercial, industrial, and defense applications
+              Comprehensive drone solutions for commercial, industrial, and
+              defense applications
             </p>
           </div>
 
@@ -175,16 +213,21 @@ export default function DronesPage() {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">
+                    {service.title}
+                  </h3>
                 </div>
-                
+
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   {service.description}
                 </p>
 
                 <div className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center space-x-2">
+                    <div
+                      key={featureIndex}
+                      className="flex items-center space-x-2"
+                    >
                       <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
                       <span className="text-sm text-gray-600">{feature}</span>
                     </div>
@@ -231,7 +274,9 @@ export default function DronesPage() {
                     />
                   </svg>
                 </div>
-                <h3 className="font-semibold text-gray-900 text-sm">{capability}</h3>
+                <h3 className="font-semibold text-gray-900 text-sm">
+                  {capability}
+                </h3>
               </div>
             ))}
           </div>
@@ -245,8 +290,8 @@ export default function DronesPage() {
             Ready to Take Flight?
           </h2>
           <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-            Partner with Xtrawrkx Manufacturing for cutting-edge drone solutions. 
-            Let's elevate your operations to new heights.
+            Partner with Xtrawrkx Manufacturing for cutting-edge drone
+            solutions. Let's elevate your operations to new heights.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -272,7 +317,3 @@ export default function DronesPage() {
     </main>
   );
 }
-
-
-
-

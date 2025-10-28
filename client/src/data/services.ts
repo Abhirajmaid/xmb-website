@@ -360,8 +360,8 @@ export const servicesData: Service[] = [
         id: "operation-consulting-service-excellence",
         title: "Operation Consulting / Service Excellence",
         description: "Strategic operational consulting and service excellence programs to optimize your business processes, improve efficiency, and enhance customer satisfaction. We help organizations achieve operational excellence through proven methodologies.",
-        image: "https://images.unsplash.com/photo-1565043589221-1d6d4b8b8b8b?w=800&h=600&fit=crop",
-        heroImage: "https://images.unsplash.com/photo-1565043589221-1d6d4b8b8b8b?w=1920&h=1080&fit=crop&crop=center",
+        image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&h=1080&fit=crop&crop=center",
+        heroImage: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&h=1080&fit=crop&crop=center",
         overview: {
             title: "Operational Excellence & Service Leadership",
             description: "Our operational consulting services combine deep industry expertise with proven methodologies to drive sustainable improvements in efficiency, quality, and customer satisfaction. We partner with you to build world-class operations.",

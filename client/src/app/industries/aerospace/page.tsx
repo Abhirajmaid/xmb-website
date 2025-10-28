@@ -18,24 +18,48 @@ export default function AerospacePage() {
   const services = [
     {
       title: "Aircraft Components",
-      description: "Precision manufacturing of critical aircraft components including structural elements, landing gear, and propulsion systems",
-      features: ["Structural Components", "Landing Gear Systems", "Engine Components", "Flight Controls"]
+      description:
+        "Precision manufacturing of critical aircraft components including structural elements, landing gear, and propulsion systems",
+      features: [
+        "Structural Components",
+        "Landing Gear Systems",
+        "Engine Components",
+        "Flight Controls",
+      ],
     },
     {
       title: "Space Systems",
-      description: "Advanced manufacturing for space exploration including satellite components, launch vehicles, and space station modules",
-      features: ["Satellite Systems", "Launch Vehicles", "Space Station Modules", "Spacecraft Components"]
+      description:
+        "Advanced manufacturing for space exploration including satellite components, launch vehicles, and space station modules",
+      features: [
+        "Satellite Systems",
+        "Launch Vehicles",
+        "Space Station Modules",
+        "Spacecraft Components",
+      ],
     },
     {
       title: "Satellite Technology",
-      description: "High-precision manufacturing of satellite systems for communication, navigation, and earth observation",
-      features: ["Communication Satellites", "Navigation Systems", "Earth Observation", "Scientific Instruments"]
+      description:
+        "High-precision manufacturing of satellite systems for communication, navigation, and earth observation",
+      features: [
+        "Communication Satellites",
+        "Navigation Systems",
+        "Earth Observation",
+        "Scientific Instruments",
+      ],
     },
     {
       title: "Avionics",
-      description: "Advanced electronic systems for aircraft and spacecraft including navigation, communication, and control systems",
-      features: ["Flight Management", "Navigation Systems", "Communication Equipment", "Control Systems"]
-    }
+      description:
+        "Advanced electronic systems for aircraft and spacecraft including navigation, communication, and control systems",
+      features: [
+        "Flight Management",
+        "Navigation Systems",
+        "Communication Equipment",
+        "Control Systems",
+      ],
+    },
   ];
 
   const capabilities = [
@@ -44,7 +68,7 @@ export default function AerospacePage() {
     "Quality Assurance",
     "Testing & Validation",
     "Regulatory Compliance",
-    "Supply Chain Management"
+    "Supply Chain Management",
   ];
 
   return (
@@ -77,7 +101,8 @@ export default function AerospacePage() {
               Aerospace
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              Advanced aerospace manufacturing for aviation and space exploration technologies
+              Advanced aerospace manufacturing for aviation and space
+              exploration technologies
             </p>
           </div>
         </div>
@@ -97,27 +122,39 @@ export default function AerospacePage() {
                 Reaching for the Stars
               </h2>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                The aerospace industry represents the pinnacle of engineering excellence, pushing the boundaries 
-                of what's possible in aviation and space exploration. From commercial aircraft to space missions, 
-                aerospace manufacturing demands the highest levels of precision, quality, and reliability. Our 
-                manufacturing expertise delivers critical components and systems that meet the stringent requirements 
-                of aerospace applications.
+                The aerospace industry represents the pinnacle of engineering
+                excellence, pushing the boundaries of what's possible in
+                aviation and space exploration. From commercial aircraft to
+                space missions, aerospace manufacturing demands the highest
+                levels of precision, quality, and reliability. Our manufacturing
+                expertise delivers critical components and systems that meet the
+                stringent requirements of aerospace applications.
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
-                  <div className="text-sm text-gray-600">Aircraft Components</div>
+                  <div className="text-3xl font-bold text-blue-600 mb-2">
+                    500+
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    Aircraft Components
+                  </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">50+</div>
+                  <div className="text-3xl font-bold text-blue-600 mb-2">
+                    50+
+                  </div>
                   <div className="text-sm text-gray-600">Satellite Systems</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">99.99%</div>
+                  <div className="text-3xl font-bold text-blue-600 mb-2">
+                    99.99%
+                  </div>
                   <div className="text-sm text-gray-600">Quality Rate</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">AS9100</div>
+                  <div className="text-3xl font-bold text-blue-600 mb-2">
+                    AS9100
+                  </div>
                   <div className="text-sm text-gray-600">Certified</div>
                 </div>
               </div>
@@ -133,8 +170,9 @@ export default function AerospacePage() {
                   Advanced Aerospace Manufacturing
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Our facilities are equipped with state-of-the-art precision manufacturing capabilities, 
-                  advanced testing equipment, and rigorous quality control systems for aerospace applications.
+                  Our facilities are equipped with state-of-the-art precision
+                  manufacturing capabilities, advanced testing equipment, and
+                  rigorous quality control systems for aerospace applications.
                 </p>
               </div>
             </div>
@@ -150,7 +188,8 @@ export default function AerospacePage() {
               Our Aerospace Services
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Comprehensive aerospace manufacturing solutions for aviation and space applications
+              Comprehensive aerospace manufacturing solutions for aviation and
+              space applications
             </p>
           </div>
 
@@ -176,16 +215,21 @@ export default function AerospacePage() {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">
+                    {service.title}
+                  </h3>
                 </div>
-                
+
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   {service.description}
                 </p>
 
                 <div className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center space-x-2">
+                    <div
+                      key={featureIndex}
+                      className="flex items-center space-x-2"
+                    >
                       <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                       <span className="text-sm text-gray-600">{feature}</span>
                     </div>
@@ -232,7 +276,9 @@ export default function AerospacePage() {
                     />
                   </svg>
                 </div>
-                <h3 className="font-semibold text-gray-900 text-sm">{capability}</h3>
+                <h3 className="font-semibold text-gray-900 text-sm">
+                  {capability}
+                </h3>
               </div>
             ))}
           </div>
@@ -246,8 +292,8 @@ export default function AerospacePage() {
             Ready to Reach New Heights?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Partner with Xtrawrkx Manufacturing for cutting-edge aerospace solutions. 
-            Let's explore the infinite possibilities together.
+            Partner with Xtrawrkx Manufacturing for cutting-edge aerospace
+            solutions. Let's explore the infinite possibilities together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -273,7 +319,3 @@ export default function AerospacePage() {
     </main>
   );
 }
-
-
-
-

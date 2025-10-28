@@ -10,6 +10,7 @@ import {
   getFeaturedPosts,
   getAllCategories,
 } from "@/data/blogs";
+import PageHero from "@/components/PageHero";
 
 export default function BlogPage() {
   const [activeFilter, setActiveFilter] = useState("ALL");
@@ -49,48 +50,28 @@ export default function BlogPage() {
 
       {/* Notification Toast */}
       {showNotification && (
-        <div className="fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 animate-fade-in">
+        <div className="fixed top-4 right-4 bg-brand-success text-white px-6 py-3 rounded-lg shadow-lg z-50 animate-fade-in">
           {notificationMessage}
         </div>
       )}
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 px-6 overflow-hidden h-[50vh]">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&h=1080&fit=crop&crop=center"
-            alt="Manufacturing Insights Background"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/60 via-blue-800/50 to-blue-700/40"></div>
-        </div>
-
-        {/* Glass Overlay with Content */}
-        <div className="absolute inset-6 backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl flex items-center justify-center z-10">
-          <div className="text-center text-white">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-              Manufacturing Insights
-            </h1>
-            <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-              Explore the latest trends, technologies, and best practices in
-              modern manufacturing
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        title="Manufacturing Insights"
+        subtitle="Explore the latest trends, technologies, and best practices in modern manufacturing"
+        backgroundImage="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&h=1080&fit=crop&crop=center"
+        backgroundAlt="Manufacturing Insights Background"
+        variant="full"
+      />
 
       {/* Blog Content Section */}
-      <section className="relative py-20 px-6 overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-100"></div>
-
-        <div className="max-w-7xl mx-auto relative z-10">
+      <section className="relative py-20 px-6 bg-white">
+        <div className="max-w-7xl mx-auto">
           {/* Filter Section */}
           <div className="text-center mb-16">
-            <div className="backdrop-blur-md bg-white/80 border border-blue-200/50 rounded-full px-6 py-3 inline-block mb-8">
-              <p className="text-blue-600 font-semibold text-lg tracking-wide uppercase">
-                LATEST ARTICLES
+            <div className="relative inline-block mb-8">
+              <p className="text-brand-primary uppercase tracking-wide text-sm font-bold mb-6 bg-brand-light/40 px-8 py-3 rounded-full border border-brand-light/50">
+                ✨ LATEST ARTICLES
               </p>
             </div>
 
@@ -100,8 +81,8 @@ export default function BlogPage() {
                 onClick={() => handleFilterClick("ALL")}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                   activeFilter === "ALL"
-                    ? "bg-blue-600 text-white shadow-lg"
-                    : "bg-white/80 text-gray-600 hover:bg-white hover:shadow-md"
+                    ? "bg-brand-primary text-white shadow-lg"
+                    : "bg-white border border-gray-200 text-gray-600 hover:shadow-md"
                 }`}
               >
                 ALL
@@ -112,8 +93,8 @@ export default function BlogPage() {
                   onClick={() => handleFilterClick(category.toUpperCase())}
                   className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                     activeFilter === category.toUpperCase()
-                      ? "bg-blue-600 text-white shadow-lg"
-                      : "bg-white/80 text-gray-600 hover:bg-white hover:shadow-md"
+                      ? "bg-brand-primary text-white shadow-lg"
+                      : "bg-white border border-gray-200 text-gray-600 hover:shadow-md"
                   }`}
                 >
                   {category.toUpperCase()}
@@ -140,7 +121,6 @@ export default function BlogPage() {
                         alt={post.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     </div>
                   </div>
 
@@ -151,7 +131,7 @@ export default function BlogPage() {
                       {post.category.map((cat) => (
                         <span
                           key={cat}
-                          className="px-4 py-2 bg-blue-100 text-blue-600 text-sm rounded-full font-medium"
+                          className="px-4 py-2 bg-brand-light/40 text-brand-primary text-sm rounded-full font-medium"
                         >
                           {cat}
                         </span>
@@ -162,7 +142,7 @@ export default function BlogPage() {
                     </div>
 
                     {/* Article Title */}
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight hover:text-blue-600 transition-colors duration-300">
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight hover:text-brand-primary transition-colors duration-300">
                       {post.title}
                     </h2>
 
@@ -193,7 +173,7 @@ export default function BlogPage() {
                       <Link
                         href={`/blog/${post.slug}`}
                         onClick={() => handleReadMore(post.slug, post.title)}
-                        className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                        className="inline-flex items-center bg-brand-primary text-white px-6 py-3 rounded-xl font-semibold hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl"
                       >
                         Read Full Article
                         <svg
@@ -222,7 +202,7 @@ export default function BlogPage() {
             {filteredPosts.map((post) => (
               <article
                 key={post.id}
-                className="group bg-white/80 backdrop-blur-sm border border-blue-200/50 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
+                className="group bg-white border border-gray-200 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-500"
               >
                 <Link href={`/blog/${post.slug}`}>
                   <div className="aspect-[4/3] bg-gray-200 rounded-2xl overflow-hidden mb-6">
@@ -238,14 +218,14 @@ export default function BlogPage() {
                     {post.category.map((cat) => (
                       <span
                         key={cat}
-                        className="px-3 py-1 bg-blue-100 text-blue-600 text-xs rounded-full font-medium"
+                        className="px-3 py-1 bg-brand-light/40 text-brand-primary text-xs rounded-full font-medium"
                       >
                         {cat}
                       </span>
                     ))}
                   </div>
 
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300 line-clamp-2">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-primary transition-colors duration-300 line-clamp-2">
                     {post.title}
                   </h3>
 
@@ -275,8 +255,6 @@ export default function BlogPage() {
                     </span>
                   </div>
                 </Link>
-
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </article>
             ))}
           </div>

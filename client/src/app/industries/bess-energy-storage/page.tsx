@@ -18,24 +18,48 @@ export default function BESSEnergyStoragePage() {
   const services = [
     {
       title: "Grid-Scale Storage",
-      description: "Large-scale battery systems for utility grid stabilization and renewable energy integration",
-      features: ["Utility-Scale BESS", "Grid Stabilization", "Peak Shaving", "Frequency Regulation"]
+      description:
+        "Large-scale battery systems for utility grid stabilization and renewable energy integration",
+      features: [
+        "Utility-Scale BESS",
+        "Grid Stabilization",
+        "Peak Shaving",
+        "Frequency Regulation",
+      ],
     },
     {
       title: "Residential Energy Storage",
-      description: "Home battery systems for energy independence and backup power solutions",
-      features: ["Home Battery Systems", "Backup Power", "Solar Integration", "Energy Management"]
+      description:
+        "Home battery systems for energy independence and backup power solutions",
+      features: [
+        "Home Battery Systems",
+        "Backup Power",
+        "Solar Integration",
+        "Energy Management",
+      ],
     },
     {
       title: "Industrial BESS",
-      description: "Commercial and industrial battery storage for cost optimization and reliability",
-      features: ["Industrial Backup", "Load Management", "Demand Response", "Power Quality"]
+      description:
+        "Commercial and industrial battery storage for cost optimization and reliability",
+      features: [
+        "Industrial Backup",
+        "Load Management",
+        "Demand Response",
+        "Power Quality",
+      ],
     },
     {
       title: "Energy Management Systems",
-      description: "Advanced control systems for optimal battery performance and grid integration",
-      features: ["Battery Management", "Grid Integration", "Predictive Analytics", "Remote Monitoring"]
-    }
+      description:
+        "Advanced control systems for optimal battery performance and grid integration",
+      features: [
+        "Battery Management",
+        "Grid Integration",
+        "Predictive Analytics",
+        "Remote Monitoring",
+      ],
+    },
   ];
 
   const capabilities = [
@@ -44,7 +68,7 @@ export default function BESSEnergyStoragePage() {
     "Thermal Management",
     "Safety Systems",
     "Grid Integration",
-    "Testing & Validation"
+    "Testing & Validation",
   ];
 
   return (
@@ -77,7 +101,8 @@ export default function BESSEnergyStoragePage() {
               BESS/Energy Storage
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              Advanced battery energy storage systems for grid stability and renewable energy integration
+              Advanced battery energy storage systems for grid stability and
+              renewable energy integration
             </p>
           </div>
         </div>
@@ -97,26 +122,36 @@ export default function BESSEnergyStoragePage() {
                 Powering the Energy Revolution
               </h2>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Battery Energy Storage Systems (BESS) are the cornerstone of modern energy infrastructure. 
-                As renewable energy adoption accelerates, reliable energy storage becomes critical for grid 
-                stability, energy arbitrage, and backup power. Our manufacturing expertise delivers robust, 
-                scalable BESS solutions for every application.
+                Battery Energy Storage Systems (BESS) are the cornerstone of
+                modern energy infrastructure. As renewable energy adoption
+                accelerates, reliable energy storage becomes critical for grid
+                stability, energy arbitrage, and backup power. Our manufacturing
+                expertise delivers robust, scalable BESS solutions for every
+                application.
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-yellow-600 mb-2">100+</div>
+                  <div className="text-3xl font-bold text-yellow-600 mb-2">
+                    100+
+                  </div>
                   <div className="text-sm text-gray-600">BESS Projects</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-yellow-600 mb-2">500MW</div>
+                  <div className="text-3xl font-bold text-yellow-600 mb-2">
+                    500MW
+                  </div>
                   <div className="text-sm text-gray-600">Total Capacity</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-yellow-600 mb-2">99.9%</div>
+                  <div className="text-3xl font-bold text-yellow-600 mb-2">
+                    99.9%
+                  </div>
                   <div className="text-sm text-gray-600">Reliability</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-yellow-600 mb-2">25+</div>
+                  <div className="text-3xl font-bold text-yellow-600 mb-2">
+                    25+
+                  </div>
                   <div className="text-sm text-gray-600">Countries</div>
                 </div>
               </div>
@@ -132,8 +167,9 @@ export default function BESSEnergyStoragePage() {
                   Advanced BESS Manufacturing
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Our facilities specialize in manufacturing high-performance battery energy storage systems 
-                  with advanced safety features and intelligent management capabilities.
+                  Our facilities specialize in manufacturing high-performance
+                  battery energy storage systems with advanced safety features
+                  and intelligent management capabilities.
                 </p>
               </div>
             </div>
@@ -149,7 +185,8 @@ export default function BESSEnergyStoragePage() {
               Our BESS/Energy Storage Services
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Comprehensive energy storage solutions for grid, commercial, and residential applications
+              Comprehensive energy storage solutions for grid, commercial, and
+              residential applications
             </p>
           </div>
 
@@ -175,16 +212,21 @@ export default function BESSEnergyStoragePage() {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">
+                    {service.title}
+                  </h3>
                 </div>
-                
+
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   {service.description}
                 </p>
 
                 <div className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center space-x-2">
+                    <div
+                      key={featureIndex}
+                      className="flex items-center space-x-2"
+                    >
                       <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
                       <span className="text-sm text-gray-600">{feature}</span>
                     </div>
@@ -231,7 +273,9 @@ export default function BESSEnergyStoragePage() {
                     />
                   </svg>
                 </div>
-                <h3 className="font-semibold text-gray-900 text-sm">{capability}</h3>
+                <h3 className="font-semibold text-gray-900 text-sm">
+                  {capability}
+                </h3>
               </div>
             ))}
           </div>
@@ -245,7 +289,7 @@ export default function BESSEnergyStoragePage() {
             Ready to Store the Future of Energy?
           </h2>
           <p className="text-xl text-yellow-100 mb-8 max-w-2xl mx-auto">
-            Partner with Xtrawrkx Manufacturing for cutting-edge BESS solutions. 
+            Partner with Xtrawrkx Manufacturing for cutting-edge BESS solutions.
             Let's build a more sustainable energy future together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -272,7 +316,3 @@ export default function BESSEnergyStoragePage() {
     </main>
   );
 }
-
-
-
-

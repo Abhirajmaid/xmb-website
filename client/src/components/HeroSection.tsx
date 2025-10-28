@@ -35,8 +35,8 @@ export default function HeroSection() {
           }}
         ></div>
 
-        {/* Blue Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/60 via-blue-800/50 to-blue-700/40"></div>
+        {/* Theme Gradient Overlay */}
+        <div className="absolute inset-0 bg-brand-dark/40 bg-gradient-to-br from-brand-primary/30 via-brand-secondary/30 to-brand-primary/40"></div>
         {/* Additional dark overlay for better text readability */}
         <div className="absolute inset-0 bg-black/30"></div>
       </div>
@@ -58,7 +58,10 @@ export default function HeroSection() {
                 </h1>
 
                 <p className="text-xl lg:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto">
-                  Xtrawrkx Manufacturing Services provides end-to-end product development and manufacturing services — from ideation and prototyping to large-scale production, quality assurance, logistics, and supply chain solutions.
+                  Xtrawrkx Manufacturing Services provides end-to-end product
+                  development and manufacturing services — from ideation and
+                  prototyping to large-scale production, quality assurance,
+                  logistics, and supply chain solutions.
                 </p>
               </div>
             </div>

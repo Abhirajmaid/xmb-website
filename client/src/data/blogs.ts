@@ -474,7 +474,7 @@ Quality is no longer just about meeting specifications—it's about exceeding ex
         readTime: 12,
         category: ["Quality", "Manufacturing"],
         tags: ["Quality Control", "SPC", "Machine Vision", "CMM", "Inspection"],
-        image: "https://images.unsplash.com/photo-1565043589221-1d6d4b8b8b8b?w=800&h=600&fit=crop",
+        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop",
         featured: false
     },
     {

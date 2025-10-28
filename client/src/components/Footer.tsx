@@ -14,13 +14,13 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-black bg-gradient-to-br from-slate-900 via-blue-900/70 to-slate-900 text-white overflow-hidden">
+    <footer className="relative bg-black bg-gradient-to-br from-brand-secondary/10 via-brand-primary/15 to-brand-secondary/10 text-white overflow-hidden">
       {/* Glass background elements */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-32 left-32 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-32 right-32 w-80 h-80 bg-purple-500/30 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-green-500/20 rounded-full blur-3xl"></div>
-      </div>
+      {/* <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-32 left-32 w-96 h-96 bg-brand-primary/30 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-32 right-32 w-80 h-80 bg-brand-secondary/30 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-brand-success/20 rounded-full blur-3xl"></div>
+      </div> */}
 
       {/* Grid Pattern Overlay */}
       <div className="absolute inset-0 opacity-5">
@@ -54,7 +54,7 @@ export default function Footer() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email address"
-                className="flex-1 px-6 py-4 bg-white/20 border border-white/30 rounded-full text-white placeholder-gray-300 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-300 placeholder:text-white"
+                className="flex-1 px-6 py-4 bg-white/20 border border-white/30 rounded-full text-white placeholder-gray-300 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-300 placeholder:text-white"
                 required
               />
               <Button
@@ -74,10 +74,9 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-6">
             <div>
-              <h2 className="text-4xl font-bold mb-4 text-white">XMB</h2>
-              <p className="text-blue-300 text-sm font-medium tracking-wider mb-4">
+              <h2 className="text-4xl font-bold mb-4 text-brand-primary/80">
                 XTRAWRKX MANUFACTURING BUSINESS
-              </p>
+              </h2>
               <p className="text-gray-300 leading-relaxed text-lg">
                 Transforming manufacturing through precision engineering,
                 innovative solutions, and cutting-edge technology. Delivering

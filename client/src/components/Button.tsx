@@ -43,15 +43,15 @@ export default function Button({
   const variantClasses = {
     primary: `
       relative overflow-hidden group
-      bg-gradient-to-r from-blue-600 to-blue-700 
-      hover:from-blue-700 hover:to-blue-800
+      bg-gradient-to-r from-brand-primary to-brand-secondary 
+      hover:from-brand-secondary hover:to-brand-primary
       text-white font-semibold
       before:absolute before:inset-0 
-      before:bg-gradient-to-r before:from-blue-400 before:to-blue-600
+      before:bg-gradient-to-r before:from-brand-primary/80 before:to-brand-secondary/80
       before:translate-x-[-100%] before:transition-transform before:duration-500
       hover:before:translate-x-0
-      border border-blue-500 hover:border-blue-400
-      shadow-lg hover:shadow-xl hover:shadow-blue-500/25
+      border border-brand-primary/70 hover:border-brand-primary
+      shadow-lg hover:shadow-xl hover:shadow-brand-primary/25
       transform hover:scale-105 hover:-translate-y-1
     `,
     secondary: `
@@ -69,14 +69,14 @@ export default function Button({
     `,
     outline: `
       relative overflow-hidden group
-      bg-transparent border-2 border-blue-600
-      text-blue-600 hover:text-white font-semibold
+      bg-transparent border-2 border-brand-primary
+      text-brand-primary hover:text-white font-semibold
       before:absolute before:inset-0 
-      before:bg-gradient-to-r before:from-blue-600 before:to-blue-700
+      before:bg-gradient-to-r before:from-brand-primary before:to-brand-secondary
       before:scale-x-0 before:origin-left before:transition-transform before:duration-500
       hover:before:scale-x-100
-      hover:border-blue-500
-      shadow-md hover:shadow-lg hover:shadow-blue-500/20
+      hover:border-brand-primary/80
+      shadow-md hover:shadow-lg hover:shadow-brand-primary/20
       transform hover:scale-105
     `,
     glass: `
@@ -117,7 +117,7 @@ export default function Button({
   const baseClasses = `
     relative inline-flex items-center justify-center gap-3
     rounded-full font-medium transition-all duration-300 ease-out
-    focus:outline-none focus:ring-4 focus:ring-blue-500/20
+    focus:outline-none focus:ring-4 focus:ring-brand-primary/20
     cursor-pointer select-none
     ${fullWidth ? "w-full" : ""}
     ${disabled ? "opacity-50 cursor-not-allowed pointer-events-none" : ""}

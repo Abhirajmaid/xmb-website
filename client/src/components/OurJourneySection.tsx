@@ -93,45 +93,16 @@ export default function OurJourneySection() {
   ];
 
   return (
-    <section className="relative bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 py-16 md:py-24 px-4 md:px-6 overflow-hidden">
-      {/* Enhanced Background Elements */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-br from-blue-400/40 to-purple-400/40 rounded-full blur-3xl animate-pulse"></div>
-        <div
-          className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-green-400/40 to-blue-400/40 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: "2s" }}
-        ></div>
-        <div
-          className="absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-br from-purple-400/30 to-pink-400/30 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: "4s" }}
-        ></div>
-      </div>
-
-      {/* Floating Particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-2 h-2 bg-blue-400/20 rounded-full animate-pulse"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${3 + Math.random() * 4}s`,
-            }}
-          />
-        ))}
-      </div>
-
+    <section className="relative bg-white py-16 md:py-24 px-4 md:px-6">
       <div className="max-w-[95%] sm:max-w-[90%] md:max-w-[85%] lg:max-w-[80%] mx-auto relative z-10">
         {/* Enhanced Section Header */}
         <div className="text-center mb-20">
           <div className="relative inline-block mb-8">
-            <p className="text-blue-600 uppercase tracking-wide text-sm font-bold mb-6 backdrop-blur-sm bg-blue-50/80 px-8 py-3 rounded-full border border-blue-200/50 shadow-lg">
+            <p className="text-brand-primary uppercase tracking-wide text-sm font-bold mb-6 bg-brand-light/40 px-8 py-3 rounded-full border border-brand-light/50">
               ✨ OUR JOURNEY
             </p>
           </div>
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-gray-900 bg-clip-text text-transparent leading-tight mb-8">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-8">
             Excellence Through Innovation
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
@@ -142,22 +113,30 @@ export default function OurJourneySection() {
 
           {/* Achievement Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 max-w-4xl mx-auto">
-            <div className="backdrop-blur-xl bg-white/60 border border-white/40 rounded-2xl p-6 text-center shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-              <div className="text-3xl font-bold text-blue-600 mb-2">16+</div>
+            <div className="bg-white border border-gray-200 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="text-3xl font-bold text-brand-primary mb-2">
+                16+
+              </div>
               <div className="text-gray-600 font-medium">Years Excellence</div>
             </div>
-            <div className="backdrop-blur-xl bg-white/60 border border-white/40 rounded-2xl p-6 text-center shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-              <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
+            <div className="bg-white border border-gray-200 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="text-3xl font-bold text-brand-primary mb-2">
+                500+
+              </div>
               <div className="text-gray-600 font-medium">
                 Projects Delivered
               </div>
             </div>
-            <div className="backdrop-blur-xl bg-white/60 border border-white/40 rounded-2xl p-6 text-center shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-              <div className="text-3xl font-bold text-blue-600 mb-2">25+</div>
+            <div className="bg-white border border-gray-200 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="text-3xl font-bold text-brand-primary mb-2">
+                25+
+              </div>
               <div className="text-gray-600 font-medium">Countries Served</div>
             </div>
-            <div className="backdrop-blur-xl bg-white/60 border border-white/40 rounded-2xl p-6 text-center shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-              <div className="text-3xl font-bold text-blue-600 mb-2">99.8%</div>
+            <div className="bg-white border border-gray-200 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="text-3xl font-bold text-brand-primary mb-2">
+                99.8%
+              </div>
               <div className="text-gray-600 font-medium">
                 Client Satisfaction
               </div>
@@ -166,10 +145,7 @@ export default function OurJourneySection() {
         </div>
 
         {/* Main Content */}
-        <div className="backdrop-blur-xl bg-white/40 border border-white/50 rounded-3xl p-3 sm:p-6 md:p-10 lg:p-16 shadow-2xl relative">
-          {/* Glass effect overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-white/60 to-white/30 rounded-3xl"></div>
-
+        <div className="bg-white border border-gray-200 rounded-3xl p-3 sm:p-6 md:p-10 lg:p-16 shadow-lg relative">
           <div className="grid lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8 lg:gap-16 items-start relative z-10">
             {/* Left Content */}
             <div className="lg:col-span-2 space-y-8">
@@ -217,8 +193,8 @@ export default function OurJourneySection() {
 
               {/* Enhanced Achievements Grid */}
               <div className="grid grid-cols-2 gap-4">
-                <div className="backdrop-blur-xl bg-white/60 border border-white/40 rounded-2xl p-6 group hover:shadow-lg transition-all duration-300">
-                  <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 group hover:shadow-lg transition-all duration-300">
+                  <div className="w-12 h-12 bg-brand-primary rounded-xl flex items-center justify-center mb-4">
                     <svg
                       className="w-6 h-6 text-white"
                       fill="none"
@@ -241,8 +217,8 @@ export default function OurJourneySection() {
                   </div>
                 </div>
 
-                <div className="backdrop-blur-xl bg-white/60 border border-white/40 rounded-2xl p-6 group hover:shadow-lg transition-all duration-300">
-                  <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 group hover:shadow-lg transition-all duration-300">
+                  <div className="w-12 h-12 bg-brand-primary rounded-xl flex items-center justify-center mb-4">
                     <svg
                       className="w-6 h-6 text-white"
                       fill="none"
@@ -265,8 +241,8 @@ export default function OurJourneySection() {
                   </div>
                 </div>
 
-                <div className="backdrop-blur-xl bg-white/60 border border-white/40 rounded-2xl p-6 group hover:shadow-lg transition-all duration-300">
-                  <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 group hover:shadow-lg transition-all duration-300">
+                  <div className="w-12 h-12 bg-brand-primary rounded-xl flex items-center justify-center mb-4">
                     <svg
                       className="w-6 h-6 text-white"
                       fill="none"
@@ -289,8 +265,8 @@ export default function OurJourneySection() {
                   </div>
                 </div>
 
-                <div className="backdrop-blur-xl bg-white/60 border border-white/40 rounded-2xl p-6 group hover:shadow-lg transition-all duration-300">
-                  <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 group hover:shadow-lg transition-all duration-300">
+                  <div className="w-12 h-12 bg-brand-primary rounded-xl flex items-center justify-center mb-4">
                     <svg
                       className="w-6 h-6 text-white"
                       fill="none"
@@ -335,10 +311,10 @@ export default function OurJourneySection() {
 
               {/* Animated Timeline Line */}
               <div
-                className="absolute left-8 top-0 w-1 bg-gradient-to-b from-blue-500 via-blue-600 to-blue-700 rounded-full transition-all duration-1000 ease-out shadow-lg"
+                className="absolute left-8 top-0 w-1 bg-gradient-to-b from-brand-primary via-brand-secondary to-brand-primary rounded-full transition-all duration-1000 ease-out shadow-lg"
                 style={{
                   height: `${lineProgress * 100}%`,
-                  boxShadow: "0 0 20px rgba(59, 130, 246, 0.5)",
+                  boxShadow: "0 0 20px rgba(255, 74, 116, 0.5)",
                 }}
               ></div>
 
@@ -355,28 +331,22 @@ export default function OurJourneySection() {
                   >
                     {/* Timeline Dot */}
                     <div
-                      className={`absolute left-6 w-6 h-6 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full transform -translate-x-3 border-4 border-white shadow-xl transition-all duration-700 ease-out z-10 ${
+                      className={`absolute left-6 w-6 h-6 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-full transform -translate-x-3 border-4 border-white shadow-xl transition-all duration-700 ease-out z-10 ${
                         visibleItems.includes(index) ? "scale-100" : "scale-0"
                       }`}
                     >
                       <div className="absolute inset-1 bg-white rounded-full flex items-center justify-center">
-                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <div className="w-2 h-2 bg-brand-primary rounded-full"></div>
                       </div>
                     </div>
 
                     {/* Content Card */}
-                    <div className="ml-12 sm:ml-16 md:ml-20 backdrop-blur-md bg-white/80 border border-white/60 rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 group hover:scale-102 relative overflow-hidden">
-                      {/* Card Background Pattern */}
-                      <div className="absolute inset-0 opacity-5">
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-400 to-purple-400 rounded-full -translate-y-16 translate-x-16"></div>
-                        <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-br from-green-400 to-blue-400 rounded-full translate-y-12 -translate-x-12"></div>
-                      </div>
-
+                    <div className="ml-12 sm:ml-16 md:ml-20 bg-white border border-gray-200 rounded-3xl p-4 sm:p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-500 group relative overflow-hidden">
                       <div className="relative z-10">
                         {/* Year Badge & Stats */}
                         <div className="flex justify-between items-start mb-6">
                           <div
-                            className={`text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent transition-all duration-700 ease-out ${
+                            className={`text-5xl font-bold text-brand-primary transition-all duration-700 ease-out ${
                               visibleItems.includes(index)
                                 ? "opacity-100 translate-y-0"
                                 : "opacity-0 translate-y-4"
@@ -395,7 +365,7 @@ export default function OurJourneySection() {
                         </div>
 
                         {/* Title */}
-                        <h4 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
+                        <h4 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-brand-primary transition-colors duration-300">
                           {milestone.title}
                         </h4>
 
@@ -415,7 +385,7 @@ export default function OurJourneySection() {
                           {milestone.achievements.map((achievement, idx) => (
                             <span
                               key={idx}
-                              className="px-4 py-2 bg-blue-600 text-white rounded-full text-sm font-medium shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 hover:bg-blue-700"
+                              className="px-4 py-2 bg-brand-primary text-white rounded-full text-sm font-medium shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 hover:opacity-90"
                             >
                               {achievement}
                             </span>

@@ -18,24 +18,48 @@ export default function EAgritechPage() {
   const services = [
     {
       title: "Precision Agriculture",
-      description: "Smart farming solutions using IoT sensors, drones, and data analytics for optimized crop production",
-      features: ["Soil Monitoring", "Crop Health Analysis", "Yield Optimization", "Resource Management"]
+      description:
+        "Smart farming solutions using IoT sensors, drones, and data analytics for optimized crop production",
+      features: [
+        "Soil Monitoring",
+        "Crop Health Analysis",
+        "Yield Optimization",
+        "Resource Management",
+      ],
     },
     {
       title: "IoT Sensors",
-      description: "Advanced sensor networks for real-time monitoring of agricultural conditions and equipment",
-      features: ["Weather Stations", "Soil Sensors", "Equipment Monitoring", "Data Collection"]
+      description:
+        "Advanced sensor networks for real-time monitoring of agricultural conditions and equipment",
+      features: [
+        "Weather Stations",
+        "Soil Sensors",
+        "Equipment Monitoring",
+        "Data Collection",
+      ],
     },
     {
       title: "Automated Farming",
-      description: "Robotic systems and automation solutions for efficient and sustainable farming operations",
-      features: ["Autonomous Tractors", "Robotic Harvesting", "Automated Irrigation", "Smart Greenhouses"]
+      description:
+        "Robotic systems and automation solutions for efficient and sustainable farming operations",
+      features: [
+        "Autonomous Tractors",
+        "Robotic Harvesting",
+        "Automated Irrigation",
+        "Smart Greenhouses",
+      ],
     },
     {
       title: "Crop Monitoring Systems",
-      description: "Advanced monitoring and management systems for crop health, growth, and yield optimization",
-      features: ["Satellite Monitoring", "Drone Surveillance", "AI Analytics", "Predictive Modeling"]
-    }
+      description:
+        "Advanced monitoring and management systems for crop health, growth, and yield optimization",
+      features: [
+        "Satellite Monitoring",
+        "Drone Surveillance",
+        "AI Analytics",
+        "Predictive Modeling",
+      ],
+    },
   ];
 
   const capabilities = [
@@ -44,7 +68,7 @@ export default function EAgritechPage() {
     "Data Analytics",
     "Automation Systems",
     "Precision Equipment",
-    "Farm Management"
+    "Farm Management",
   ];
 
   return (
@@ -77,7 +101,8 @@ export default function EAgritechPage() {
               E-Agritech
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              Smart agricultural technologies for sustainable farming and food production
+              Smart agricultural technologies for sustainable farming and food
+              production
             </p>
           </div>
         </div>
@@ -97,27 +122,37 @@ export default function EAgritechPage() {
                 Cultivating the Future of Farming
               </h2>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                E-Agritech is revolutionizing agriculture through smart technologies, precision farming, 
-                and sustainable practices. As the global population grows and climate challenges intensify, 
-                smart agricultural solutions become essential for food security. Our manufacturing expertise 
-                delivers advanced agritech solutions that optimize crop yields, reduce resource consumption, 
-                and promote sustainable farming practices.
+                E-Agritech is revolutionizing agriculture through smart
+                technologies, precision farming, and sustainable practices. As
+                the global population grows and climate challenges intensify,
+                smart agricultural solutions become essential for food security.
+                Our manufacturing expertise delivers advanced agritech solutions
+                that optimize crop yields, reduce resource consumption, and
+                promote sustainable farming practices.
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600 mb-2">150+</div>
+                  <div className="text-3xl font-bold text-green-600 mb-2">
+                    150+
+                  </div>
                   <div className="text-sm text-gray-600">Farm Projects</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600 mb-2">30%</div>
+                  <div className="text-3xl font-bold text-green-600 mb-2">
+                    30%
+                  </div>
                   <div className="text-sm text-gray-600">Yield Increase</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600 mb-2">40%</div>
+                  <div className="text-3xl font-bold text-green-600 mb-2">
+                    40%
+                  </div>
                   <div className="text-sm text-gray-600">Water Savings</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600 mb-2">1000+</div>
+                  <div className="text-3xl font-bold text-green-600 mb-2">
+                    1000+
+                  </div>
                   <div className="text-sm text-gray-600">Sensors Deployed</div>
                 </div>
               </div>
@@ -133,8 +168,9 @@ export default function EAgritechPage() {
                   Advanced Agritech Manufacturing
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Our facilities specialize in manufacturing precision agricultural equipment, 
-                  IoT sensors, and smart farming systems that enhance productivity and sustainability.
+                  Our facilities specialize in manufacturing precision
+                  agricultural equipment, IoT sensors, and smart farming systems
+                  that enhance productivity and sustainability.
                 </p>
               </div>
             </div>
@@ -150,7 +186,8 @@ export default function EAgritechPage() {
               Our E-Agritech Services
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Comprehensive smart agriculture solutions for modern farming operations
+              Comprehensive smart agriculture solutions for modern farming
+              operations
             </p>
           </div>
 
@@ -176,16 +213,21 @@ export default function EAgritechPage() {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">
+                    {service.title}
+                  </h3>
                 </div>
-                
+
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   {service.description}
                 </p>
 
                 <div className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center space-x-2">
+                    <div
+                      key={featureIndex}
+                      className="flex items-center space-x-2"
+                    >
                       <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                       <span className="text-sm text-gray-600">{feature}</span>
                     </div>
@@ -207,7 +249,8 @@ export default function EAgritechPage() {
               Manufacturing Capabilities
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Advanced manufacturing capabilities for agricultural technology solutions
+              Advanced manufacturing capabilities for agricultural technology
+              solutions
             </p>
           </div>
 
@@ -232,7 +275,9 @@ export default function EAgritechPage() {
                     />
                   </svg>
                 </div>
-                <h3 className="font-semibold text-gray-900 text-sm">{capability}</h3>
+                <h3 className="font-semibold text-gray-900 text-sm">
+                  {capability}
+                </h3>
               </div>
             ))}
           </div>
@@ -246,8 +291,8 @@ export default function EAgritechPage() {
             Ready to Grow Smarter?
           </h2>
           <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-            Partner with Xtrawrkx Manufacturing for cutting-edge agritech solutions. 
-            Let's cultivate a more sustainable future together.
+            Partner with Xtrawrkx Manufacturing for cutting-edge agritech
+            solutions. Let's cultivate a more sustainable future together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -273,7 +318,3 @@ export default function EAgritechPage() {
     </main>
   );
 }
-
-
-
-

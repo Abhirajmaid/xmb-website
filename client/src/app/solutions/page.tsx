@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
 import { solutionsData, getSolutionsByCategory } from "@/data/solutions";
+import PageHero from "@/components/PageHero";
 
 export default function SolutionsPage() {
   const [favorites, setFavorites] = useState<Set<number>>(new Set());
@@ -43,31 +44,13 @@ export default function SolutionsPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 px-6 overflow-hidden h-[50vh]">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=1920&h=1080&fit=crop&crop=center"
-            alt="Business Solutions Background"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/60 via-blue-800/50 to-blue-700/40"></div>
-        </div>
-
-        {/* Glass Overlay with Content */}
-        <div className="absolute inset-6 backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl flex items-center justify-center z-10">
-          <div className="text-center text-white">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-              Our Servives
-            </h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              Comprehensive industry and business solutions that integrate our
-              core services to deliver exceptional value and competitive
-              advantage
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        title="Our Solutions"
+        subtitle="Comprehensive industry and business solutions that integrate our core services to deliver exceptional value and competitive advantage"
+        backgroundImage="https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=1920&h=1080&fit=crop&crop=center"
+        backgroundAlt="Business Solutions Background"
+        variant="full"
+      />
 
       {/* Solutions Introduction Section */}
       {/* <section className="relative py-20 px-6 overflow-hidden">
@@ -246,27 +229,45 @@ export default function SolutionsPage() {
               <div className="relative h-40 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 p-6">
                 <div className="absolute top-6 right-6">
                   <div className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/20">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                    <svg
+                      className="w-5 h-5 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                      />
                     </svg>
                   </div>
                 </div>
                 <div className="absolute bottom-6 left-6 right-6">
-                  <h3 className="text-xl font-bold text-white mb-3">Sourcing & Procurement</h3>
+                  <h3 className="text-xl font-bold text-white mb-3">
+                    Sourcing & Procurement
+                  </h3>
                   <div className="flex flex-wrap gap-2">
-                    <span className="text-xs bg-white/20 backdrop-blur-sm text-white px-3 py-1.5 rounded-full border border-white/30 font-medium">Supply Chain</span>
-                    <span className="text-xs bg-white/20 backdrop-blur-sm text-white px-3 py-1.5 rounded-full border border-white/30 font-medium">Strategic Sourcing</span>
+                    <span className="text-xs bg-white/20 backdrop-blur-sm text-white px-3 py-1.5 rounded-full border border-white/30 font-medium">
+                      Supply Chain
+                    </span>
+                    <span className="text-xs bg-white/20 backdrop-blur-sm text-white px-3 py-1.5 rounded-full border border-white/30 font-medium">
+                      Strategic Sourcing
+                    </span>
                   </div>
                 </div>
                 {/* Decorative Elements */}
                 <div className="absolute top-4 left-4 w-16 h-16 bg-white/5 rounded-full"></div>
                 <div className="absolute bottom-4 right-4 w-8 h-8 bg-white/5 rounded-full"></div>
               </div>
-              
+
               {/* Content Section */}
               <div className="p-6">
                 <p className="text-gray-700 text-sm leading-relaxed mb-6">
-                  Strategic sourcing solutions that optimize your supply chain, reduce costs, and ensure quality through our global supplier network and procurement expertise.
+                  Strategic sourcing solutions that optimize your supply chain,
+                  reduce costs, and ensure quality through our global supplier
+                  network and procurement expertise.
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3 text-sm text-gray-600">
@@ -291,27 +292,45 @@ export default function SolutionsPage() {
               <div className="relative h-40 bg-gradient-to-br from-emerald-600 via-emerald-700 to-emerald-800 p-6">
                 <div className="absolute top-6 right-6">
                   <div className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/20">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                    <svg
+                      className="w-5 h-5 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                      />
                     </svg>
                   </div>
                 </div>
                 <div className="absolute bottom-6 left-6 right-6">
-                  <h3 className="text-xl font-bold text-white mb-3">Design and Prototyping</h3>
+                  <h3 className="text-xl font-bold text-white mb-3">
+                    Design and Prototyping
+                  </h3>
                   <div className="flex flex-wrap gap-2">
-                    <span className="text-xs bg-white/20 backdrop-blur-sm text-white px-3 py-1.5 rounded-full border border-white/30 font-medium">Innovation</span>
-                    <span className="text-xs bg-white/20 backdrop-blur-sm text-white px-3 py-1.5 rounded-full border border-white/30 font-medium">Rapid Prototyping</span>
+                    <span className="text-xs bg-white/20 backdrop-blur-sm text-white px-3 py-1.5 rounded-full border border-white/30 font-medium">
+                      Innovation
+                    </span>
+                    <span className="text-xs bg-white/20 backdrop-blur-sm text-white px-3 py-1.5 rounded-full border border-white/30 font-medium">
+                      Rapid Prototyping
+                    </span>
                   </div>
                 </div>
                 {/* Decorative Elements */}
                 <div className="absolute top-4 left-4 w-16 h-16 bg-white/5 rounded-full"></div>
                 <div className="absolute bottom-4 right-4 w-8 h-8 bg-white/5 rounded-full"></div>
               </div>
-              
+
               {/* Content Section */}
               <div className="p-6">
                 <p className="text-gray-700 text-sm leading-relaxed mb-6">
-                  Cutting-edge design and rapid prototyping services that transform your ideas into reality with advanced CAD modeling, 3D printing, and iterative development.
+                  Cutting-edge design and rapid prototyping services that
+                  transform your ideas into reality with advanced CAD modeling,
+                  3D printing, and iterative development.
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3 text-sm text-gray-600">
@@ -336,27 +355,45 @@ export default function SolutionsPage() {
               <div className="relative h-40 bg-gradient-to-br from-violet-600 via-violet-700 to-violet-800 p-6">
                 <div className="absolute top-6 right-6">
                   <div className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/20">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                    <svg
+                      className="w-5 h-5 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                      />
                     </svg>
                   </div>
                 </div>
                 <div className="absolute bottom-6 left-6 right-6">
-                  <h3 className="text-xl font-bold text-white mb-3">Manufacturing Solutions</h3>
+                  <h3 className="text-xl font-bold text-white mb-3">
+                    Manufacturing Solutions
+                  </h3>
                   <div className="flex flex-wrap gap-2">
-                    <span className="text-xs bg-white/20 backdrop-blur-sm text-white px-3 py-1.5 rounded-full border border-white/30 font-medium">Production</span>
-                    <span className="text-xs bg-white/20 backdrop-blur-sm text-white px-3 py-1.5 rounded-full border border-white/30 font-medium">Advanced Manufacturing</span>
+                    <span className="text-xs bg-white/20 backdrop-blur-sm text-white px-3 py-1.5 rounded-full border border-white/30 font-medium">
+                      Production
+                    </span>
+                    <span className="text-xs bg-white/20 backdrop-blur-sm text-white px-3 py-1.5 rounded-full border border-white/30 font-medium">
+                      Advanced Manufacturing
+                    </span>
                   </div>
                 </div>
                 {/* Decorative Elements */}
                 <div className="absolute top-4 left-4 w-16 h-16 bg-white/5 rounded-full"></div>
                 <div className="absolute bottom-4 right-4 w-8 h-8 bg-white/5 rounded-full"></div>
               </div>
-              
+
               {/* Content Section */}
               <div className="p-6">
                 <p className="text-gray-700 text-sm leading-relaxed mb-6">
-                  End-to-end manufacturing solutions featuring advanced production capabilities, quality control systems, and scalable operations for diverse industries.
+                  End-to-end manufacturing solutions featuring advanced
+                  production capabilities, quality control systems, and scalable
+                  operations for diverse industries.
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3 text-sm text-gray-600">
@@ -381,27 +418,45 @@ export default function SolutionsPage() {
               <div className="relative h-40 bg-gradient-to-br from-amber-600 via-amber-700 to-amber-800 p-6">
                 <div className="absolute top-6 right-6">
                   <div className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/20">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                    <svg
+                      className="w-5 h-5 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                      />
                     </svg>
                   </div>
                 </div>
                 <div className="absolute bottom-6 left-6 right-6">
-                  <h3 className="text-xl font-bold text-white mb-3">Operation Consulting</h3>
+                  <h3 className="text-xl font-bold text-white mb-3">
+                    Operation Consulting
+                  </h3>
                   <div className="flex flex-wrap gap-2">
-                    <span className="text-xs bg-white/20 backdrop-blur-sm text-white px-3 py-1.5 rounded-full border border-white/30 font-medium">Excellence</span>
-                    <span className="text-xs bg-white/20 backdrop-blur-sm text-white px-3 py-1.5 rounded-full border border-white/30 font-medium">Process Optimization</span>
+                    <span className="text-xs bg-white/20 backdrop-blur-sm text-white px-3 py-1.5 rounded-full border border-white/30 font-medium">
+                      Excellence
+                    </span>
+                    <span className="text-xs bg-white/20 backdrop-blur-sm text-white px-3 py-1.5 rounded-full border border-white/30 font-medium">
+                      Process Optimization
+                    </span>
                   </div>
                 </div>
                 {/* Decorative Elements */}
                 <div className="absolute top-4 left-4 w-16 h-16 bg-white/5 rounded-full"></div>
                 <div className="absolute bottom-4 right-4 w-8 h-8 bg-white/5 rounded-full"></div>
               </div>
-              
+
               {/* Content Section */}
               <div className="p-6">
                 <p className="text-gray-700 text-sm leading-relaxed mb-6">
-                  Strategic operational consulting that drives excellence through process optimization, performance improvement, and operational transformation initiatives.
+                  Strategic operational consulting that drives excellence
+                  through process optimization, performance improvement, and
+                  operational transformation initiatives.
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3 text-sm text-gray-600">

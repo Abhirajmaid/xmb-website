@@ -27,7 +27,7 @@ export default function Header() {
   // Handle dropdown interactions
   const handleMouseEnter = (linkId: string) => {
     // Only apply hover for non-industries dropdowns
-    if (linkId !== 'industries') {
+    if (linkId !== "industries") {
       if (dropdownTimeoutRef.current) {
         clearTimeout(dropdownTimeoutRef.current);
       }
@@ -37,7 +37,7 @@ export default function Header() {
 
   const handleMouseLeave = () => {
     // Only apply hover leave for non-industries dropdowns
-    if (activeDropdown !== 'industries') {
+    if (activeDropdown !== "industries") {
       dropdownTimeoutRef.current = setTimeout(() => {
         setActiveDropdown(null);
       }, 150);
@@ -52,7 +52,7 @@ export default function Header() {
 
   const handleDropdownMouseLeave = () => {
     // Only apply hover leave for non-industries dropdowns
-    if (activeDropdown !== 'industries') {
+    if (activeDropdown !== "industries") {
       dropdownTimeoutRef.current = setTimeout(() => {
         setActiveDropdown(null);
       }, 150);
@@ -71,7 +71,7 @@ export default function Header() {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
       // Don't close if clicking on the dropdown or navigation items
-      if (!target.closest('.dropdown-container') && !target.closest('nav')) {
+      if (!target.closest(".dropdown-container") && !target.closest("nav")) {
         setActiveDropdown(null);
         setIsMobileDropdownOpen(null);
       }
@@ -117,7 +117,7 @@ export default function Header() {
             <div
               className={`w-8 h-8 backdrop-blur-md rounded-xl flex items-center justify-center transition-all duration-300 border ${
                 isScrolled
-                  ? "bg-blue-600/90 border-blue-400/30 shadow-lg shadow-blue-500/20"
+                  ? "bg-brand-primary/90 border-brand-primary/30 shadow-lg shadow-brand-primary/20"
                   : "bg-white/20 border-white/30 shadow-lg shadow-black/10"
               }`}
             >
@@ -129,7 +129,7 @@ export default function Header() {
             </div>
             <span
               className={`text-xl font-bold transition-colors duration-300 ${
-                isScrolled ? "text-blue-900" : "text-white"
+                isScrolled ? "text-brand-dark" : "text-white"
               }`}
             >
               XMB
@@ -142,14 +142,18 @@ export default function Header() {
               <div
                 key={link.id}
                 className="relative"
-                onMouseEnter={() => link.dropdown && link.id !== 'industries' && handleMouseEnter(link.id)}
+                onMouseEnter={() =>
+                  link.dropdown &&
+                  link.id !== "industries" &&
+                  handleMouseEnter(link.id)
+                }
                 onMouseLeave={handleMouseLeave}
               >
                 <a
                   href={link.href}
                   className={`font-medium text-xl transition-all duration-200 relative hover:-translate-y-0.5 flex items-center space-x-1 ${
                     isScrolled
-                      ? "text-blue-700 hover:text-blue-900"
+                      ? "text-brand-dark/80 hover:text-brand-dark"
                       : "text-white hover:text-white"
                   }`}
                   onClick={(e) => {
@@ -157,7 +161,7 @@ export default function Header() {
                       e.preventDefault();
                     }
                     // Industries should navigate directly to the page, not show dropdown
-                    if (link.id === 'industries') {
+                    if (link.id === "industries") {
                       // Allow normal navigation to /industries page
                       return;
                     }
@@ -165,7 +169,7 @@ export default function Header() {
                 >
                   <span>{link.label}</span>
                   {/* Show dropdown arrow for all items except industries */}
-                  {link.dropdown && link.id !== 'industries' && (
+                  {link.dropdown && link.id !== "industries" && (
                     <svg
                       className={`w-4 h-4 transition-transform duration-200 ${
                         activeDropdown === link.id ? "rotate-180" : ""
@@ -184,7 +188,7 @@ export default function Header() {
                   )}
                   <div
                     className={`absolute bottom-0 left-0 h-0.5 w-0 hover:w-full transition-all duration-300 ${
-                      isScrolled ? "bg-blue-600" : "bg-white"
+                      isScrolled ? "bg-brand-primary" : "bg-white"
                     }`}
                   />
                 </a>
@@ -213,17 +217,17 @@ export default function Header() {
             <div className="w-6 h-6 flex flex-col justify-center space-y-1">
               <span
                 className={`w-full h-0.5 origin-center transition-all duration-300 ${
-                  isScrolled ? "bg-blue-700" : "bg-white"
+                  isScrolled ? "bg-brand-secondary" : "bg-white"
                 } ${isMenuOpen ? "rotate-45 translate-y-1.5" : ""}`}
               />
               <span
                 className={`w-full h-0.5 transition-all duration-300 ${
-                  isScrolled ? "bg-blue-700" : "bg-white"
+                  isScrolled ? "bg-brand-secondary" : "bg-white"
                 } ${isMenuOpen ? "opacity-0" : ""}`}
               />
               <span
                 className={`w-full h-0.5 origin-center transition-all duration-300 ${
-                  isScrolled ? "bg-blue-700" : "bg-white"
+                  isScrolled ? "bg-brand-secondary" : "bg-white"
                 } ${isMenuOpen ? "-rotate-45 -translate-y-1.5" : ""}`}
               />
             </div>
@@ -237,11 +241,14 @@ export default function Header() {
             onMouseEnter={handleDropdownMouseEnter}
             onMouseLeave={handleDropdownMouseLeave}
           >
-            <div className={`grid gap-8 ${
-              navigationLinks.find((link) => link.id === activeDropdown)?.dropdown?.length === 3 
-                ? "grid-cols-3" 
-                : "grid-cols-2"
-            }`}>
+            <div
+              className={`grid gap-8 ${
+                navigationLinks.find((link) => link.id === activeDropdown)
+                  ?.dropdown?.length === 3
+                  ? "grid-cols-3"
+                  : "grid-cols-2"
+              }`}
+            >
               {navigationLinks
                 .find((link) => link.id === activeDropdown)
                 ?.dropdown?.map((section, sectionIndex) => (
@@ -264,32 +271,32 @@ export default function Header() {
                         <a
                           key={itemIndex}
                           href={item.href}
-                          className="group block h-20 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-blue-50 hover:border-blue-300 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/20"
+                          className="group block h-20 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-brand-light hover:border-brand-light transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-primary/20"
                         >
                           <div className="flex items-center space-x-3 h-full">
                             {/* Icon Container - Fixed Size */}
-                            <div className="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-200 transition-all duration-300">
+                            <div className="flex-shrink-0 w-10 h-10 bg-brand-light rounded-lg flex items-center justify-center group-hover:bg-brand-light transition-all duration-300">
                               {item.iconType === "svg" ? (
                                 <Icon
                                   name={item.icon || ""}
-                                  className="text-blue-600"
+                                  className="text-brand-primary"
                                   size="sm"
                                 />
                               ) : (
-                                <span className="text-sm text-blue-600">
+                                <span className="text-sm text-brand-primary">
                                   {item.icon}
                                 </span>
                               )}
                             </div>
-                            
+
                             {/* Content Container - Fixed Height */}
                             <div className="flex-1 min-w-0 h-full flex flex-col justify-center">
                               <div className="flex items-center justify-between mb-1">
-                                <h4 className="text-sm font-semibold text-gray-900 group-hover:text-blue-700 transition-colors duration-300 truncate">
+                                <h4 className="text-sm font-semibold text-gray-900 group-hover:text-brand-primary transition-colors duration-300 truncate">
                                   {item.label}
                                 </h4>
                                 {item.badge && (
-                                  <span className="ml-2 px-2 py-1 bg-green-100 text-green-700 text-xs font-medium rounded-full border border-green-200 flex-shrink-0">
+                                  <span className="ml-2 px-2 py-1 bg-brand-success/20 text-brand-success text-xs font-medium rounded-full border border-brand-success/30 flex-shrink-0">
                                     {item.badge}
                                   </span>
                                 )}
@@ -300,11 +307,11 @@ export default function Header() {
                                 </p>
                               )}
                             </div>
-                            
+
                             {/* Arrow Icon */}
                             <div className="flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                               <svg
-                                className="w-4 h-4 text-blue-600"
+                                className="w-4 h-4 text-brand-primary"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
@@ -324,7 +331,7 @@ export default function Header() {
 
                     {/* CTA Button - Fixed Position */}
                     <div className="mt-6 pt-4 border-t border-gray-200">
-                      {activeDropdown === 'solutions' && (
+                      {activeDropdown === "solutions" && (
                         <>
                           {sectionIndex === 0 && (
                             <Button
@@ -332,7 +339,7 @@ export default function Header() {
                               size="sm"
                               showArrow={true}
                               href="/solutions"
-                              className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800"
+                              className="w-[30%]"
                             >
                               Explore
                             </Button>
@@ -343,7 +350,7 @@ export default function Header() {
                               size="sm"
                               showArrow={true}
                               href="/industries"
-                              className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800"
+                              className="w-[30%]"
                             >
                               Explore Industries
                             </Button>
@@ -354,15 +361,15 @@ export default function Header() {
                               size="sm"
                               showArrow={true}
                               href="/register"
-                              className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800"
+                              className="w-[30%]"
                             >
                               Join Platform
                             </Button>
                           )}
                         </>
                       )}
-                      
-                      {activeDropdown === 'company' && (
+
+                      {activeDropdown === "company" && (
                         <>
                           {sectionIndex === 0 && (
                             <Button
@@ -370,7 +377,7 @@ export default function Header() {
                               size="sm"
                               showArrow={true}
                               href="/about"
-                              className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800"
+                              className="w-[30%] "
                             >
                               Learn More
                             </Button>
@@ -381,7 +388,7 @@ export default function Header() {
                               size="sm"
                               showArrow={true}
                               href="/contact"
-                              className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800"
+                              className="w-[30%] "
                             >
                               Get In Touch
                             </Button>
@@ -418,7 +425,7 @@ export default function Header() {
                       href={link.dropdown ? "#" : link.href}
                       className={`font-medium text-base transition-all duration-200 hover:translate-x-2 flex-1 ${
                         isScrolled
-                          ? "text-blue-700 hover:text-blue-900"
+                          ? "text-brand-primary hover:text-brand-dark"
                           : "text-white/90 hover:text-white"
                       }`}
                       style={{ animationDelay: `${index * 100}ms` }}
@@ -440,7 +447,7 @@ export default function Header() {
                       >
                         <svg
                           className={`w-4 h-4 ${
-                            isScrolled ? "text-blue-700" : "text-white/90"
+                            isScrolled ? "text-brand-primary" : "text-white/90"
                           }`}
                           fill="none"
                           stroke="currentColor"
@@ -466,7 +473,9 @@ export default function Header() {
                           <div className="pb-2 border-b border-white/20">
                             <h4
                               className={`text-sm font-bold ${
-                                isScrolled ? "text-blue-800" : "text-white"
+                                isScrolled
+                                  ? "text-brand-secondary"
+                                  : "text-white"
                               }`}
                             >
                               {section.title}
@@ -480,7 +489,7 @@ export default function Header() {
                               href={item.href}
                               className={`flex items-center space-x-3 p-2 rounded-xl transition-all duration-200 hover:translate-x-1 ${
                                 isScrolled
-                                  ? "text-blue-600 hover:text-blue-800 hover:bg-white/20"
+                                  ? "text-brand-primary hover:text-brand-secondary hover:bg-white/20"
                                   : "text-white/80 hover:text-white hover:bg-white/10"
                               }`}
                             >
@@ -502,7 +511,7 @@ export default function Header() {
                                     <span
                                       className={`text-xs font-bold ${
                                         isScrolled
-                                          ? "text-blue-700"
+                                          ? "text-brand-primary"
                                           : "text-white"
                                       }`}
                                     >
@@ -516,7 +525,7 @@ export default function Header() {
                                   </div>
                                 )}
                                 {item.badge && (
-                                  <span className="inline-block mt-1 px-2 py-0.5 bg-green-100 text-green-700 text-xs font-medium rounded-full">
+                                  <span className="inline-block mt-1 px-2 py-0.5 bg-brand-success/20 text-brand-success text-xs font-medium rounded-full">
                                     {item.badge}
                                   </span>
                                 )}
