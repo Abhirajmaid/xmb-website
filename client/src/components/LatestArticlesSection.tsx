@@ -65,7 +65,7 @@ export default function LatestArticlesSection() {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <p className="text-blue-600 uppercase tracking-wide text-sm font-medium mb-6 backdrop-blur-sm bg-blue-50/50 px-6 py-2 rounded-full w-fit mx-auto border border-blue-200/50">
+          <p className="text-brand-primary uppercase tracking-wide text-sm font-medium mb-6 backdrop-blur-sm bg-brand-light/50 px-6 py-2 rounded-full w-fit mx-auto border border-brand-light/60">
             LATEST INSIGHTS
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
@@ -130,7 +130,7 @@ export default function LatestArticlesSection() {
                   </div>
                   {featuredArticle.subcategory && (
                     <div className="absolute top-4 right-4">
-                      <span className="bg-green-600 text-white px-3 py-1 rounded text-sm font-medium">
+              <span className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded text-sm font-medium">
                         {featuredArticle.subcategory}
                       </span>
                     </div>
@@ -173,7 +173,7 @@ export default function LatestArticlesSection() {
 
                     {/* Article Content */}
                     <div className="flex-1 min-w-0">
-                      <h4 className="font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors leading-tight text-lg">
+                      <h4 className="font-bold text-gray-900 mb-2 group-hover:text-brand-primary transition-colors leading-tight text-lg">
                         {article.title}
                       </h4>
                       <p
@@ -187,7 +187,7 @@ export default function LatestArticlesSection() {
                         {article.description}
                       </p>
                       <div className="flex items-center text-xs text-gray-500">
-                        <span className="bg-blue-100 text-blue-600 px-2 py-0.5 rounded text-xs font-medium mr-2">
+                        <span className="bg-brand-light text-brand-primary px-2 py-0.5 rounded text-xs font-medium mr-2">
                           XMB
                         </span>
                         <span>By {article.author}</span>

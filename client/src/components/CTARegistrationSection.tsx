@@ -5,7 +5,7 @@ import Icon from "./Icon";
 
 export default function CTARegistrationSection() {
   return (
-    <section className="relative py-12 sm:py-16 md:py-20 px-2 sm:px-4 md:px-6 bg-white">
+    <section className="relative pt-8 sm:pt-10 md:pt-12 pb-12 sm:pb-16 md:pb-20 px-2 sm:px-4 md:px-6 bg-white">
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
@@ -46,7 +46,7 @@ export default function CTARegistrationSection() {
 
                 {/* Title */}
                 <h3 className="text-2xl sm:text-3xl font-bold mb-3 leading-tight">
-                  Join as Customer
+                  Join as Customer Partner
                 </h3>
 
                 {/* Description */}
@@ -68,36 +68,36 @@ export default function CTARegistrationSection() {
             </div>
 
             {/* Supplier Registration Card */}
-            <div className="group bg-gradient-to-br from-brand-light to-white rounded-2xl p-6 sm:p-8 border-2 border-brand-primary/30 shadow-lg hover:shadow-xl transition-all duration-300">
+            <div className="group bg-gradient-to-br from-brand-primary to-brand-secondary rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300">
               {/* Content */}
-              <div className="text-brand-dark">
+              <div className="text-white">
                 {/* Icon and Badge */}
                 <div className="flex justify-between items-start mb-4 sm:mb-6">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-brand-primary/10 rounded-2xl flex items-center justify-center">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 rounded-2xl flex items-center justify-center">
                     <Icon
                       name="heroicons:building-office-2-20-solid"
-                      className="w-6 h-6 sm:w-7 text-brand-primary"
+                      className="w-6 h-6 sm:w-7 text-white"
                     />
                   </div>
-                  <div className="bg-brand-primary/10 rounded-full px-3 py-1 text-xs font-medium">
+                  <div className="bg-white/20 rounded-full px-3 py-1 text-xs font-medium">
                     For Partners
                   </div>
                 </div>
 
                 {/* Title */}
                 <h3 className="text-2xl sm:text-3xl font-bold mb-3 leading-tight">
-                  Join as Supplier
+                  Join as Supplier Partner in Goods and Service Provider
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-600 leading-relaxed mb-6 text-base">
+                <p className="text-white/90 leading-relaxed mb-6 text-base">
                   Join our trusted supplier network with access to global
                   customers and growth opportunities.
                 </p>
 
                 {/* CTA Button */}
                 <Button
-                  variant="primary"
+                  variant="glass"
                   size="lg"
                   showArrow={true}
                   href="/register/supplier"

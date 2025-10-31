@@ -14,8 +14,8 @@ export default function Home() {
     <main className="min-h-screen">
       <Header />
       <HeroSection />
-      <CTARegistrationSection />
       <ModernServicesSection />
+      <CTARegistrationSection />
       <AboutUsSection />
       <GlobalManufacturingCapacity />
       {/* <ModernTestimonialsSection /> */}

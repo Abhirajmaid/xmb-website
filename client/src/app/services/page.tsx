@@ -87,9 +87,8 @@ export default function ServicesPage() {
           {/* Services Grid */}
           <div className="grid md:grid-cols-2 gap-6">
             {services.map((service, index) => (
-              <a
+              <div
                 key={index}
-                href={`/services/${service.id}`}
                 className="group relative bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:border-brand-primary hover:-translate-y-1"
               >
                 {/* Image Section */}
@@ -111,25 +110,9 @@ export default function ServicesPage() {
                     {service.description}
                   </p>
 
-                  {/* Learn More Button */}
-                  <div className="flex items-center text-brand-primary font-semibold text-sm group-hover:gap-2 transition-all">
-                    <span>Learn More</span>
-                    <svg
-                      className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M17 8l4 4m0 0l-4 4m4-4H3"
-                      />
-                    </svg>
-                  </div>
+                  {/* Learn More removed to disable clickthrough */}
                 </div>
-              </a>
+              </div>
             ))}
           </div>
         </div>

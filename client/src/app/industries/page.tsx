@@ -247,9 +247,8 @@ export default function IndustriesPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {industries.map((industry) => (
-              <a
+              <div
                 key={industry.id}
-                href={industry.href}
                 className="group relative bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:border-brand-primary hover:-translate-y-1"
               >
                 {/* Image Section */}
@@ -293,25 +292,9 @@ export default function IndustriesPage() {
                     ))}
                   </div>
 
-                  {/* Learn More Link */}
-                  <div className="flex items-center text-brand-primary font-semibold text-sm group-hover:gap-2 transition-all pt-2">
-                    <span>Explore Industry</span>
-                    <svg
-                      className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M17 8l4 4m0 0l-4 4m4-4H3"
-                      />
-                    </svg>
-                  </div>
+                  {/* Explore Industry button removed as requested */}
                 </div>
-              </a>
+              </div>
             ))}
           </div>
         </div>

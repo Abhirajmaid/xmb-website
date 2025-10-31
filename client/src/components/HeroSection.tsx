@@ -59,7 +59,7 @@ export default function HeroSection() {
 
                 <p className="text-xl lg:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto">
                   Xtrawrkx Manufacturing Services provides end-to-end product
-                  development and manufacturing services — from ideation and
+                  development and manufacturing services from ideation and
                   prototyping to large-scale production, quality assurance,
                   logistics, and supply chain solutions.
                 </p>

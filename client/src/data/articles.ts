@@ -192,12 +192,6 @@ export const getBottomGridArticles = (): Article[] => {
 
 // Get category badge color
 export const getCategoryColor = (category: string): string => {
-    const colors: { [key: string]: string } = {
-        "Case Study": "bg-blue-600",
-        "Blog": "bg-purple-600",
-        "Press": "bg-green-600",
-        "XMBVidz": "bg-orange-600",
-        "gaZETTe": "bg-red-600"
-    };
-    return colors[category] || "bg-gray-600";
+    // Rising Sun theme: unified brand gradient for all badges
+    return "bg-gradient-to-r from-brand-primary to-brand-secondary";
 };
