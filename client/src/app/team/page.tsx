@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Button from "@/components/Button";
 import PageHero from "@/components/PageHero";
+import TeamCard from "@/components/TeamCard";
 
 // Team data
 const teamMembers = [
@@ -145,9 +146,6 @@ export default function TeamPage() {
 
       {/* Team Section */}
       <section className="relative py-20 px-6 overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-light via-white to-brand-light/50"></div>
-
         <div className="max-w-7xl mx-auto relative z-10">
           {/* Filter Section */}
           <div className="text-center mb-16">
@@ -176,70 +174,19 @@ export default function TeamPage() {
           </div>
 
           {/* Team Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredMembers.map((member, index) => (
-              <div
+              <TeamCard
                 key={member.id}
-                className="group relative bg-white rounded-3xl border border-gray-100 p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:border-brand-light"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                {/* Profile Image */}
-                <div className="relative mb-6">
-                  <div className="w-32 h-32 mx-auto rounded-full overflow-hidden ring-4 ring-gray-100 group-hover:ring-blue-100 transition-all duration-300">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-
-                {/* Member Info */}
-                <div className="text-center space-y-4">
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-1 group-hover:text-brand-primary transition-colors">
-                      {member.name}
-                    </h3>
-                    <p className="text-gray-600 text-sm">{member.role}</p>
-                  </div>
-
-                  {/* Social Icons */}
-                  <div className="flex justify-center gap-3 pt-2">
-                    <a
-                      href={member.linkedin}
-                      className="w-9 h-9 rounded-lg bg-gray-100 hover:bg-brand-primary flex items-center justify-center transition-all duration-300 hover:scale-110"
-                      aria-label={`${member.name} LinkedIn`}
-                    >
-                      <svg
-                        className="w-5 h-5 text-gray-600 hover:text-white"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                      </svg>
-                    </a>
-                    <a
-                      href={`mailto:${member.email}`}
-                      className="w-9 h-9 rounded-lg bg-gray-100 hover:bg-brand-primary flex items-center justify-center transition-all duration-300 hover:scale-110"
-                      aria-label={`${member.name} Email`}
-                    >
-                      <svg
-                        className="w-5 h-5 text-gray-600 hover:text-white"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
+                name={member.name}
+                role={member.role}
+                image={member.image}
+                linkedin={member.linkedin}
+                email={member.email}
+                department={member.department}
+                bio={member.bio}
+                animationDelay={index * 100}
+              />
             ))}
           </div>
 

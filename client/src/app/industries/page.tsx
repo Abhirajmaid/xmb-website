@@ -179,39 +179,6 @@ export default function IndustriesPage() {
         </svg>
       ),
     },
-    {
-      id: "aerospace",
-      title: "Aerospace",
-      description: "Aviation • Space technology",
-      image:
-        "https://images.unsplash.com/photo-1446776877081-d282a0f896e2?w=800&h=600&fit=crop&crop=center",
-      href: "/industries/aerospace",
-      content:
-        "Advanced aerospace manufacturing for aviation and space exploration technologies. We provide precision manufacturing services for aircraft components, space systems, and satellite technology that meet the stringent requirements of aerospace industry standards.",
-      features: [
-        "Aircraft Components",
-        "Space Systems",
-        "Satellite Technology",
-        "Avionics",
-        "Propulsion Systems",
-        "Structural Components",
-      ],
-      icon: (
-        <svg
-          className="w-6 h-6 text-white"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M13 10V3L4 14h7v7l9-11h-7z"
-          />
-        </svg>
-      ),
-    },
   ];
 
   return (
@@ -220,39 +187,39 @@ export default function IndustriesPage() {
 
       {/* Hero Section */}
       <PageHero
-        title="Industries"
-        subtitle="Specialized manufacturing solutions for cutting-edge industries driving the future of technology"
-        backgroundImage="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&h=1080&fit=crop&crop=center"
+        title="Our Industries"
+        backgroundImage="/images/hero3.jpg"
         backgroundAlt="Industries Background"
         variant="full"
       />
 
       {/* Industries Grid */}
-      <section className="py-20 px-6 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-20 bg-gray-50">
+        <div className="max-w-8xl mx-auto">
           <div className="text-center mb-16">
             <div className="backdrop-blur-md bg-white/80 border border-brand-light/50 rounded-full px-6 py-3 inline-block mb-8">
               <p className="text-brand-primary font-semibold text-lg tracking-wide uppercase">
                 Industry Solutions
               </p>
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">
               Future-Ready Industries
             </h2>
-            <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               We provide comprehensive manufacturing solutions for industries at
               the forefront of technological innovation
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Industries Grid - Single Row */}
+          <div className="flex flex-wrap gap-6">
             {industries.map((industry) => (
               <div
                 key={industry.id}
-                className="group relative bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:border-brand-primary hover:-translate-y-1"
+                className="group relative bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:border-brand-primary hover:-translate-y-1 flex-1 min-w-[280px] flex flex-col"
               >
                 {/* Image Section */}
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-56 flex-shrink-0 overflow-hidden">
                   <img
                     src={industry.image}
                     alt={industry.title}
@@ -274,25 +241,28 @@ export default function IndustriesPage() {
                 </div>
 
                 {/* Content Section */}
-                <div className="p-7 space-y-4">
-                  <h3 className="text-2xl font-bold text-gray-900 group-hover:text-brand-primary transition-colors">
+                <div className="p-7 flex flex-col flex-1">
+                  <h3 className="text-2xl font-bold text-gray-900 group-hover:text-brand-primary transition-colors mb-3">
                     {industry.title}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed line-clamp-2">
+                  <p className="text-gray-600 text-sm leading-relaxed flex-1 mb-4">
                     {industry.content}
                   </p>
 
                   {/* Featured Items */}
-                  <div className="space-y-2">
+                  <ul className="space-y-2 mt-auto">
                     {industry.features.slice(0, 3).map((feature, index) => (
-                      <div key={index} className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-brand-primary rounded-full flex-shrink-0"></div>
-                        <span className="text-xs text-gray-600">{feature}</span>
-                      </div>
+                      <li
+                        key={index}
+                        className="flex items-start gap-2 text-sm text-gray-600"
+                      >
+                        <span className="text-brand-primary mt-1.5 flex-shrink-0">
+                          •
+                        </span>
+                        <span>{feature}</span>
+                      </li>
                     ))}
-                  </div>
-
-                  {/* Explore Industry button removed as requested */}
+                  </ul>
                 </div>
               </div>
             ))}

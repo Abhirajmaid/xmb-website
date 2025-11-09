@@ -71,7 +71,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <PageHero
         title="Contact Us"
-        backgroundImage="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&h=1080&fit=crop&crop=center"
+        backgroundImage="/images/hero5.jpg"
         backgroundAlt="Contact Background"
         variant="full"
       />

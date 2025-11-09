@@ -59,7 +59,7 @@ export default function BlogPage() {
       <PageHero
         title="Manufacturing Insights"
         subtitle="Explore the latest trends, technologies, and best practices in modern manufacturing"
-        backgroundImage="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&h=1080&fit=crop&crop=center"
+        backgroundImage="/images/hero4.jpg"
         backgroundAlt="Manufacturing Insights Background"
         variant="full"
       />

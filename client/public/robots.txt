@@ -1,0 +1,23 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://xmb.xtrawrkx.com/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Allow important paths
+Allow: /
+Allow: /about
+Allow: /services
+Allow: /solutions
+Allow: /industries
+Allow: /blog
+Allow: /contact
+Allow: /case-studies
+Allow: /team
+

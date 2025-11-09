@@ -13,7 +13,7 @@ export default function ModernServicesSection() {
       tag: "Supply Chain Excellence",
       stats: { value: "500+", label: "Suppliers" },
       image:
-        "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1600&h=1200&fit=crop&crop=center",
+        "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&h=600&fit=crop&q=90&auto=format",
       features: [
         "Strategic sourcing",
         "Procurement",
@@ -30,7 +30,7 @@ export default function ModernServicesSection() {
       tag: "Innovation & Design",
       stats: { value: "24-48hrs", label: "Prototyping" },
       image:
-        "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=1600&h=1200&fit=crop&crop=center",
+        "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&h=600&fit=crop&q=90&auto=format",
       link: "/services/design-prototyping",
       icon: <Icon name="heroicons:light-bulb-20-solid" className="w-8 h-8" />,
     },
@@ -41,7 +41,7 @@ export default function ModernServicesSection() {
       tag: "Manufacturing Excellence",
       stats: { value: "±0.001mm", label: "Precision" },
       image:
-        "https://images.unsplash.com/photo-1581091870627-3a83aa8f1a89?w=1600&h=1200&fit=crop&crop=center",
+        "https://images.unsplash.com/photo-1581091870627-3a83aa8f1a89?w=800&h=600&fit=crop&q=90&auto=format",
       link: "/services/manufacturing",
       icon: <Icon name="heroicons:cog-6-tooth-20-solid" className="w-8 h-8" />,
     },
@@ -52,7 +52,7 @@ export default function ModernServicesSection() {
       tag: "Operational Excellence",
       stats: { value: "30-80%", label: "Efficiency" },
       image:
-        "https://images.unsplash.com/photo-1506719040632-7d586470c936?w=1600&h=1200&fit=crop&crop=center",
+        "https://images.unsplash.com/photo-1506719040632-7d586470c936?w=800&h=600&fit=crop&q=90&auto=format",
       link: "/services/business-excellence",
       icon: <Icon name="heroicons:chart-bar-20-solid" className="w-8 h-8" />,
     },
@@ -82,50 +82,53 @@ export default function ModernServicesSection() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 h-full min-h-[360px] flex flex-col overflow-hidden"
+              className="group relative bg-white rounded-2xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:-translate-y-1 h-[480px] flex flex-col"
             >
-              {/* Background image */}
-              <div className="absolute inset-0">
+              {/* Image Section */}
+              <div className="relative h-48 flex-shrink-0 overflow-hidden">
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/10" />
-              </div>
-
-              <div className="relative z-10 text-white">
-                {/* Icon */}
-                <div className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-6">
-                  <div className="text-white">{service.icon}</div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                
+                {/* Icon Badge */}
+                <div className="absolute top-4 left-4 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-xl flex items-center justify-center shadow-lg">
+                  <div className="text-brand-primary">{service.icon}</div>
                 </div>
 
-                {/* Title */}
-                <h3 className="text-xl font-bold mb-4 leading-tight">
-                  {service.title}
-                </h3>
-
-                {/* Stats */}
-                <div className="mb-4">
-                  <div className="text-2xl font-bold mb-1">
+                {/* Stats Badge */}
+                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-2 shadow-lg">
+                  <div className="text-brand-primary text-lg font-bold">
                     {service.stats.value}
                   </div>
-                  <div className="text-xs text-white/80 font-medium">
+                  <div className="text-gray-600 text-[10px] font-medium">
                     {service.stats.label}
                   </div>
                 </div>
+              </div>
 
-                {/* Description */}
-                <p className="text-base text-white/90 leading-relaxed mb-4 flex-grow">
-                  {service.description}
-                </p>
-
+              {/* Content Section */}
+              <div className="p-6 flex flex-col flex-1">
                 {/* Tag */}
-                <div className="mt-auto pt-4 border-t border-white/20">
-                  <span className="inline-block px-3 py-1 bg-white/15 text-white text-xs font-semibold rounded-full">
+                <div className="mb-3">
+                  <span className="inline-block px-3 py-1 bg-brand-light/40 text-brand-primary text-xs font-semibold rounded-full border border-brand-light/50">
                     {service.tag}
                   </span>
                 </div>
+
+                {/* Title */}
+                <h3 className="text-lg font-bold text-gray-900 mb-3 leading-tight">
+                  {service.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-sm text-gray-600 leading-relaxed flex-1">
+                  {service.description}
+                </p>
               </div>
             </div>
           ))}

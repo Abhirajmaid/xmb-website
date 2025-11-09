@@ -4,6 +4,7 @@ import CTARegistrationSection from "@/components/CTARegistrationSection";
 import AboutUsSection from "@/components/AboutUsSection";
 import ModernServicesSection from "@/components/ModernServicesSection";
 import GlobalManufacturingCapacity from "@/components/GlobalManufacturingCapacity";
+import ManufacturingFlowSection from "@/components/ManufacturingFlowSection";
 import ModernTestimonialsSection from "@/components/ModernTestimonialsSection";
 import OurJourneySection from "@/components/OurJourneySection";
 import LatestArticlesSection from "@/components/LatestArticlesSection";
@@ -17,6 +18,7 @@ export default function Home() {
       <ModernServicesSection />
       <CTARegistrationSection />
       <AboutUsSection />
+      <ManufacturingFlowSection />
       <GlobalManufacturingCapacity />
       {/* <ModernTestimonialsSection /> */}
       {/* <OurJourneySection /> */}

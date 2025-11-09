@@ -1,31 +1,60 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Xtrawrkx Manufacturing Business - Precision Manufacturing Solutions",
+  metadataBase: new URL("https://xmb.xtrawrkx.com"),
+  title: {
+    default: "Xtrawrkx Manufacturing Business - Precision Manufacturing Solutions",
+    template: "%s | Xtrawrkx Manufacturing Business",
+  },
   description:
-    "Leading manufacturing company specializing in precision machining, assembly manufacturing, and Industry 4.0 solutions. Delivering world-class manufacturing excellence with cutting-edge technology and expert craftsmanship.",
-  keywords:
-    "manufacturing, precision machining, assembly, Industry 4.0, CNC machining, quality control, supply chain, automotive, aerospace, electronics, medical devices",
+    "Leading manufacturing company specializing in precision machining, assembly manufacturing, and Industry 4.0 solutions. Delivering world-class manufacturing excellence with cutting-edge technology and expert craftsmanship. Global operations across 25+ countries.",
+  keywords: [
+    "manufacturing",
+    "precision machining",
+    "assembly manufacturing",
+    "Industry 4.0",
+    "CNC machining",
+    "quality control",
+    "supply chain",
+    "automotive manufacturing",
+    "aerospace manufacturing",
+    "electronics manufacturing",
+    "medical device manufacturing",
+    "sourcing and procurement",
+    "design and prototyping",
+    "operational excellence",
+    "global manufacturing",
+    "Xtrawrkx",
+  ],
   authors: [{ name: "Xtrawrkx Manufacturing Business" }],
   creator: "Xtrawrkx Manufacturing Business",
   publisher: "Xtrawrkx Manufacturing Business",
-  robots: "index, follow",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://xtrawrkx.com",
+    url: "https://xmb.xtrawrkx.com",
     siteName: "Xtrawrkx Manufacturing Business",
-    title:
-      "Xtrawrkx Manufacturing Business - Precision Manufacturing Solutions",
+    title: "Xtrawrkx Manufacturing Business - Precision Manufacturing Solutions",
     description:
-      "Leading manufacturing company specializing in precision machining, assembly manufacturing, and Industry 4.0 solutions.",
+      "Leading manufacturing company specializing in precision machining, assembly manufacturing, and Industry 4.0 solutions. Global operations across 25+ countries.",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "Xtrawrkx Manufacturing Business - Modern Manufacturing Solutions",
@@ -34,14 +63,55 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Xtrawrkx Manufacturing Business - Precision Manufacturing Solutions",
+    title: "Xtrawrkx Manufacturing Business - Precision Manufacturing Solutions",
     description:
       "Leading manufacturing company specializing in precision machining, assembly manufacturing, and Industry 4.0 solutions.",
-    images: ["/images/twitter-image.jpg"],
+    images: ["/images/twitter-image.png"],
   },
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#2563eb",
+  alternates: {
+    canonical: "https://xmb.xtrawrkx.com",
+  },
+  verification: {
+    // Add your verification codes here when available
+    // google: "your-google-verification-code",
+    // yandex: "your-yandex-verification-code",
+    // bing: "your-bing-verification-code",
+  },
+  category: "Manufacturing",
+  classification: "Business",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Xtrawrkx Manufacturing",
+  },
+  formatDetection: {
+    telephone: true,
+    date: true,
+    address: true,
+    email: true,
+    url: true,
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#2563eb" },
+    { media: "(prefers-color-scheme: dark)", color: "#1e40af" },
+  ],
 };
 
 export default function RootLayout({

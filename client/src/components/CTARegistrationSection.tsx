@@ -68,36 +68,36 @@ export default function CTARegistrationSection() {
             </div>
 
             {/* Supplier Registration Card */}
-            <div className="group bg-gradient-to-br from-brand-primary to-brand-secondary rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+            <div className="group bg-white border-2 border-gray-200 rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-brand-primary/30">
               {/* Content */}
-              <div className="text-white">
+              <div className="text-gray-900">
                 {/* Icon and Badge */}
                 <div className="flex justify-between items-start mb-4 sm:mb-6">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 rounded-2xl flex items-center justify-center">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-2xl flex items-center justify-center">
                     <Icon
                       name="heroicons:building-office-2-20-solid"
                       className="w-6 h-6 sm:w-7 text-white"
                     />
                   </div>
-                  <div className="bg-white/20 rounded-full px-3 py-1 text-xs font-medium">
+                  <div className="bg-gradient-to-r from-brand-primary/10 to-brand-secondary/10 border border-brand-primary/20 rounded-full px-3 py-1 text-xs font-medium text-brand-primary">
                     For Partners
                   </div>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl sm:text-3xl font-bold mb-3 leading-tight">
+                <h3 className="text-2xl sm:text-3xl font-bold mb-3 leading-tight text-gray-900">
                   Join as Supplier Partner in Goods and Service Provider
                 </h3>
 
                 {/* Description */}
-                <p className="text-white/90 leading-relaxed mb-6 text-base">
+                <p className="text-gray-600 leading-relaxed mb-6 text-base">
                   Join our trusted supplier network with access to global
                   customers and growth opportunities.
                 </p>
 
                 {/* CTA Button */}
                 <Button
-                  variant="glass"
+                  variant="primary"
                   size="lg"
                   showArrow={true}
                   href="/register/supplier"

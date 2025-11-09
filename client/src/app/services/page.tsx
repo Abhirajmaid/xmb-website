@@ -6,12 +6,46 @@ import Footer from "@/components/Footer";
 import { servicesData } from "@/data/services";
 import PageHero from "@/components/PageHero";
 import Button from "@/components/Button";
+import Icon from "@/components/Icon";
 
 export default function ServicesPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   // Get services data from the data file
   const services = servicesData;
+
+  // Service icons mapping
+  const serviceIcons = {
+    "sourcing-procurement": (
+      <Icon name="heroicons:truck-20-solid" className="w-6 h-6 text-white" />
+    ),
+    "design-prototyping": (
+      <Icon
+        name="heroicons:light-bulb-20-solid"
+        className="w-6 h-6 text-white"
+      />
+    ),
+    "manufacturing-solutions": (
+      <Icon
+        name="heroicons:cog-6-tooth-20-solid"
+        className="w-6 h-6 text-white"
+      />
+    ),
+    "operation-consulting-service-excellence": (
+      <Icon
+        name="heroicons:chart-bar-20-solid"
+        className="w-6 h-6 text-white"
+      />
+    ),
+  };
+
+  // Service tags mapping
+  const serviceTags = {
+    "sourcing-procurement": "Supply Chain",
+    "design-prototyping": "Innovation",
+    "manufacturing-solutions": "Production",
+    "operation-consulting-service-excellence": "Excellence",
+  };
 
   // FAQ data
   const faqs = [
@@ -58,14 +92,14 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <PageHero
         title="Our Services"
-        backgroundImage="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&h=1080&fit=crop&crop=center"
+        backgroundImage="/images/hero3.jpg"
         backgroundAlt="Business Services Background"
         variant="full"
       />
 
       {/* Services Grid Section */}
-      <section className="py-20 px-6 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-20 bg-gray-50">
+        <div className="max-w-8xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
             <div className="backdrop-blur-md bg-white/80 border border-brand-light/50 rounded-full px-6 py-3 inline-block mb-8">
@@ -84,33 +118,62 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          {/* Services Grid */}
-          <div className="grid md:grid-cols-2 gap-6">
+          {/* Services Grid - Single Row */}
+          <div className="flex flex-wrap gap-6">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group relative bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:border-brand-primary hover:-translate-y-1"
+                className="group relative bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:border-brand-primary hover:-translate-y-1 flex-1 min-w-[280px] flex flex-col"
               >
                 {/* Image Section */}
-                <div className="relative h-56 rounded-2xl overflow-hidden">
+                <div className="relative h-56 flex-shrink-0 overflow-hidden">
                   <img
                     src={service.image}
                     alt={service.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+
+                  {/* Icon Badge */}
+                  <div className="absolute top-5 left-5 w-14 h-14 bg-brand-primary rounded-2xl flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
+                    {serviceIcons[service.id as keyof typeof serviceIcons]}
+                  </div>
+
+                  {/* Service Tag */}
+                  <div className="absolute top-5 right-5 px-4 py-2 bg-white/95 backdrop-blur-sm rounded-xl shadow-md">
+                    <p className="text-xs font-bold text-gray-800">
+                      {serviceTags[service.id as keyof typeof serviceTags]}
+                    </p>
+                  </div>
                 </div>
 
                 {/* Content Section */}
-                <div className="p-7 space-y-4">
-                  <h3 className="text-2xl font-bold text-gray-900 group-hover:text-brand-primary transition-colors">
+                <div className="p-7 flex flex-col flex-1">
+                  <h3 className="text-2xl font-bold text-gray-900 group-hover:text-brand-primary transition-colors mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
+                  <p className="text-gray-600 text-sm leading-relaxed flex-1 mb-4">
                     {service.description}
                   </p>
 
-                  {/* Learn More removed to disable clickthrough */}
+                  {/* Subpoints */}
+                  {service.subServices && service.subServices.length > 0 && (
+                    <ul className="space-y-2 mt-auto">
+                      {service.subServices[0].features
+                        .slice(0, 3)
+                        .map((feature, idx) => (
+                          <li
+                            key={idx}
+                            className="flex items-start gap-2 text-sm text-gray-600"
+                          >
+                            <span className="text-brand-primary mt-1.5 flex-shrink-0">
+                              •
+                            </span>
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                    </ul>
+                  )}
                 </div>
               </div>
             ))}

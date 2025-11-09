@@ -73,117 +73,112 @@ export const navigationLinks: NavLink[] = [
         id: "services",
         href: "/services",
         label: "Services",
-        // dropdown: [
-        //     {
-        //         title: "Core Services",
-        //         description: "Our comprehensive suite of business solutions designed to drive efficiency, innovation, and growth across your entire value chain.",
-        //         items: [
-        //             {
-        //                 href: "/services/sourcing-procurement",
-        //                 label: "Sourcing & Procurement",
-        //                 description: "Supply chain • Strategic sourcing",
-        //                 iconType: "svg",
-        //                 icon: "heroicons:truck-20-solid"
-        //             },
-        //             {
-        //                 href: "/services/design-prototyping",
-        //                 label: "Design and Prototyping",
-        //                 description: "Innovation • Rapid prototyping",
-        //                 iconType: "svg",
-        //                 icon: "heroicons:light-bulb-20-solid"
-        //             },
-        //             {
-        //                 href: "/services/manufacturing-solutions",
-        //                 label: "Manufacturing Solutions",
-        //                 description: "Production • Advanced manufacturing",
-        //                 iconType: "svg",
-        //                 icon: "heroicons:cog-6-tooth-20-solid"
-        //             },
-        //             {
-        //                 href: "/services/operation-consulting-service-excellence",
-        //                 label: "Operation Consulting",
-        //                 description: "Excellence • Process optimization",
-        //                 iconType: "svg",
-        //                 icon: "heroicons:chart-bar-20-solid"
-        //             }
-        //         ]
-        //     },
-        //     {
-        //         title: "Industry Services",
-        //         description: "Specialized manufacturing solutions for cutting-edge industries driving the future of technology.",
-        //         items: [
-        //             {
-        //                 href: "/industries/ev-mobility",
-        //                 label: "EV/E-Mobility",
-        //                 description: "Electric vehicles • Charging infrastructure",
-        //                 iconType: "svg",
-        //                 icon: "heroicons:truck-20-solid"
-        //             },
-        //             {
-        //                 href: "/industries/bess-energy-storage",
-        //                 label: "BESS/Energy Storage",
-        //                 description: "Battery systems • Grid storage",
-        //                 iconType: "svg",
-        //                 icon: "heroicons:battery-100-20-solid"
-        //             },
-        //             {
-        //                 href: "/industries/drones",
-        //                 label: "Drones",
-        //                 description: "UAV manufacturing • Aerial systems",
-        //                 iconType: "svg",
-        //                 icon: "heroicons:paper-airplane-20-solid"
-        //             },
-        //             {
-        //                 href: "/industries/e-agritech",
-        //                 label: "E-Agritech",
-        //                 description: "Smart farming • Agricultural tech",
-        //                 iconType: "svg",
-        //                 icon: "heroicons:leaf-20-solid"
-        //             },
-        //             {
-        //                 href: "/industries/aerospace",
-        //                 label: "Aerospace",
-        //                 description: "Aviation • Space technology",
-        //                 iconType: "svg",
-        //                 icon: "heroicons:rocket-launch-20-solid"
-        //             }
-        //         ]
-        //     },
-        //     {
-        //         title: "Partnership Programs",
-        //         description: "Join our ecosystem of customers, suppliers, and partners",
-        //         items: [
-        //             {
-        //                 href: "/register/customer",
-        //                 label: "Customer Portal",
-        //                 description: "Access our services platform",
-        //                 badge: "Free Access",
-        //                 iconType: "svg",
-        //                 icon: "heroicons:user-group-20-solid"
-        //             },
-        //             {
-        //                 href: "/register/supplier",
-        //                 label: "Supplier Network",
-        //                 description: "Join our verified suppliers",
-        //                 badge: "Apply Now",
-        //                 iconType: "svg",
-        //                 icon: "heroicons:building-office-2-20-solid"
-        //             },
-        //             {
-        //                 href: "/partners/strategic",
-        //                 label: "Strategic Partnerships",
-        //                 description: "Long-term collaboration",
-        //                 iconType: "svg",
-        //                 icon: "heroicons:hand-raised-20-solid"
-        //             }
-        //         ]
-        //     }
-        // ]
+        dropdown: [
+            {
+                title: "Core Services",
+                description: "Our comprehensive suite of business solutions designed to drive efficiency, innovation, and growth across your entire value chain.",
+                items: [
+                    {
+                        href: "/services/sourcing-procurement",
+                        label: "Sourcing & Procurement",
+                        description: "Supply chain • Strategic sourcing",
+                        iconType: "svg",
+                        icon: "heroicons:truck-20-solid"
+                    },
+                    {
+                        href: "/services/design-prototyping",
+                        label: "Design and Prototyping",
+                        description: "Innovation • Rapid prototyping",
+                        iconType: "svg",
+                        icon: "heroicons:light-bulb-20-solid"
+                    },
+                    {
+                        href: "/services/manufacturing-solutions",
+                        label: "Manufacturing Solutions",
+                        description: "Production • Advanced manufacturing",
+                        iconType: "svg",
+                        icon: "heroicons:cog-6-tooth-20-solid"
+                    },
+                    {
+                        href: "/services/operation-consulting-service-excellence",
+                        label: "Operation Consulting",
+                        description: "Excellence • Process optimization",
+                        iconType: "svg",
+                        icon: "heroicons:chart-bar-20-solid"
+                    }
+                ]
+            },
+            {
+                title: "Partnership Programs",
+                description: "Join our ecosystem of customers, suppliers, and partners",
+                items: [
+                    {
+                        href: "/register/customer",
+                        label: "Customer Portal",
+                        description: "Access our services platform",
+                        badge: "Free Access",
+                        iconType: "svg",
+                        icon: "heroicons:user-group-20-solid"
+                    },
+                    {
+                        href: "/register/supplier",
+                        label: "Supplier Network",
+                        description: "Join our verified suppliers",
+                        badge: "Apply Now",
+                        iconType: "svg",
+                        icon: "heroicons:building-office-2-20-solid"
+                    },
+                    {
+                        href: "/partners/strategic",
+                        label: "Strategic Partnerships",
+                        description: "Long-term collaboration",
+                        iconType: "svg",
+                        icon: "heroicons:hand-raised-20-solid"
+                    }
+                ]
+            }
+        ]
     },
     {
         id: "industries",
         href: "/industries",
-        label: "Industries"
+        label: "Industries",
+        dropdown: [
+            {
+                title: "Industry Solutions",
+                description: "Specialized manufacturing solutions for cutting-edge industries driving the future of technology.",
+                items: [
+                    {
+                        href: "/industries/ev-mobility",
+                        label: "EV/E-Mobility",
+                        description: "Electric vehicles • Charging infrastructure",
+                        iconType: "svg",
+                        icon: "heroicons:truck-20-solid"
+                    },
+                    {
+                        href: "/industries/bess-energy-storage",
+                        label: "BESS/Energy Storage",
+                        description: "Battery systems • Grid storage",
+                        iconType: "svg",
+                        icon: "heroicons:battery-50-solid"
+                    },
+                    {
+                        href: "/industries/drones",
+                        label: "Drones",
+                        description: "UAV manufacturing • Aerial systems",
+                        iconType: "svg",
+                        icon: "heroicons:paper-airplane-20-solid"
+                    },
+                    {
+                        href: "/industries/e-agritech",
+                        label: "E-Agritech",
+                        description: "Smart farming • Agricultural tech",
+                        iconType: "svg",
+                        icon: "heroicons:leaf-20-solid"
+                    },
+                ]
+            }
+        ]
     },
     // {
     //     id: "resources",

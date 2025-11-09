@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 export default function NotFound() {
   return (
@@ -12,14 +12,11 @@ export default function NotFound() {
         </p>
         <Link
           href="/"
-          className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+          className="bg-brand-primary text-white px-4 py-2 rounded-lg hover:bg-brand-primary/90 transition-colors"
         >
           Return Home
         </Link>
       </div>
     </div>
-  )
+  );
 }
-
-
-

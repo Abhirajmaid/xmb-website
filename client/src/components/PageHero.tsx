@@ -43,7 +43,7 @@ export default function PageHero({
             className="w-full h-full object-cover"
           />
         )}
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/60 via-brand-secondary/50 to-brand-primary/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/10 via-brand-secondary/10 to-brand-primary/10"></div>
       </div>
 
       {/* Glass Overlay with Content */}
