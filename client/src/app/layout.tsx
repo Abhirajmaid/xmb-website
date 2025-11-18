@@ -7,7 +7,8 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL("https://xmb.xtrawrkx.com"),
   title: {
-    default: "Xtrawrkx Manufacturing Business - Precision Manufacturing Solutions",
+    default:
+      "Xtrawrkx Manufacturing Business - Precision Manufacturing Solutions",
     template: "%s | Xtrawrkx Manufacturing Business",
   },
   description:
@@ -49,7 +50,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://xmb.xtrawrkx.com",
     siteName: "Xtrawrkx Manufacturing Business",
-    title: "Xtrawrkx Manufacturing Business - Precision Manufacturing Solutions",
+    title:
+      "Xtrawrkx Manufacturing Business - Precision Manufacturing Solutions",
     description:
       "Leading manufacturing company specializing in precision machining, assembly manufacturing, and Industry 4.0 solutions. Global operations across 25+ countries.",
     images: [
@@ -63,7 +65,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Xtrawrkx Manufacturing Business - Precision Manufacturing Solutions",
+    title:
+      "Xtrawrkx Manufacturing Business - Precision Manufacturing Solutions",
     description:
       "Leading manufacturing company specializing in precision machining, assembly manufacturing, and Industry 4.0 solutions.",
     images: ["/images/twitter-image.png"],
@@ -85,9 +88,7 @@ export const metadata: Metadata = {
       { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
       { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
     ],
-    apple: [
-      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
-    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
   },
   manifest: "/manifest.json",
   appleWebApp: {
@@ -122,6 +123,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Google tag (gtag.js) */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-H9JQRB2TSZ"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-H9JQRB2TSZ');
+            `,
+          }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
