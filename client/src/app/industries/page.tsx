@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import Button from "@/components/Button";
+import Icon from "@/components/Icon";
 
 export default function IndustriesPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -52,7 +53,7 @@ export default function IndustriesPage() {
       title: "EV/E-Mobility",
       description: "Electric vehicles • Charging infrastructure",
       image:
-        "https://images.unsplash.com/photo-1593941707882-a5bac6861d75?w=800&h=600&fit=crop&crop=center",
+        "https://images.unsplash.com/photo-1746123249833-5625967e8bf1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       href: "/industries/ev-mobility",
       content:
         "Revolutionizing transportation with electric vehicles and sustainable mobility solutions. We provide comprehensive manufacturing services for electric vehicle components, charging infrastructure, and battery management systems that power the future of sustainable transportation.",
@@ -65,19 +66,7 @@ export default function IndustriesPage() {
         "Thermal Management",
       ],
       icon: (
-        <svg
-          className="w-6 h-6 text-white"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
-          />
-        </svg>
+        <Icon name="heroicons:truck-20-solid" className="w-6 h-6 text-white" />
       ),
     },
     {
@@ -98,19 +87,10 @@ export default function IndustriesPage() {
         "Power Conversion Systems",
       ],
       icon: (
-        <svg
+        <Icon
+          name="heroicons:battery-50-solid"
           className="w-6 h-6 text-white"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
-          />
-        </svg>
+        />
       ),
     },
     {
@@ -131,19 +111,10 @@ export default function IndustriesPage() {
         "Payload Integration",
       ],
       icon: (
-        <svg
+        <Icon
+          name="heroicons:paper-airplane-20-solid"
           className="w-6 h-6 text-white"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
-          />
-        </svg>
+        />
       ),
     },
     {
@@ -164,19 +135,7 @@ export default function IndustriesPage() {
         "Agricultural Robotics",
       ],
       icon: (
-        <svg
-          className="w-6 h-6 text-white"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-          />
-        </svg>
+        <Icon name="heroicons:chart-bar-solid" className="w-6 h-6 text-white" />
       ),
     },
   ];
@@ -194,25 +153,25 @@ export default function IndustriesPage() {
       />
 
       {/* Industries Grid */}
-      <section className="py-20 px-20 bg-gray-50">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-12 lg:px-20 bg-gray-50">
         <div className="max-w-8xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="backdrop-blur-md bg-white/80 border border-brand-light/50 rounded-full px-6 py-3 inline-block mb-8">
-              <p className="text-brand-primary font-semibold text-lg tracking-wide uppercase">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <div className="backdrop-blur-md bg-white/80 border border-brand-light/50 rounded-full px-4 sm:px-6 py-2 sm:py-3 inline-block mb-4 sm:mb-6 md:mb-8">
+              <p className="text-brand-primary font-semibold text-xs sm:text-sm md:text-lg tracking-wide uppercase">
                 Industry Solutions
               </p>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 md:mb-8 leading-tight px-4 sm:px-0">
               Future-Ready Industries
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
               We provide comprehensive manufacturing solutions for industries at
               the forefront of technological innovation
             </p>
           </div>
 
           {/* Industries Grid - Single Row */}
-          <div className="flex flex-wrap gap-6">
+          <div className="flex flex-wrap gap-4 sm:gap-6">
             {industries.map((industry) => (
               <div
                 key={industry.id}
@@ -241,7 +200,7 @@ export default function IndustriesPage() {
                 </div>
 
                 {/* Content Section */}
-                <div className="p-7 flex flex-col flex-1">
+                <div className="p-4 sm:p-6 md:p-7 flex flex-col flex-1">
                   <h3 className="text-2xl font-bold text-gray-900 group-hover:text-brand-primary transition-colors mb-3">
                     {industry.title}
                   </h3>
@@ -271,18 +230,18 @@ export default function IndustriesPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 px-6 bg-gray-50">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gray-50">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="relative inline-block mb-8">
-              <p className="text-brand-primary uppercase tracking-wide text-sm font-bold mb-6 bg-brand-light/40 px-8 py-3 rounded-full border border-brand-light/50">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <div className="relative inline-block mb-4 sm:mb-6 md:mb-8">
+              <p className="text-brand-primary uppercase tracking-wide text-xs sm:text-sm font-bold mb-4 sm:mb-6 bg-brand-light/40 px-4 sm:px-6 md:px-8 py-2 sm:py-3 rounded-full border border-brand-light/50">
                 ✨ FAQ
               </p>
             </div>
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight mb-4 sm:mb-6 md:mb-8 px-4 sm:px-0">
               Industry Expertise
             </h2>
-            <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4 sm:px-0">
               Get answers to common questions about our industry capabilities
             </p>
           </div>
@@ -334,12 +293,12 @@ export default function IndustriesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-brand-primary py-20 px-6">
+      <section className="bg-brand-primary py-12 sm:py-16 md:py-20 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 px-4 sm:px-0">
             Ready to Transform Your Industry?
           </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4 sm:px-0">
             Partner with us for cutting-edge manufacturing solutions. Let's
             innovate together.
           </p>

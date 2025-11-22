@@ -68,27 +68,127 @@ export default function AboutUsPage() {
     setTimeout(() => setShowNotification(false), 3000);
   };
 
-  // Leadership team data
-  const leadershipTeam = [
+  // Team data
+  const teamMembers = [
     {
-      name: "Rajesh Kumar",
-      role: "Chief Executive Officer",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+      id: 1,
+      name: "Hiten Pal Saklani",
+      role: "CEO, Co-Founder & MD",
+      department: "Leadership",
+      location: "Chandigarh",
+      image: "/images/team/hiten.png",
+      bio: "Group MD & OG of xtrawrkx Group, leading the organization with strategic vision and innovation.",
+      linkedin: "#",
+      email: "hiten@xmb.com",
     },
     {
-      name: "Priya Sharma",
-      role: "Chief Technology Officer",
-      image:
-        "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
+      id: 2,
+      name: "Gopi Tharun Velivala",
+      role: "CEO, Co-Founder & Director at XMB",
+      department: "Leadership",
+      location: "Hyderabad",
+      image: "/images/team/gopi.png",
+      bio: "Leading the XMB team as a dynamic and experienced CEO, driving growth and excellence across all operations.",
+      linkedin: "#",
+      email: "gopi@xmb.com",
     },
     {
-      name: "Amit Patel",
-      role: "Head of Operations",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+      id: 3,
+      name: "Amitabh Vaidya",
+      role: "Co-Founder & Director XMC",
+      department: "Engineering",
+      location: "Pune",
+      image: "/images/team/amitabh.png",
+      bio: "The cornerstone to our engineering capabilities, ensuring technical excellence and innovation in all projects.",
+      linkedin: "#",
+      email: "amitabh@xmb.com",
+    },
+    {
+      id: 4,
+      name: "Seetal Singh Jasrotia",
+      role: "Cofounder and Director at XMB",
+      department: "Leadership",
+      location: "Jammu",
+      image: "/images/team/seetal.png",
+      bio: "Co-founder and Director at XMB, contributing to strategic direction and organizational growth.",
+      linkedin: "#",
+      email: "seetal@xmb.com",
+    },
+    {
+      id: 5,
+      name: "Arti Thakur Saklani",
+      role: "Director at XMC & XMB",
+      department: "Operations",
+      location: "Chandigarh",
+      image: "/images/team/arti.png",
+      bio: "Leading corporate operations, audit, and strategic partnerships across XMC and XMB organizations.",
+      linkedin: "#",
+      email: "arti@xmb.com",
+    },
+    {
+      id: 6,
+      name: "Dinesh Laxman Burangule",
+      role: "AVP Dealer Development",
+      department: "Business",
+      location: "Pune",
+      image: "/images/team/dinesh.png",
+      bio: "Driving dealer development and expanding our network of partners and distributors.",
+      linkedin: "#",
+      email: "dinesh@xmb.com",
+    },
+    {
+      id: 7,
+      name: "Aniket Dey",
+      role: "Manager-BD at XMC",
+      department: "Business",
+      location: "Chandigarh",
+      image: "/images/team/aniket.png",
+      bio: "Handling XEN community & membership growth, building strong relationships and expanding our network.",
+      linkedin: "#",
+      email: "aniket@xmb.com",
+    },
+    {
+      id: 8,
+      name: "Anurag Das",
+      role: "Partner at XMC",
+      department: "Leadership",
+      location: "Ahmedabad",
+      image: "/images/team/anurag.png",
+      bio: "Aide-de-camp to MD & being positioned as future CEO, playing a key role in strategic planning and execution.",
+      linkedin: "#",
+      email: "anurag@xmb.com",
+    },
+    {
+      id: 9,
+      name: "Chandrashekar V",
+      role: "Partner Consultant at XMC & XMB",
+      department: "Engineering",
+      location: "Bengaluru",
+      image: "/images/team/chandra.png",
+      bio: "Our senior most expert in all matters EV sourcing, providing strategic guidance and technical expertise.",
+      linkedin: "#",
+      email: "chandrashekar@xmb.com",
     },
   ];
+
+  const departments = [
+    "All",
+    "Leadership",
+    "Engineering",
+    "Operations",
+    "Business",
+  ];
+
+  const [activeFilter, setActiveFilter] = useState("All");
+
+  const filteredMembers =
+    activeFilter === "All"
+      ? teamMembers
+      : teamMembers.filter((member) => member.department === activeFilter);
+
+  const handleFilterClick = (filter: string) => {
+    setActiveFilter(filter);
+  };
 
   return (
     <main className="min-h-screen bg-white">
@@ -257,31 +357,54 @@ export default function AboutUsPage() {
       <OurJourneySection />
 
       {/* Leadership Section */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative py-20 px-6 overflow-hidden">
+        <div className="max-w-7xl mx-auto relative z-10">
+          {/* Filter Section */}
           <div className="text-center mb-16">
-            <div className="relative inline-block mb-8">
-              <p className="text-brand-primary uppercase tracking-wide text-sm font-bold mb-6 bg-brand-light/40 px-8 py-3 rounded-full border border-brand-light/50">
-                ✨ OUR LEADERSHIP
+            <div className="backdrop-blur-md bg-white/80 border border-brand-light/50 rounded-full px-6 py-3 inline-block mb-8">
+              <p className="text-brand-primary font-semibold text-lg tracking-wide uppercase">
+                OUR LEADERSHIP
               </p>
             </div>
+
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-8">
               Meet Our Leadership Team
             </h2>
-            <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8">
               Experienced leaders driving innovation and excellence in
               manufacturing solutions
             </p>
+
+            {/* Filter Tabs */}
+            <div className="flex flex-wrap gap-4 justify-center">
+              {departments.map((department) => (
+                <button
+                  key={department}
+                  onClick={() => handleFilterClick(department)}
+                  className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                    activeFilter === department
+                      ? "bg-brand-primary text-white shadow-lg"
+                      : "bg-white/80 text-gray-600 hover:bg-white hover:shadow-md"
+                  }`}
+                >
+                  {department}
+                </button>
+              ))}
+            </div>
           </div>
 
-          {/* Leadership Grid */}
+          {/* Team Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {leadershipTeam.map((member, index) => (
+            {filteredMembers.map((member, index) => (
               <TeamCard
-                key={index}
+                key={member.id}
                 name={member.name}
                 role={member.role}
                 image={member.image}
+                linkedin={member.linkedin}
+                email={member.email}
+                department={member.department}
+                bio={member.bio}
                 animationDelay={index * 100}
               />
             ))}

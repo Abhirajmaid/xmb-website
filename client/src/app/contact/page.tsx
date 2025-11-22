@@ -77,13 +77,13 @@ export default function ContactPage() {
       />
 
       {/* Main Contact Section */}
-      <section className="py-20 px-6 bg-gray-50">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16">
             {/* Left Side - Contact Form */}
-            <div className="bg-white rounded-3xl p-8 shadow-lg">
-              <div className="mb-8">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <div className="bg-white rounded-3xl p-4 sm:p-6 md:p-8 shadow-lg">
+              <div className="mb-6 sm:mb-8">
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
                   Xtrawrkx Manufacturing is a global manufacturer that can help
                   you maximize efficiency, quality and value in your supply
                   chain.

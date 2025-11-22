@@ -48,8 +48,8 @@ export const servicesData: Service[] = [
         id: "sourcing-procurement",
         title: "Sourcing & Procurement",
         description: "Strategic sourcing and procurement services to optimize your supply chain, reduce costs, and ensure reliable material availability. We leverage global networks and industry expertise to deliver value-driven procurement solutions.",
-        image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop",
-        heroImage: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&h=1080&fit=crop&crop=center",
+        image: "/images/services/Sourcing & Procurement.png",
+        heroImage: "/images/services/Sourcing & Procurement.png",
         overview: {
             title: "Strategic Supply Chain Excellence",
             description: "Our sourcing and procurement services combine deep market knowledge with strategic partnerships to deliver cost-effective, reliable supply chain solutions. We help you navigate complex global markets while ensuring quality, compliance, and sustainability.",
@@ -152,8 +152,8 @@ export const servicesData: Service[] = [
         id: "design-prototyping",
         title: "Design and Prototyping",
         description: "Comprehensive design and prototyping services from concept to production-ready designs. Our expert team combines creativity with technical expertise to bring your ideas to life through innovative design solutions.",
-        image: "https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=800&h=600&fit=crop",
-        heroImage: "https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=1920&h=1080&fit=crop&crop=center",
+        image: "/images/services/Design and Prototyping.png",
+        heroImage: "/images/services/Design and Prototyping.png",
         overview: {
             title: "Innovation Through Design Excellence",
             description: "Our design and prototyping services transform concepts into reality through systematic design thinking, advanced CAD modeling, and rapid prototyping technologies. We bridge the gap between imagination and implementation.",
@@ -256,8 +256,8 @@ export const servicesData: Service[] = [
         id: "manufacturing-solutions",
         title: "Manufacturing Solutions",
         description: "Complete manufacturing solutions from precision machining to large-scale production. We deliver high-quality components and assemblies using advanced manufacturing technologies and rigorous quality control processes.",
-        image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop",
-        heroImage: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&h=1080&fit=crop&crop=center",
+        image: "/images/services/Manufacturing Solutions.png",
+        heroImage: "/images/services/Manufacturing Solutions.png",
         overview: {
             title: "Advanced Manufacturing Excellence",
             description: "Our manufacturing solutions encompass the full spectrum of production capabilities, from precision machining and fabrication to assembly and finishing. We combine cutting-edge technology with skilled craftsmanship to deliver superior quality products.",
@@ -360,8 +360,8 @@ export const servicesData: Service[] = [
         id: "operation-consulting-service-excellence",
         title: "Operation Consulting / Service Excellence",
         description: "Strategic operational consulting and service excellence programs to optimize your business processes, improve efficiency, and enhance customer satisfaction. We help organizations achieve operational excellence through proven methodologies.",
-        image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&h=1080&fit=crop&crop=center",
-        heroImage: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&h=1080&fit=crop&crop=center",
+        image: "/images/services/Operation Consulting Service Excellence.png",
+        heroImage: "/images/services/Operation Consulting Service Excellence.png",
         overview: {
             title: "Operational Excellence & Service Leadership",
             description: "Our operational consulting services combine deep industry expertise with proven methodologies to drive sustainable improvements in efficiency, quality, and customer satisfaction. We partner with you to build world-class operations.",

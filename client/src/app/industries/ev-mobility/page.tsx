@@ -87,7 +87,7 @@ export default function EVMobilityPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1593941707882-a5bac6861d75?w=1920&h=1080&fit=crop&crop=center"
+            src="/images/industries/ev-mobility.png"
             alt="EV Mobility Background"
             className="w-full h-full object-cover"
           />

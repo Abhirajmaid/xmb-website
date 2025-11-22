@@ -32,29 +32,29 @@ export default function Footer() {
         ></div>
       </div>
 
-      <div className="relative z-10 max-w-[80%] mx-auto px-6 py-16">
+      <div className="relative z-10 max-w-[95%] sm:max-w-[90%] md:max-w-[80%] mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16">
         {/* Newsletter Section */}
-        <div className="backdrop-blur-xl bg-white/10 border border-white/30 rounded-3xl p-8 md:p-12 mb-16 shadow-2xl shadow-black/20 relative">
+        <div className="backdrop-blur-xl bg-white/10 border border-white/30 rounded-3xl p-4 sm:p-6 md:p-8 lg:p-12 mb-8 sm:mb-12 md:mb-16 shadow-2xl shadow-black/20 relative">
           {/* Glass effect overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/0 rounded-3xl"></div>
-          <div className="text-center mb-8 relative z-10">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+          <div className="text-center mb-6 sm:mb-8 relative z-10">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-white">
               Stay Connected with XMB
             </h2>
-            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto px-4 sm:px-0">
               Get the latest insights on manufacturing innovation, industry
               trends, and XMB updates delivered to your inbox.
             </p>
           </div>
 
           <form onSubmit={handleSubscribe} className="max-w-md mx-auto">
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email address"
-                className="flex-1 px-6 py-4 bg-white/20 border border-white/30 rounded-full text-white placeholder-gray-300 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-300 placeholder:text-white"
+                className="flex-1 px-4 sm:px-6 py-3 sm:py-4 bg-white/20 border border-white/30 rounded-full text-white placeholder-gray-300 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-300 placeholder:text-white text-sm sm:text-base"
                 required
               />
               <Button
@@ -62,6 +62,7 @@ export default function Footer() {
                 size="lg"
                 showArrow={true}
                 onClick={handleSubscribe}
+                className="w-full sm:w-auto whitespace-nowrap"
               >
                 Subscribe
               </Button>
@@ -75,11 +76,11 @@ export default function Footer() {
           <div className="lg:col-span-2 space-y-6">
             <div>
               <h2 className="text-4xl font-bold mb-4 text-brand-primary/80">
-                XTRAWRKX MANUFACTURING BUSINESS
+                XTRAWRKX MANUFACTURING BUSINESSES
               </h2>
               <p className="text-gray-300 leading-relaxed text-lg">
                 Transforming manufacturing through precision engineering,
-                innovative solutions, and cutting-edge technology. Delivering
+                innovative solutions, and cutting edge technology. Delivering
                 excellence that drives business growth and operational success
                 across 25+ countries.
               </p>
@@ -162,7 +163,6 @@ export default function Footer() {
                 { label: "Home", href: "/" },
                 { label: "About Us", href: "/about" },
                 { label: "Services", href: "/services" },
-                { label: "Case Studies", href: "/case-studies" },
                 { label: "Blog", href: "/blog" },
                 { label: "Contact", href: "/contact" },
               ].map((link, index) => (
@@ -202,6 +202,47 @@ export default function Footer() {
               </p>
 
               <div className="space-y-3">
+                {/* Company Name */}
+                <div className="p-3 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10">
+                  <div className="text-sm text-gray-400 mb-1">Company</div>
+                  <div className="text-white font-medium text-sm">
+                    Xtrawrkx Manufacturing Businesses Pvt Ltd.
+                  </div>
+                </div>
+
+                {/* Address */}
+                <div className="flex items-start gap-3 p-3 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300">
+                  <div className="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                    <svg
+                      className="w-4 h-4 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-400">Address</div>
+                    <div className="text-white font-medium text-sm leading-relaxed">
+                      841, Vaishnavi Sovereign, Green Glen Layout, Bellandur,
+                      Bengaluru 560103
+                    </div>
+                  </div>
+                </div>
+
+                {/* Email */}
                 <div className="flex items-center gap-3 p-3 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300">
                   <div className="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center">
                     <svg
@@ -220,10 +261,16 @@ export default function Footer() {
                   </div>
                   <div>
                     <div className="text-sm text-gray-400">Email</div>
-                    <div className="text-white font-medium">info@xmb.com</div>
+                    <a
+                      href="mailto:contact@xtrawrkx.com"
+                      className="text-white font-medium hover:text-brand-primary transition-colors"
+                    >
+                      contact@xtrawrkx.com
+                    </a>
                   </div>
                 </div>
 
+                {/* Phone */}
                 <div className="flex items-center gap-3 p-3 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300">
                   <div className="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center">
                     <svg
@@ -242,13 +289,14 @@ export default function Footer() {
                   </div>
                   <div>
                     <div className="text-sm text-gray-400">Phone</div>
-                    <div className="text-white font-medium">
-                      +1 (555) 123-4567
-                    </div>
+                    <a
+                      href="tel:+917795081665"
+                      className="text-white font-medium hover:text-brand-primary transition-colors"
+                    >
+                      +91 77950 81665
+                    </a>
                   </div>
                 </div>
-
-                {/* Location card removed as requested */}
               </div>
 
               <Button

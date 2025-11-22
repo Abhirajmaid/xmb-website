@@ -113,20 +113,20 @@ export default function ManufacturingFlowSection() {
   return (
     <section
       ref={sectionRef}
-      className="py-20 px-4 sm:px-6 md:px-8 lg:px-24 bg-white relative overflow-hidden"
+      className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 lg:px-24 bg-white relative overflow-hidden"
     >
       <div className="max-w-full mx-auto relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-block px-6 py-2 bg-brand-light/40 rounded-full mb-6 border border-brand-light/50">
-            <span className="text-brand-primary font-semibold text-sm uppercase tracking-wide">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <div className="inline-block px-4 sm:px-6 py-2 bg-brand-light/40 rounded-full mb-4 sm:mb-6 border border-brand-light/50">
+            <span className="text-brand-primary font-semibold text-xs sm:text-sm uppercase tracking-wide">
               Our Process
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-gray-900">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight text-gray-900 px-4 sm:px-0">
             Manufacturing Flow
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
             From ideation to market, we guide your product through every stage
             of the manufacturing journey
           </p>

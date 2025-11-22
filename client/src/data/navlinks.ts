@@ -79,28 +79,28 @@ export const navigationLinks: NavLink[] = [
                 description: "Our comprehensive suite of business solutions designed to drive efficiency, innovation, and growth across your entire value chain.",
                 items: [
                     {
-                        href: "/services/sourcing-procurement",
+                        href: "/services",
                         label: "Sourcing & Procurement",
                         description: "Supply chain • Strategic sourcing",
                         iconType: "svg",
                         icon: "heroicons:truck-20-solid"
                     },
                     {
-                        href: "/services/design-prototyping",
+                        href: "/services",
                         label: "Design and Prototyping",
                         description: "Innovation • Rapid prototyping",
                         iconType: "svg",
                         icon: "heroicons:light-bulb-20-solid"
                     },
                     {
-                        href: "/services/manufacturing-solutions",
+                        href: "/services",
                         label: "Manufacturing Solutions",
                         description: "Production • Advanced manufacturing",
                         iconType: "svg",
                         icon: "heroicons:cog-6-tooth-20-solid"
                     },
                     {
-                        href: "/services/operation-consulting-service-excellence",
+                        href: "/services",
                         label: "Operation Consulting",
                         description: "Excellence • Process optimization",
                         iconType: "svg",
@@ -149,32 +149,32 @@ export const navigationLinks: NavLink[] = [
                 description: "Specialized manufacturing solutions for cutting-edge industries driving the future of technology.",
                 items: [
                     {
-                        href: "/industries/ev-mobility",
+                        href: "/industries",
                         label: "EV/E-Mobility",
                         description: "Electric vehicles • Charging infrastructure",
                         iconType: "svg",
                         icon: "heroicons:truck-20-solid"
                     },
                     {
-                        href: "/industries/bess-energy-storage",
+                        href: "/industries",
                         label: "BESS/Energy Storage",
                         description: "Battery systems • Grid storage",
                         iconType: "svg",
                         icon: "heroicons:battery-50-solid"
                     },
                     {
-                        href: "/industries/drones",
+                        href: "/industries",
                         label: "Drones",
                         description: "UAV manufacturing • Aerial systems",
                         iconType: "svg",
                         icon: "heroicons:paper-airplane-20-solid"
                     },
                     {
-                        href: "/industries/e-agritech",
+                        href: "/industries",
                         label: "E-Agritech",
                         description: "Smart farming • Agricultural tech",
                         iconType: "svg",
-                        icon: "heroicons:leaf-20-solid"
+                        icon: "heroicons:chart-bar-solid"
                     },
                 ]
             }

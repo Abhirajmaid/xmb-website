@@ -98,19 +98,19 @@ export default function ServicesPage() {
       />
 
       {/* Services Grid Section */}
-      <section className="py-20 px-20 bg-gray-50">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-12 lg:px-20 bg-gray-50">
         <div className="max-w-8xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
-            <div className="backdrop-blur-md bg-white/80 border border-brand-light/50 rounded-full px-6 py-3 inline-block mb-8">
-              <p className="text-brand-primary font-semibold text-lg tracking-wide uppercase">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <div className="backdrop-blur-md bg-white/80 border border-brand-light/50 rounded-full px-4 sm:px-6 py-2 sm:py-3 inline-block mb-4 sm:mb-6 md:mb-8">
+              <p className="text-brand-primary font-semibold text-xs sm:text-sm md:text-lg tracking-wide uppercase">
                 SERVICE PORTFOLIO
               </p>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 md:mb-8 leading-tight px-4 sm:px-0">
               Complete Business Services
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
               Explore our comprehensive range of services from strategic
               sourcing and innovative design to advanced manufacturing and
               operational excellence, designed to drive growth and efficiency
@@ -119,20 +119,20 @@ export default function ServicesPage() {
           </div>
 
           {/* Services Grid - Single Row */}
-          <div className="flex flex-wrap gap-6">
+          <div className="flex flex-wrap gap-4 sm:gap-6">
             {services.map((service, index) => (
               <div
                 key={index}
                 className="group relative bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:border-brand-primary hover:-translate-y-1 flex-1 min-w-[280px] flex flex-col"
               >
                 {/* Image Section */}
-                <div className="relative h-56 flex-shrink-0 overflow-hidden">
+                <div className="relative h-[300px] flex-shrink-0 overflow-hidden">
                   <img
                     src={service.image}
                     alt={service.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                  {/* <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div> */}
 
                   {/* Icon Badge */}
                   <div className="absolute top-5 left-5 w-14 h-14 bg-brand-primary rounded-2xl flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">

@@ -73,7 +73,9 @@ export default function Header() {
   return (
     <header
       className={`fixed z-50 transition-all duration-300 ${
-        isScrolled ? "top-6 left-4 right-4" : "top-6 left-0 right-0"
+        isScrolled
+          ? "top-2 sm:top-4 md:top-6 left-2 sm:left-4 right-2 sm:right-4"
+          : "top-2 sm:top-4 md:top-6 left-0 right-0"
       }`}
     >
       {/* Glass Morphism Background */}
@@ -94,7 +96,9 @@ export default function Header() {
 
       <div
         className={`mx-auto max-w-7xl relative z-10 transition-all duration-300 ${
-          isScrolled ? "px-6 py-4" : "px-6 py-4"
+          isScrolled
+            ? "px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4"
+            : "px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4"
         }`}
       >
         <nav className="flex items-center justify-between">
@@ -104,26 +108,14 @@ export default function Header() {
             className="flex items-center space-x-3 hover:scale-105 transition-transform duration-200"
           >
             <img
-              src="/xtrawrkx_logo_full.png"
+              src={
+                isScrolled
+                  ? "/images/XMB Logo.png"
+                  : "/images/XMB Logo White.png"
+              }
               alt="Xtrawrkx Manufacturing Business"
-              className="h-10 w-auto object-contain"
+              className="h-10 sm:h-14 md:h-16 lg:h-20 w-auto object-contain transition-opacity duration-300"
             />
-            <div className="flex flex-col">
-              <span
-                className={`text-lg font-bold transition-colors duration-300 leading-tight ${
-                  isScrolled ? "text-brand-dark" : "text-white"
-                }`}
-              >
-                Xtrawrkx
-              </span>
-              <span
-                className={`text-xs font-medium transition-colors duration-300 leading-tight ${
-                  isScrolled ? "text-gray-600" : "text-white/80"
-                }`}
-              >
-                Manufacturing Business
-              </span>
-            </div>
           </a>
 
           {/* Desktop Navigation */}
@@ -181,7 +173,9 @@ export default function Header() {
                       link.dropdown.length === 1
                         ? "w-auto min-w-[320px]"
                         : link.dropdown.length === 2
-                        ? "w-[500px]"
+                        ? link.id === "services"
+                          ? "w-[700px]"
+                          : "w-[500px]"
                         : "w-[600px]"
                     }`}
                     onMouseEnter={handleDropdownMouseEnter}

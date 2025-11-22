@@ -64,14 +64,14 @@ export default function LatestArticlesSection() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <p className="text-brand-primary uppercase tracking-wide text-sm font-medium mb-6 backdrop-blur-sm bg-brand-light/50 px-6 py-2 rounded-full w-fit mx-auto border border-brand-light/60">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <p className="text-brand-primary uppercase tracking-wide text-xs sm:text-sm font-medium mb-4 sm:mb-6 backdrop-blur-sm bg-brand-light/50 px-4 sm:px-6 py-2 rounded-full w-fit mx-auto border border-brand-light/60">
             LATEST INSIGHTS
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-4 sm:mb-6 px-4 sm:px-0">
             Latest from XMB
           </h2>
-          <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed mb-6 sm:mb-8 px-4 sm:px-0">
             Stay updated with our latest insights, case studies, and innovations
             in manufacturing excellence. Discover how we're shaping the future
             of industry.
